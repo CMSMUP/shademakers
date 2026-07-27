@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ec7a14"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="96" fill="url(#logo-grad)" opacity="0.15"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="url(#logo-grad)" stroke-width="2"/>
+  <!-- Blind slats -->
+  <rect x="40" y="50" width="120" height="12" rx="3" fill="url(#logo-grad)"/>
+  <rect x="40" y="68" width="120" height="12" rx="3" fill="url(#logo-grad)" opacity="0.85"/>
+  <rect x="40" y="86" width="120" height="12" rx="3" fill="url(#logo-grad)" opacity="0.7"/>
+  <rect x="40" y="104" width="120" height="12" rx="3" fill="url(#logo-grad)" opacity="0.55"/>
+  <rect x="40" y="122" width="120" height="12" rx="3" fill="url(#logo-grad)" opacity="0.4"/>
+  <rect x="40" y="140" width="120" height="12" rx="3" fill="url(#logo-grad)" opacity="0.25"/>
+  <!-- Window frame -->
+  <rect x="30" y="40" width="140" height="122" rx="8" fill="none" stroke="url(#logo-grad)" stroke-width="3"/>
+  <!-- Bottom bar -->
+  <rect x="55" y="154" width="90" height="8" rx="4" fill="url(#logo-grad)" opacity="0.5"/>
+</svg>
