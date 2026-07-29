@@ -125,7 +125,7 @@ export default function QuickQuote({ defaultProductSlug, compact = false }: Quic
           <div className="mt-3">
             <Link
               href={`/estimate?product=${productSlug}&w=${width}&h=${height}&qty=${qty}`}
-              className="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+              className="block w-full text-center py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
             >
               Get Detailed Quote
             </Link>

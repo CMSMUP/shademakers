@@ -70,7 +70,7 @@ export default function AuthPage() {
         <div className="card p-8 md:p-10">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center font-bold text-deep-950 text-xl mx-auto mb-4">
+            <div className="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center font-bold text-deep-950 text-xl mx-auto mb-4">
               OB
             </div>
             <h1 className="text-2xl font-bold text-white">
@@ -113,7 +113,7 @@ export default function AuthPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3.5 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-semibold text-sm hover:translate-y-[-2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Sending...' : 'Send Login Code'}
               </button>
@@ -139,7 +139,7 @@ export default function AuthPage() {
               <button
                 type="submit"
                 disabled={loading || token.length < 6}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3.5 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-semibold text-sm hover:translate-y-[-2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Verifying...' : 'Verify & Login'}
               </button>

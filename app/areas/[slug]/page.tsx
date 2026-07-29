@@ -45,7 +45,7 @@ export default function AreaPage({ params }: Props) {
           </nav>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Office Blinds in{" "}
-            <span className="text-gradient">{area.name}</span>
+            <span className="text-brand-500">{area.name}</span>
           </h1>
           <p className="text-deep-300 text-lg max-w-2xl">
             Premium commercial blinds for {area.desc}. Free quote, free site visit,
@@ -80,11 +80,11 @@ export default function AreaPage({ params }: Props) {
       <section className="pb-10">
         <div className="container-wide max-w-3xl">
           <div className="card p-8">
-            <h2 className="text-xl font-bold text-white mb-4">Why Choose Office Blinds Dubai in {area.name}?</h2>
+            <h2 className="text-xl font-bold text-white mb-4">Why Choose ShadeMakers in {area.name}?</h2>
             <div className="text-deep-300 text-sm leading-relaxed space-y-4">
               <p>
                 {area.name} is home to some of Dubai&apos;s most prestigious businesses. Your office
-                deserves window coverings that match the quality of your location. At Office Blinds Dubai,
+                deserves window coverings that match the quality of your location. At ShadeMakers,
                 we specialize in providing premium commercial blinds to offices across {area.name}.
               </p>
               <p>
@@ -115,8 +115,8 @@ export default function AreaPage({ params }: Props) {
       {/* CTA */}
       <section className="pb-20">
         <div className="container-wide max-w-3xl">
-          <div className="relative overflow-hidden rounded-3xl p-8 md:p-12 gradient-border text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-600/20 via-navy-800/30 to-deep-950" />
+          <div className="relative overflow-hidden rounded-3xl p-8 md:p-12 card text-center">
+            <div className="absolute inset-0 bg-navy-900" />
             <div className="relative z-10">
               <h2 className="text-2xl font-bold text-white mb-3">
                 Get a Free Quote for Your {area.name} Office
@@ -127,7 +127,7 @@ export default function AreaPage({ params }: Props) {
               </p>
               <Link
                 href="/estimate"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/30"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-bold hover:translate-y-[-2px] transition-all"
               >
                 Get Free Quote
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

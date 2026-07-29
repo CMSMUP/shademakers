@@ -67,7 +67,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     priority
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-brand-500/10 via-navy-500/5 to-deep-950 flex items-center justify-center">
+                  <div className="w-full h-full bg from-brand-500/10 via-navy-500/5 to-deep-950 flex items-center justify-center">
                     <div className="text-center p-10">
                       <svg className="w-16 h-16 text-deep-600 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
@@ -132,13 +132,13 @@ export default async function ProductDetailPage({ params }: Props) {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/estimate"
-                  className="flex-1 text-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+                  className="flex-1 text-center px-6 py-3.5 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all"
                 >
                   Get Free Quote
                 </Link>
                 <Link
                   href="/contact"
-                  className="flex-1 text-center px-6 py-3.5 rounded-xl glass-light text-deep-100 font-semibold hover:bg-white/10 hover:translate-y-[-2px] transition-all"
+                  className="flex-1 text-center px-6 py-3.5 rounded-xl glass text-deep-100 font-semibold hover:bg-white/10 hover:translate-y-[-2px] transition-all"
                 >
                   Book Site Visit
                 </Link>
@@ -239,8 +239,8 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* CTA Banner */}
       <section className="pb-20">
         <div className="container-wide max-w-4xl">
-          <div className="relative overflow-hidden rounded-3xl p-8 md:p-12 gradient-border text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-600/20 via-navy-800/30 to-deep-950" />
+          <div className="relative overflow-hidden rounded-3xl p-8 md:p-12 card text-center">
+            <div className="absolute inset-0 bg-navy-900" />
             <div className="relative z-10">
               <h2 className="text-2xl font-bold text-white mb-3">
                 Ready to Order {productData.name}?
@@ -250,7 +250,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </p>
               <Link
                 href="/estimate"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/30"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all"
               >
                 Get Free Quote
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

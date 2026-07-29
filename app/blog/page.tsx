@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog | Office Blinds Dubai — Commercial Blinds Tips & Insights',
+  title: 'Blog | ShadeMakers — Commercial Blinds Tips & Insights',
   description: 'Expert tips, guides, and insights about commercial blinds for offices in Dubai. Roller blinds, smart blinds, installation guides, and more.',
 };
 
@@ -49,20 +49,13 @@ const BLOG_POSTS = [
   },
 ];
 
-const CATEGORY_COLORS: Record<string, string> = {
-  'Guide': 'from-blue-600 to-cyan-600',
-  'Smart Blinds': 'from-cyan-600 to-teal-600',
-  'Comparison': 'from-amber-600 to-orange-600',
-  'Tips': 'from-green-600 to-emerald-600',
-};
-
 export default function BlogPage() {
   return (
     <>
       <section className="pt-24 pb-10">
         <div className="container-wide">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Office Blinds <span className="text-gradient">Blog</span>
+            Office Blinds <span className="text-brand-500">Blog</span>
           </h1>
           <p className="text-deep-300 max-w-xl">
             Expert tips, guides, and insights about commercial blinds for Dubai offices.
@@ -79,7 +72,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="card p-6 group hover:border-brand-500/30 transition-all flex flex-col"
               >
-                <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${CATEGORY_COLORS[post.category] || 'from-brand-600 to-brand-500'} flex items-center justify-center mb-4 text-white text-lg group-hover:scale-110 transition-transform`}>
+                <div className={`w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center mb-4 text-white text-lg group-hover:scale-110 transition-transform`}>
                   {post.image}
                 </div>
                 <span className="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">
@@ -117,7 +110,7 @@ export default function BlogPage() {
               </p>
               <p>
                 From cost-effective <Link href="/products/roller-blinds" className="text-brand-400 hover:underline">roller blinds</Link> to premium <Link href="/products/smart-blinds" className="text-brand-400 hover:underline">smart motorized systems</Link>,
-                Office Blinds Dubai offers tailored solutions for every commercial requirement.
+                ShadeMakers offers tailored solutions for every commercial project.
                 Our team handles everything from consultation and measurement to professional
                 installation and aftercare.
               </p>

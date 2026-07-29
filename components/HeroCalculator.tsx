@@ -52,7 +52,7 @@ export default function HeroCalculator() {
   const mainImage = productSlug ? getProductMainImage(productSlug) : null;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] backdrop-blur-sm">
+    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg from-white/[0.04] to-white/[0.01] backdrop-blur-sm">
       <div className="grid grid-cols-1 lg:grid-cols-5">
         {/* Left: Product Preview */}
         <div className="lg:col-span-2 relative min-h-[280px] lg:min-h-[400px] bg-white/[0.02] overflow-hidden">
@@ -202,7 +202,7 @@ export default function HeroCalculator() {
 
           {/* Price Breakdown */}
           {estimate && (
-            <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-brand-500/10 to-gold-500/5 border border-brand-500/10">
+            <div className="mt-6 p-4 rounded-2xl bg-brand-500/10 border border-brand-500/10">
               <div className="grid grid-cols-2 gap-y-2 text-sm">
                 <span className="text-deep-300">Area</span>
                 <span className="text-white text-right">{estimate.area_sqm.toFixed(2)} m²</span>
@@ -240,7 +240,7 @@ export default function HeroCalculator() {
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
               href={productSlug ? `/estimate?product=${productSlug}&w=${width}&h=${height}` : '/estimate'}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold text-sm hover:translate-y-[-2px] transition-all shadow-xl shadow-brand-500/25"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 text-navy-950 font-bold text-sm hover:bg-brand-600 transition-all"
             >
               Get Detailed Quote
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -250,7 +250,7 @@ export default function HeroCalculator() {
             {productSlug && (
               <Link
                 href={`/products/${productSlug}`}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl glass-light text-deep-200 font-semibold text-sm hover:bg-white/10 transition-all"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl glass text-deep-200 font-semibold text-sm hover:bg-white/10 transition-all"
               >
                 View Product Details
               </Link>

@@ -7,7 +7,7 @@ const BLOG_POSTS = {
     title: 'How to Choose the Perfect Office Blinds in Dubai',
     date: '2026-07-20',
     category: 'Guide',
-    author: 'Office Blinds Dubai Team',
+    author: 'ShadeMakers Team',
     readTime: '6 min read',
     metaDesc: 'A comprehensive guide to selecting the right commercial blinds for your Dubai office. Compare roller, venetian, smart, and zebra blinds for your workspace.',
     content: `Choosing the right blinds for your office in Dubai is about more than just aesthetics — it's about functionality, energy efficiency, and creating the right environment for your team.
@@ -68,7 +68,7 @@ Roller and vertical blinds are easiest to maintain. Venetian blinds may require 
 ### Budget
 Our online calculator gives you an instant estimate. Remember to factor in 5% UAE VAT.
 
-## The Office Blinds Dubai Process
+## The ShadeMakers Process
 
 1. **Free online quote** — Use our calculator for an instant estimate
 2. **Free site visit** — Our team measures and recommends
@@ -82,7 +82,7 @@ Ready to get started? [Get your free quote](/estimate) today.`,
     title: '5 Benefits of Smart Motorized Blinds for Dubai Offices',
     date: '2026-07-15',
     category: 'Smart Blinds',
-    author: 'Office Blinds Dubai Team',
+    author: 'ShadeMakers Team',
     readTime: '5 min read',
     metaDesc: 'Discover why smart motorized blinds are transforming Dubai offices. Learn about energy savings, automation, and how they improve workplace productivity.',
     content: `Smart motorized blinds are rapidly becoming the standard for modern offices in Dubai. Here's why forward-thinking businesses are making the switch.
@@ -119,7 +119,7 @@ Our smart blinds integrate with building management systems, occupancy sensors, 
     title: 'Roller Blinds vs Venetian Blinds: Which Is Best for Your Office?',
     date: '2026-07-10',
     category: 'Comparison',
-    author: 'Office Blinds Dubai Team',
+    author: 'ShadeMakers Team',
     readTime: '4 min read',
     metaDesc: 'Compare roller blinds and venetian blinds for Dubai offices. We break down the pros, cons, pricing, and best use cases for each option.',
     content: `Two of the most popular choices for Dubai offices are roller blinds and venetian blinds. But which one is right for your space?
@@ -179,7 +179,7 @@ Need help deciding? [Get a free consultation](/contact) — our team will visit 
     title: 'Dubai Building Regulations for Office Window Coverings',
     date: '2026-07-05',
     category: 'Guide',
-    author: 'Office Blinds Dubai Team',
+    author: 'ShadeMakers Team',
     readTime: '5 min read',
     metaDesc: 'Learn about Dubai building codes and safety regulations for commercial window coverings. Fire safety compliance, child safety standards, and more.',
     content: `When outfitting an office in Dubai, it's essential to understand the local building regulations that apply to window coverings. Here's what you need to know.
@@ -202,7 +202,7 @@ Dubai Municipality's building codes specify:
 
 ## Our Compliance Guarantee
 
-All Office Blinds Dubai products are:
+All ShadeMakers products are:
 - ✅ Fire-retardant certified (UAE Civil Defense compliant)
 - ✅ Child-safe options available
 - ✅ Professionally installed to building code standards
@@ -218,7 +218,7 @@ For specific compliance questions about your project, [contact our team](/contac
     title: 'How Energy-Efficient Blinds Can Reduce Your Office Cooling Costs',
     date: '2026-06-28',
     category: 'Tips',
-    author: 'Office Blinds Dubai Team',
+    author: 'ShadeMakers Team',
     readTime: '4 min read',
     metaDesc: 'Learn how the right office blinds can reduce your energy bills in Dubai. Smart blinds, thermal fabrics, and positioning strategies for maximum savings.',
     content: `In Dubai, air conditioning accounts for up to 70% of a commercial building's electricity bill. The right window coverings can significantly reduce this cost.
@@ -276,7 +276,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Post Not Found' };
 
   return {
-    title: `${post.title} | Office Blinds Dubai Blog`,
+    title: `${post.title} | ShadeMakers Blog`,
     description: post.metaDesc,
     openGraph: {
       title: post.title,
@@ -361,12 +361,12 @@ export default function BlogPostPage({ params }: Props) {
           </div>
 
           {/* Share + CTA */}
-          <div className="mt-12 p-8 rounded-2xl gradient-border text-center">
+          <div className="mt-12 p-8 rounded-2xl card text-center">
             <h3 className="text-xl font-bold text-white mb-3">Ready for Your Free Quote?</h3>
             <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Dubai office — takes 2 minutes.</p>
             <Link
               href="/estimate"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/30"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-bold hover:translate-y-[-2px] transition-all"
             >
               Get Free Quote
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="frameGrad" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2137a3"/>
+      <stop offset="100%" stop-color="#0f1b46"/>
+    </linearGradient>
+    <linearGradient id="slatGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f09333"/>
+      <stop offset="100%" stop-color="#FDEB07"/>
+    </linearGradient>
+    <linearGradient id="fabricGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4a46c"/>
+      <stop offset="50%" stop-color="#a08a5a"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+    <linearGradient id="aluGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="50%" stop-color="#b8b8b8"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+  </defs>
+  <!-- Wall -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <!-- Window frame -->
+  <rect x="100" y="60" width="600" height="440" rx="12" fill="url(#frameGrad)"/>
+  <rect x="118" y="78" width="564" height="404" rx="8" fill="#121212"/>
+  <!-- Floor hint -->
+  <rect x="0" y="520" width="800" height="80" fill="#0d0d0d"/>
+  <ellipse cx="400" cy="520" rx="320" ry="16" fill="#000000" opacity="0.4"/>
+
+  <path d="M160 100 L190 110 L220 100 L250 110 L280 100 L310 110 L340 100 L370 110 L400 100 L430 110 L460 100 L490 110 L520 100 L550 110 L580 100 L610 110 L640 100" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 133 L190 143 L220 133 L250 143 L280 133 L310 143 L340 133 L370 143 L400 133 L430 143 L460 133 L490 143 L520 133 L550 143 L580 133 L610 143 L640 133" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 166 L190 176 L220 166 L250 176 L280 166 L310 176 L340 166 L370 176 L400 166 L430 176 L460 166 L490 176 L520 166 L550 176 L580 166 L610 176 L640 166" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 199 L190 209 L220 199 L250 209 L280 199 L310 209 L340 199 L370 209 L400 199 L430 209 L460 199 L490 209 L520 199 L550 209 L580 199 L610 209 L640 199" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 232 L190 242 L220 232 L250 242 L280 232 L310 242 L340 232 L370 242 L400 232 L430 242 L460 232 L490 242 L520 232 L550 242 L580 232 L610 242 L640 232" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 265 L190 275 L220 265 L250 275 L280 265 L310 275 L340 265 L370 275 L400 265 L430 275 L460 265 L490 275 L520 265 L550 275 L580 265 L610 275 L640 265" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 298 L190 308 L220 298 L250 308 L280 298 L310 308 L340 298 L370 308 L400 298 L430 308 L460 298 L490 308 L520 298 L550 308 L580 298 L610 308 L640 298" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 331 L190 341 L220 331 L250 341 L280 331 L310 341 L340 331 L370 341 L400 331 L430 341 L460 331 L490 341 L520 331 L550 341 L580 331 L610 341 L640 331" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 364 L190 374 L220 364 L250 374 L280 364 L310 374 L340 364 L370 374 L400 364 L430 374 L460 364 L490 374 L520 364 L550 374 L580 364 L610 374 L640 364" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 397 L190 407 L220 397 L250 407 L280 397 L310 407 L340 397 L370 407 L400 397 L430 407 L460 397 L490 407 L520 397 L550 407 L580 397 L610 407 L640 397" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 430 L190 440 L220 430 L250 440 L280 430 L310 440 L340 430 L370 440 L400 430 L430 440 L460 430 L490 440 L520 430 L550 440 L580 430 L610 440 L640 430" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <path d="M160 463 L190 473 L220 463 L250 473 L280 463 L310 473 L340 463 L370 473 L400 463 L430 473 L460 463 L490 473 L520 463 L550 473 L580 463 L610 473 L640 463" stroke="#d4d4d4" stroke-width="3" fill="none"/>
+
+  <rect x="150" y="86" width="500" height="14" rx="4" fill="url(#aluGrad)"/>
+  <rect x="150" y="494" width="500" height="14" rx="4" fill="url(#aluGrad)"/>
+  <!-- Side cords -->
+  <line x1="240" y1="100" x2="240" y2="494" stroke="#888" stroke-width="1.5"/>
+  <line x1="560" y1="100" x2="560" y2="494" stroke="#888" stroke-width="1.5"/>
+  <text x="400" y="560" text-anchor="middle" fill="#b0b0b0" font-family="Inter,sans-serif" font-size="20" font-weight="600">Pleated Blinds</text>
+</svg>

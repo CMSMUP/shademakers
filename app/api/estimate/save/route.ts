@@ -153,7 +153,7 @@ export async function POST(req: NextRequest) {
     // 6. Log email notification
     await supabase.from('email_notifications').insert({
       to_email: customer.email,
-      subject: `Your Office Blinds Dubai Quote — ${quote_number}`,
+      subject: `Your ShadeMakers Quote — ${quote_number}`,
       reference_type: 'quote',
       reference_id: quote.id,
       status: 'pending',

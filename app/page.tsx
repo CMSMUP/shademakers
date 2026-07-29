@@ -95,43 +95,43 @@ const FEATURED_PRODUCTS = [
 
 const WHY_US = [
   {
-    title: "Dubai-Based Expertise",
-    desc: "We understand Dubai's unique climate and commercial requirements. 10+ years serving local businesses.",
-    icon: "📍",
+    title: "Project-Scale Delivery",
+    desc: "From 10 windows to 1,000+ — we handle full floor and tower fit-outs with dedicated project managers.",
+    icon: "🏗️",
   },
   {
-    title: "Instant Online Quoting",
-    desc: "Get a preliminary estimate in minutes. Our smart calculator handles everything from roller to smart blinds.",
+    title: "Instant Project Quoting",
+    desc: "Get a preliminary estimate in minutes. Our smart calculator scales from single rooms to full projects.",
     icon: "⚡",
   },
   {
     title: "Free On-Site Survey",
-    desc: "Our experts visit your office, take precise measurements, and recommend the perfect blind solutions.",
+    desc: "Our experts visit your site, take precise measurements, and recommend solutions per facade & orientation.",
     icon: "📐",
   },
   {
-    title: "Professional Installation",
-    desc: "Certified installation team with minimal disruption to your office operations. Same-day options available.",
+    title: "Certified Installation",
+    desc: "Trained installation crews for commercial buildings. After-hours & weekend options to avoid disruption.",
     icon: "🔧",
   },
   {
-    title: "Full Warranty & Support",
-    desc: "Comprehensive warranty on all products and installation. Dedicated after-sales support team.",
+    title: "Full Warranty & AMC",
+    desc: "5-year warranty on all products with optional annual maintenance contracts for facility managers.",
     icon: "🛡️",
   },
   {
-    title: "Automated Journey",
-    desc: "From quote to installation to review — track everything online. No chasing, no paperwork.",
+    title: "Live Project Tracking",
+    desc: "From quote to handover — track production, delivery, and installation status online in real time.",
     icon: "🔄",
   },
 ];
 
 const STEPS = [
-  { num: "01", title: "Get a Free Quote", desc: "Use our online calculator or chat with us. Takes 2 minutes." },
-  { num: "02", title: "Free Site Visit", desc: "We measure, check fabrics, and confirm the perfect solution." },
-  { num: "03", title: "Confirm & Pay Deposit", desc: "70% deposit to begin production. Simple and secure." },
-  { num: "04", title: "Professional Installation", desc: "Our team installs with zero disruption. You relax." },
-  { num: "05", title: "Enjoy & Review", desc: "Pay the balance and share your experience for extended warranty." },
+  { num: "01", title: "Get a Project Quote", desc: "Use our calculator or send your BOQ. Response within 24 hours." },
+  { num: "02", title: "Free Site Survey", desc: "We measure every window, assess facades, and finalize specs." },
+  { num: "03", title: "Approve & Deposit", desc: "Sign off on final quotation. 70% deposit kicks off production." },
+  { num: "04", title: "Install & Handover", desc: "Certified crews install floor-by-floor. Minimal disruption." },
+  { num: "05", title: "Warranty & AMC", desc: "Balance on completion. 5-year warranty + optional maintenance." },
 ];
 
 export default function HomePage() {
@@ -149,29 +149,29 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Left: Text + Badges */}
             <div className="pt-8 lg:pt-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light text-xs text-brand-400 font-medium mb-8 animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs text-brand-400 font-medium mb-8 animate-fade-in-up">
                 <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse-glow" />
-                Dubai&apos;s #1 Commercial Blinds Specialist
+                Commercial Blinds Contractor — Offices, Towers &amp; Fit-Out Projects
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6 animate-fade-in-up">
-                Premium{" "}
-                <span className="text-gradient">Office Blinds</span>
+                We Build{" "}
+                <span className="text-brand-500">Shades</span>
                 <br />
-                <span className="text-deep-100">in Dubai</span>
+                <span className="text-deep-100">for Dubai&apos;s Skyline</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-deep-300 max-w-xl leading-relaxed mb-8 animate-fade-in-up-delay-1">
-                From roller blinds to smart motorized systems — we supply, install, and
-                maintain premium window coverings for commercial spaces across Dubai.
+                From single offices to full tower fit-outs — ShadeMakers supplies and installs
+                custom commercial blinds at project scale. Roller, venetian, smart motorized.
                 <span className="text-brand-400 font-semibold block mt-2">
-                  Free quote. Free site visit. Zero hassle.
+                  Free project quote. Free site survey. Volume pricing.
                 </span>
               </p>
 
               {/* Trust badges */}
               <div className="flex flex-wrap gap-6 animate-fade-in-up-delay-2">
-                {['1000+ Offices', 'Same-Day Free Quote', '5-Yr Warranty', 'Dubai-Mainland'].map((badge) => (
+                {['Project Specialists', 'Volume Pricing', '5-Yr Warranty', 'Certified Installers'].map((badge) => (
                   <div key={badge} className="flex items-center gap-1.5 text-deep-400 text-sm">
                     <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -185,7 +185,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 mt-8 animate-fade-in-up-delay-3">
                 <Link
                   href="/products"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl glass-light text-deep-100 font-semibold text-sm hover:bg-white/10 hover:translate-y-[-2px] transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl glass text-deep-100 font-semibold text-sm hover:bg-white/10 hover:translate-y-[-2px] transition-all"
                 >
                   Browse Products
                 </Link>
@@ -214,7 +214,7 @@ export default function HomePage() {
             <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Our Products</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
               Complete Range of{" "}
-              <span className="text-gradient">Commercial Blinds</span>
+              <span className="text-brand-500">Commercial Blinds</span>
             </h2>
             <p className="text-deep-400 max-w-2xl mx-auto">
               Every blind type your office needs — from budget-friendly to premium executive solutions.
@@ -236,7 +236,7 @@ export default function HomePage() {
             <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Simple Process</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
               From Quote to{" "}
-              <span className="text-gradient">Installation</span>
+              <span className="text-brand-500">Installation</span>
             </h2>
             <p className="text-deep-400 max-w-2xl mx-auto">
               Five simple steps to transform your office space. No paperwork, no chasing.
@@ -248,9 +248,9 @@ export default function HomePage() {
               <div key={step.num} className="relative text-center group">
                 {/* Connector line */}
                 {i < STEPS.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-brand-500/50 to-transparent" />
+                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-brand-500/30" />
                 )}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500/20 to-gold-500/10 border border-brand-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <span className="text-brand-400 font-bold text-lg">{step.num}</span>
                 </div>
                 <h3 className="text-white font-semibold mb-2">{step.title}</h3>
@@ -266,11 +266,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(236,122,20,0.08)_0%,_transparent_60%)]" />
         <div className="container-wide relative z-10">
           <div className="text-center mb-14">
-            <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Why Choose Us</span>
+            <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Why ShadeMakers</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4 text-white">
               Built for{" "}
-              <span className="text-gradient">Dubai Businesses</span>
+              <span className="text-brand-500">Commercial Projects</span>
             </h2>
+            <p className="text-deep-400 max-w-2xl mx-auto">
+              Facility managers, fit-out contractors, and business owners trust us with their projects.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -287,25 +290,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== WHO WE SERVE ===== */}
+      <section className="section relative pt-0">
+        <div className="container-wide">
+          <div className="text-center mb-10">
+            <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Who We Serve</span>
+            <h2 className="text-2xl md:text-3xl font-bold mt-3 text-white">
+              Trusted Across Dubai&apos;s Commercial Landscape
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: 'Corporate Offices', desc: 'Floors & HQs' },
+              { label: 'Fit-Out Contractors', desc: 'BOQ supply' },
+              { label: 'Facility Managers', desc: 'AMC & upgrades' },
+              { label: 'Hospitality & Retail', desc: 'Hotels, clinics, showrooms' },
+            ].map((t) => (
+              <div key={t.label} className="card p-5 text-center group hover:border-brand-500/30 transition-all">
+                <h3 className="text-white font-semibold text-sm group-hover:text-brand-400 transition-colors">{t.label}</h3>
+                <p className="text-deep-500 text-xs mt-1">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== CTA BANNER ===== */}
       <section className="section">
         <div className="container-wide">
-          <div className="relative overflow-hidden rounded-3xl p-10 md:p-16 gradient-border">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-600/20 via-navy-800/30 to-deep-950" />
+          <div className="relative overflow-hidden rounded-3xl p-10 md:p-16 card">
+            <div className="absolute inset-0 bg-navy-900" />
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 rounded-full blur-[100px]" />
 
             <div className="relative z-10 text-center max-w-2xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Office?
+              <span className="text-brand-400 text-sm font-semibold uppercase tracking-widest">Ready to Start?</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 mt-2">
+                Get a Project Quote in 24 Hours
               </h2>
               <p className="text-deep-300 text-lg mb-8">
-                Get your free, no-obligation quote in under 2 minutes. Our team
-                will follow up within 24 hours.
+                Send us your window schedule or use our instant calculator.
+                A dedicated project manager will handle the rest.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/estimate"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold text-base hover:translate-y-[-3px] transition-all shadow-xl shadow-brand-500/30"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all"
                 >
                   Get Free Quote Now
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -314,7 +343,7 @@ export default function HomePage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass-light text-deep-100 font-semibold text-base hover:bg-white/10 hover:translate-y-[-3px] transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass text-deep-100 font-semibold text-base hover:bg-white/10 hover:translate-y-[-3px] transition-all"
                 >
                   Talk to Our Team
                 </Link>

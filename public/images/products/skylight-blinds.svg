@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1b46"/>
+      <stop offset="100%" stop-color="#4171e7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <!-- Angled ceiling -->
+  <polygon points="0,0 800,80 800,600 0,600" fill="#0d0d0d"/>
+  <!-- Skylight frame -->
+  <polygon points="180,120 620,160 620,380 180,340" fill="url(#skyGrad)" opacity="0.5"/>
+  <polygon points="180,120 620,160 620,380 180,340" fill="none" stroke="#2137a3" stroke-width="8"/>
+  <line x1="400" y1="140" x2="400" y2="360" stroke="#2137a3" stroke-width="6"/>
+  <line x1="180" y1="230" x2="620" y2="270" stroke="#2137a3" stroke-width="6"/>
+  <!-- Blind panel half-deployed -->
+  <polygon points="180,120 620,160 620,270 180,230" fill="url(#fabricGrad)" opacity="0.92" stroke="#aaa" stroke-width="1"/>
+  <!-- Side guide rails -->
+  <line x1="180" y1="120" x2="180" y2="340" stroke="#888" stroke-width="4"/>
+  <line x1="620" y1="160" x2="620" y2="380" stroke="#888" stroke-width="4"/>
+  <!-- Sun rays -->
+  <g opacity="0.2">
+    <path d="M300 340 L340 120 L360 120 L320 340 Z" fill="#ffcc00"/>
+    <path d="M420 350 L460 130 L480 130 L440 350 Z" fill="#ffcc00"/>
+  </g>
+  <text x="400" y="560" text-anchor="middle" fill="#b0b0b0" font-family="Inter,sans-serif" font-size="20" font-weight="600">Skylight Blinds</text>
+</svg>

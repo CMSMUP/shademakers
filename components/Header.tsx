@@ -35,15 +35,15 @@ export default function Header() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform relative">
-              <Image src="/favicon.svg" alt="Office Blinds Dubai" width={24} height={24} className="w-6 h-6" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold tracking-tight">Office</span>
-              <span className="text-lg font-bold text-gradient ml-1">Blinds</span>
-              <span className="text-xs text-deep-400 block -mt-1">DUBAI</span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.svg"
+              alt="ShadeMakers — Commercial Office Blinds Dubai"
+              width={170}
+              height={42}
+              priority
+              className="h-9 md:h-10 w-auto group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -95,7 +95,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/estimate"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
             >
               Free Quote
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -153,7 +153,7 @@ export default function Header() {
             <div className="pt-3 flex gap-3">
               <Link
                 href="/estimate"
-                className="flex-1 text-center px-5 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm"
+                className="flex-1 text-center px-5 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold text-sm"
                 onClick={() => setMobileOpen(false)}
               >
                 Free Quote

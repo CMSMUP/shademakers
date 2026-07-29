@@ -16,7 +16,7 @@ export default function ChatWidget() {
     {
       id: '0',
       role: 'assistant',
-      content: 'Hi! 👋 Welcome to Office Blinds Dubai. I can help you with product info, quotes, or connect you with our team. What can I help you with?',
+      content: 'Hi! 👋 Welcome to ShadeMakers. I can help with product info, project quotes, or connect you with our team. What can I help you with?',
       created_at: new Date().toISOString(),
     },
   ]);
@@ -92,7 +92,7 @@ export default function ChatWidget() {
       {/* Chat bubble button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-brand-500 to-gold-500 text-deep-950 shadow-xl hover:scale-105 transition-all animate-pulse-glow flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-brand-500 text-deep-950 shadow-xl hover:scale-105 transition-all animate-pulse-glow flex items-center justify-center"
         aria-label="Chat with us"
       >
         {open ? (
@@ -110,10 +110,10 @@ export default function ChatWidget() {
       {open && (
         <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-10rem)] rounded-2xl glass border border-white/10 shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
           {/* Header */}
-          <div className="p-4 border-b border-white/10 flex items-center gap-3 bg-gradient-to-r from-brand-600/20 to-navy-700/20">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center text-deep-950 font-bold text-sm">OB</div>
+          <div className="p-4 border-b border-white/10 flex items-center gap-3 bg from-brand-600/20 to-navy-700/20">
+            <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-deep-950 font-bold text-sm">OB</div>
             <div>
-              <p className="text-white text-sm font-semibold">Office Blinds Dubai</p>
+              <p className="text-white text-sm font-semibold">ShadeMakers</p>
               <p className="text-deep-400 text-xs">Online support</p>
             </div>
             {user && <span className="ml-auto text-xs text-green-400">●</span>}
@@ -129,7 +129,7 @@ export default function ChatWidget() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
                     msg.role === 'user'
-                      ? 'bg-gradient-to-r from-brand-600 to-brand-500 text-white rounded-br-md'
+                      ? 'bg from-brand-600 to-brand-500 text-white rounded-br-md'
                       : msg.role === 'admin'
                       ? 'bg-amber-500/20 border border-amber-500/20 text-amber-200 rounded-bl-md'
                       : 'bg-white/10 text-deep-200 rounded-bl-md'
@@ -172,7 +172,7 @@ export default function ChatWidget() {
               <button
                 onClick={sendMessage}
                 disabled={!input.trim() || loading}
-                className="w-10 h-10 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white flex items-center justify-center disabled:opacity-40 hover:scale-105 transition-all"
+                className="w-10 h-10 rounded-xl bg from-brand-600 to-brand-500 text-white flex items-center justify-center disabled:opacity-40 hover:scale-105 transition-all"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

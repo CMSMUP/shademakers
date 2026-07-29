@@ -26,7 +26,7 @@ export default function ProductCard({ slug, name, tagline, desc, gradient, icon,
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Product Image or Gradient Fallback */}
-      <div className="relative w-full aspect-[4/3] overflow-hidden">
+      <div className="relative w-full aspect-[4/3] overflow-hidden bg-white/[0.02]">
         {image ? (
           <OptimizedProductImage
             src={image.src}
@@ -36,7 +36,7 @@ export default function ProductCard({ slug, name, tagline, desc, gradient, icon,
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         ) : (
-          <div className={`absolute inset-0 bg-gradient-to-br ${gradient} flex items-center justify-center text-white text-4xl opacity-80 group-hover:opacity-100 transition-opacity`}>
+          <div className={`absolute inset-0 bg ${gradient} flex items-center justify-center text-white text-4xl opacity-80 group-hover:opacity-100 transition-opacity`}>
             {icon}
           </div>
         )}

@@ -6,7 +6,7 @@ const PRODUCT_CONTEXT = PRODUCTS_SEED.map(p =>
   `${p.name}: ${p.short_description}. Models: ${p.models.map(m => m.name).join(', ')}. From AED ${p.base_price_per_sqm}/m².`
 ).join('\n');
 
-const SYSTEM_PROMPT = `You are a friendly sales assistant for Office Blinds Dubai, a premium commercial blinds company in Dubai, UAE.
+const SYSTEM_PROMPT = `You are a friendly sales assistant for ShadeMakers, a commercial blinds company for offices & projects in Dubai, UAE.
 
 Your role:
 - Help customers find the right blinds for their office
@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
       } else if (msg.includes('warranty')) {
         reply = 'All our products come with a 5-year warranty. Smart motor components have a separate 5-year motor warranty.';
       } else if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
-        reply = 'Hello! Welcome to Office Blinds Dubai. How can I help you today? You can ask about our products, get a quick quote, or request a site visit!';
+        reply = 'Hello! Welcome to ShadeMakers. How can I help you today? You can ask about our products, get a quick quote, or request a site visit!';
       } else {
         reply = 'Thank you for reaching out! I can help with product information, pricing, or connect you with our team for a personalized consultation. Could you tell me a bit more about what you need?';
         escalated = true;

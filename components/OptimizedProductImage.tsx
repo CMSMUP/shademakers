@@ -35,7 +35,7 @@ export default function OptimizedProductImage({
   if (error) {
     return (
       <div
-        className={`flex items-center justify-center bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/5 rounded-2xl ${className}`}
+        className={`flex items-center justify-center bg from-white/5 to-white/[0.02] border border-white/5 rounded-2xl ${className}`}
         style={fill ? undefined : { width, height, aspectRatio: `${width}/${height}` }}
       >
         <div className="text-center p-4">
@@ -59,7 +59,7 @@ export default function OptimizedProductImage({
         priority={priority}
         quality={quality}
         onError={() => setError(true)}
-        unoptimized={src.startsWith('http')} // external images from Unsplash
+        unoptimized={src.startsWith('http') || src.endsWith('.svg')} // external + local SVGs
       />
     );
   }
@@ -75,7 +75,7 @@ export default function OptimizedProductImage({
       priority={priority}
       quality={quality}
       onError={() => setError(true)}
-      unoptimized={src.startsWith('http')} // external images from Unsplash
+      unoptimized={src.startsWith('http') || src.endsWith('.svg')} // external + local SVGs
     />
   );
 }

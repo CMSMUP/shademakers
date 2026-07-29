@@ -41,20 +41,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-gold-500 flex items-center justify-center overflow-hidden relative">
-                <Image src="/favicon.svg" alt="Office Blinds Dubai" width={24} height={24} className="w-6 h-6" />
-              </div>
-              <div>
-                <span className="text-lg font-bold tracking-tight text-white">Office</span>
-                <span className="text-lg font-bold text-gradient ml-1">Blinds</span>
-                <span className="text-xs text-deep-400 block -mt-1">DUBAI</span>
-              </div>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.svg"
+                alt="ShadeMakers — Commercial Office Blinds Dubai"
+                width={180}
+                height={45}
+                className="h-11 w-auto"
+              />
             </Link>
             <p className="text-deep-400 text-sm leading-relaxed max-w-sm mb-6">
-              Dubai&apos;s premier commercial blinds specialist. Premium roller blinds,
-              venetian blinds, smart motorized solutions, and expert installation
-              for offices across the UAE.
+              Dubai&apos;s commercial blinds specialist for offices, towers &amp; fit-out
+              projects. Custom-made roller, venetian, and smart motorized blinds with
+              certified installation across the UAE.
             </p>
             <div className="flex gap-3">
               {['t', 'f', 'i', 'l'].map((icon) => (
@@ -129,7 +128,7 @@ export default function Footer() {
             </ul>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <div className="space-y-2 text-deep-400 text-sm">
-              <p>info@officeblindsdubai.com</p>
+              <p>info@shademakers.ae</p>
               <p>+971 4 123 4567</p>
               <p>Dubai, UAE</p>
             </div>
@@ -141,7 +140,7 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="container-wide py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-deep-500 text-xs">
-            © {new Date().getFullYear()} Office Blinds Dubai. All rights reserved.
+            © {new Date().getFullYear()} ShadeMakers. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-deep-500">
             <Link href="/privacy" className="hover:text-deep-300 transition-colors">Privacy Policy</Link>

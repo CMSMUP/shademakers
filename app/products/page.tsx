@@ -4,10 +4,10 @@ import { PRODUCTS_SEED } from '@/src/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'All Products | Office Blinds Dubai',
+  title: 'All Products | ShadeMakers',
   description: 'Browse our complete range of premium commercial blinds for offices in Dubai. Roller blinds, Venetian blinds, Smart motorized blinds, Zebra blinds and more.',
   openGraph: {
-    title: 'Office Blinds Dubai — Complete Product Range',
+    title: 'ShadeMakers — Complete Product Range',
     description: 'Browse all commercial blind types for your Dubai office.',
   },
 };
@@ -50,7 +50,7 @@ export default function ProductsPage() {
         <div className="container-wide relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our Complete Range of{" "}
-            <span className="text-gradient">Commercial Blinds</span>
+            <span className="text-brand-500">Commercial Blinds</span>
           </h1>
           <p className="text-deep-300 text-lg max-w-2xl">
             Every blind type your Dubai office needs — from budget-friendly essentials to
@@ -87,8 +87,8 @@ export default function ProductsPage() {
       {/* CTA */}
       <section className="pb-20">
         <div className="container-wide">
-          <div className="relative overflow-hidden rounded-3xl p-10 md:p-14 gradient-border text-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-600/20 via-navy-800/30 to-deep-950" />
+          <div className="relative overflow-hidden rounded-3xl p-10 md:p-14 card text-center">
+            <div className="absolute inset-0 bg-navy-900" />
             <div className="relative z-10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Not Sure Which Blind Is Right for Your Office?
@@ -99,7 +99,7 @@ export default function ProductsPage() {
               </p>
               <Link
                 href="/estimate"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/30"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg from-brand-600 to-brand-500 text-white font-bold hover:translate-y-[-2px] transition-all"
               >
                 Get Expert Advice
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

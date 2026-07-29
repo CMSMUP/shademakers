@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="frameGrad" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2137a3"/>
+      <stop offset="100%" stop-color="#0f1b46"/>
+    </linearGradient>
+    <linearGradient id="slatGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f09333"/>
+      <stop offset="100%" stop-color="#FDEB07"/>
+    </linearGradient>
+    <linearGradient id="fabricGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#d4d4d4"/>
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4a46c"/>
+      <stop offset="50%" stop-color="#a08a5a"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+    <linearGradient id="aluGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="50%" stop-color="#b8b8b8"/>
+      <stop offset="100%" stop-color="#909090"/>
+    </linearGradient>
+  </defs>
+  <!-- Wall -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <!-- Window frame -->
+  <rect x="100" y="60" width="600" height="440" rx="12" fill="url(#frameGrad)"/>
+  <rect x="118" y="78" width="564" height="404" rx="8" fill="#121212"/>
+  <!-- Floor hint -->
+  <rect x="0" y="520" width="800" height="80" fill="#0d0d0d"/>
+  <ellipse cx="400" cy="520" rx="320" ry="16" fill="#000000" opacity="0.4"/>
+
+  <rect x="150" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.9" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="208" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.8200000000000001" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="266" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.74" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="324" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.9" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="382" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.8200000000000001" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="440" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.74" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="498" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.9" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="556" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.8200000000000001" stroke="#aaa" stroke-width="1"/>
+
+  <rect x="614" y="90" width="46" height="400" rx="4" fill="url(#fabricGrad)" opacity="0.74" stroke="#aaa" stroke-width="1"/>
+
+  <!-- Head rail -->
+  <rect x="140" y="70" width="540" height="22" rx="6" fill="url(#aluGrad)"/>
+  <!-- Wand -->
+  <rect x="655" y="92" width="8" height="220" rx="4" fill="#888"/>
+  <text x="400" y="560" text-anchor="middle" fill="#b0b0b0" font-family="Inter,sans-serif" font-size="20" font-weight="600">Vertical Blinds</text>
+</svg>

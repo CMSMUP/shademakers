@@ -240,7 +240,7 @@ export default function EstimateWizard() {
             {step === 'rooms' && (
               <div className="space-y-4">
                 {/* Measurement Guide */}
-                <div className="card p-4 flex items-start gap-4 bg-gradient-to-r from-navy-800/30 to-transparent border-navy-500/20">
+                <div className="card p-4 flex items-start gap-4 bg from-navy-800/30 to-transparent border-navy-500/20">
                   <div className="w-20 h-20 flex-shrink-0 rounded-xl bg-white/5 flex items-center justify-center">
                     <svg viewBox="0 0 80 80" className="w-16 h-16 text-deep-300">
                       <rect x="10" y="10" width="60" height="60" rx="4" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="4,3" />
@@ -343,7 +343,7 @@ export default function EstimateWizard() {
                   <button
                     onClick={() => setStep('products')}
                     disabled={totalWindows === 0}
-                    className="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-8 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Select Products →
                   </button>
@@ -407,7 +407,7 @@ export default function EstimateWizard() {
                   <button
                     onClick={() => setStep('review')}
                     disabled={!allProductsSelected || !allModelsSelected}
-                    className="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-8 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Review Quote →
                   </button>
@@ -502,7 +502,7 @@ export default function EstimateWizard() {
                   </button>
                   <button
                     onClick={() => setStep('details')}
-                    className="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+                    className="px-8 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all"
                   >
                     Continue →
                   </button>
@@ -593,7 +593,7 @@ export default function EstimateWizard() {
                   <button
                     onClick={handleSave}
                     disabled={saving || !customer.name || !customer.email || !customer.phone}
-                    className="px-8 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-8 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {saving ? 'Saving...' : 'Get My Free Quote'}
                   </button>
@@ -616,13 +616,13 @@ export default function EstimateWizard() {
                 <div className="flex flex-col sm:flex-row justify-center gap-3">
                   <Link
                     href={`/dashboard`}
-                    className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+                    className="px-8 py-3.5 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all"
                   >
                     View My Quotes
                   </Link>
                   <Link
                     href="/"
-                    className="px-8 py-3.5 rounded-xl glass-light text-deep-100 font-semibold hover:bg-white/10 hover:translate-y-[-2px] transition-all"
+                    className="px-8 py-3.5 rounded-xl glass text-deep-100 font-semibold hover:bg-white/10 hover:translate-y-[-2px] transition-all"
                   >
                     Back to Home
                   </Link>

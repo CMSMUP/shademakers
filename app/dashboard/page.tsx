@@ -70,7 +70,7 @@ export default function DashboardPage() {
           <div className="flex gap-3">
             <Link
               href="/estimate"
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+              className="px-5 py-2.5 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
             >
               New Quote
             </Link>
@@ -109,7 +109,7 @@ export default function DashboardPage() {
               <p className="text-deep-400 text-sm mb-4">No quotes yet. Get your first free estimate!</p>
               <Link
                 href="/estimate"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
+                className="px-6 py-3 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
               >
                 Get Free Quote
               </Link>

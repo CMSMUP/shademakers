@@ -7,7 +7,7 @@ export default function ContactPage() {
       <section className="pt-24 pb-10">
         <div className="container-wide">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Contact <span className="text-gradient">Us</span>
+            Contact <span className="text-brand-500">Us</span>
           </h1>
           <p className="text-deep-300 max-w-lg">
             Ready to transform your office space? Get in touch — we&apos;ll respond within 24 hours.
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 text-white font-semibold hover:translate-y-[-2px] transition-all shadow-lg shadow-brand-500/25"
+                  className="w-full py-3.5 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-semibold hover:translate-y-[-2px] transition-all"
                 >
                   Send Message
                 </button>

@@ -1,72 +1,73 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Office Blinds Dubai — Design System
-   Brand: Punchy, flashy, classic, strong, secure, fast, fun
+   ShadeMakers — Design System
+   Electric Yellow (#FDEB07) on Dark Slate (#121714)
+   Flat colors — no gradients
    ============================================================ */
 
 @theme inline {
-  /* Brand Colors */
-  --color-brand-50: #fef7ee;
-  --color-brand-100: #fdedd3;
-  --color-brand-200: #f9d7a5;
-  --color-brand-300: #f5ba6d;
-  --color-brand-400: #f09333;
-  --color-brand-500: #ec7a14;
-  --color-brand-600: #dd5f0a;
-  --color-brand-700: #b7460b;
-  --color-brand-800: #92380f;
-  --color-brand-900: #763010;
-  --color-brand-950: #401606;
+  /* Brand Colors — Electric Yellow */
+  --color-brand-50: #fffee6;
+  --color-brand-100: #fffcc2;
+  --color-brand-200: #fef780;
+  --color-brand-300: #fef06a;
+  --color-brand-400: #fdee3a;
+  --color-brand-500: #FDEB07;
+  --color-brand-600: #e0c800;
+  --color-brand-700: #c0a800;
+  --color-brand-800: #9a8900;
+  --color-brand-900: #7a6d00;
+  --color-brand-950: #423a00;
 
-  /* Dark Navy */
-  --color-navy-50: #f0f4fe;
-  --color-navy-100: #dde6fb;
-  --color-navy-200: #c2d4f9;
-  --color-navy-300: #97b9f5;
-  --color-navy-400: #6594ee;
-  --color-navy-500: #4171e7;
-  --color-navy-600: #2c55db;
-  --color-navy-700: #2343c9;
-  --color-navy-800: #2137a3;
-  --color-navy-900: #1f3281;
-  --color-navy-950: #0f1b46;
+  /* Dark Slate Background */
+  --color-navy-50: #f3f6f5;
+  --color-navy-100: #e0e7e3;
+  --color-navy-200: #c1cec7;
+  --color-navy-300: #9aaea4;
+  --color-navy-400: #748d81;
+  --color-navy-500: #5a7266;
+  --color-navy-600: #475a50;
+  --color-navy-700: #3a4942;
+  --color-navy-800: #28312B;
+  --color-navy-900: #1A211D;
+  --color-navy-950: #121714;
 
-  /* Deep Luxury Black */
-  --color-deep-50: #f6f6f6;
-  --color-deep-100: #e7e7e7;
-  --color-deep-200: #d1d1d1;
-  --color-deep-300: #b0b0b0;
-  --color-deep-400: #888888;
-  --color-deep-500: #6d6d6d;
-  --color-deep-600: #5d5d5d;
-  --color-deep-700: #4f4f4f;
-  --color-deep-800: #454545;
-  --color-deep-900: #3d3d3d;
-  --color-deep-950: #121212;
+  /* Surface & Text Colors */
+  --color-deep-50: #FFFFFF;
+  --color-deep-100: #F5F5F5;
+  --color-deep-200: #E0E0E0;
+  --color-deep-300: #A1A8A3;
+  --color-deep-400: #A1A8A3;
+  --color-deep-500: #7A827C;
+  --color-deep-600: #5A625C;
+  --color-deep-700: #3A423C;
+  --color-deep-800: #2A322C;
+  --color-deep-900: #1A211D;
+  --color-deep-950: #121714;
 
-  /* Gold Accent */
-  --color-gold-50: #ffffe7;
-  --color-gold-100: #feffc1;
-  --color-gold-200: #fffd86;
-  --color-gold-300: #fff541;
-  --color-gold-400: #ffe70d;
-  --color-gold-500: #ffcc00;
-  --color-gold-600: #d09e00;
-  --color-gold-700: #a67202;
-  --color-gold-800: #89590a;
-  --color-gold-900: #74480f;
-  --color-gold-950: #442604;
+  /* Gold Accent — kept minimal */
+  --color-gold-50: #fffee6;
+  --color-gold-100: #fffcc2;
+  --color-gold-200: #fef780;
+  --color-gold-300: #fef06a;
+  --color-gold-400: #fdee3a;
+  --color-gold-500: #FDEB07;
+  --color-gold-600: #e0c800;
+  --color-gold-700: #c0a800;
+  --color-gold-800: #9a8900;
+  --color-gold-900: #7a6d00;
+  --color-gold-950: #423a00;
 
   /* Fonts */
-  --font-sans: 'Inter', 'Geist Sans', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Geist Sans', 'Inter', system-ui, sans-serif;
-  --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* Base Styles */
 body {
-  background: var(--color-deep-950);
+  background: var(--color-navy-950);
   color: var(--color-deep-50);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -75,12 +76,12 @@ body {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-deep-950); }
-::-webkit-scrollbar-thumb { background: var(--color-deep-700); border-radius: 4px; }
+::-webkit-scrollbar-track { background: var(--color-navy-950); }
+::-webkit-scrollbar-thumb { background: var(--color-navy-700); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-brand-500); }
 
 /* Selection */
-::selection { background: var(--color-brand-500); color: white; }
+::selection { background: var(--color-brand-500); color: var(--color-navy-950); }
 
 /* Animations */
 @keyframes fadeInUp {
@@ -96,8 +97,8 @@ body {
   50% { transform: translateY(-10px); }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(236, 122, 20, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(236, 122, 20, 0.4); }
+  0%, 100% { box-shadow: 0 0 20px rgba(253, 235, 7, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(253, 235, 7, 0.3); }
 }
 
 .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
@@ -114,41 +115,21 @@ body {
 
 /* Glass Effect */
 .glass {
-  background: rgba(18, 18, 18, 0.8);
+  background: var(--color-navy-900);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-.glass-light {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* Gradient Text */
-.text-gradient {
-  background: linear-gradient(135deg, var(--color-brand-400), var(--color-gold-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.text-gradient-navy {
-  background: linear-gradient(135deg, var(--color-navy-300), var(--color-brand-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  border: 1px solid var(--color-navy-800);
 }
 
 /* Card */
 .card {
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  background: var(--color-navy-900);
+  border: 1px solid var(--color-navy-800);
   transition: all 0.3s ease;
 }
 .card:hover {
-  border-color: rgba(236, 122, 20, 0.3);
+  border-color: rgba(253, 235, 7, 0.3);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
 }
@@ -177,21 +158,6 @@ body {
   .section { padding-top: 6rem; padding-bottom: 6rem; }
 }
 
-/* Gradient Border */
-.gradient-border { position: relative; }
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, var(--color-brand-500), var(--color-gold-500), var(--color-brand-500));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
 /* Grid background pattern */
 .bg-grid {
   background-image:
@@ -203,20 +169,20 @@ body {
 /* Input */
 .input-field {
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 12px;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   outline: none;
   transition: all 0.2s;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-navy-900);
+  border: 1px solid var(--color-navy-800);
   color: white;
 }
 .input-field:focus {
   border-color: var(--color-brand-500);
-  box-shadow: 0 0 0 3px rgba(236, 122, 20, 0.15);
+  box-shadow: 0 0 0 3px rgba(253, 235, 7, 0.15);
 }
-.input-field::placeholder { color: rgba(255, 255, 255, 0.3); }
+.input-field::placeholder { color: var(--color-deep-300); }
 
 /* Label */
 .label {
