@@ -6,7 +6,7 @@
     </linearGradient>
     <linearGradient id="slatGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f09333"/>
-      <stop offset="100%" stop-color="#FDEB07"/>
+      <stop offset="100%" stop-color="#E5B43C"/>
     </linearGradient>
     <linearGradient id="fabricGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f5f5f5"/>
@@ -39,15 +39,15 @@
   <rect x="160" y="104" width="480" height="330" fill="url(#fabricGrad)" opacity="0.92"/>
   <rect x="150" y="434" width="500" height="18" rx="6" fill="url(#aluGrad)"/>
   <!-- Signal waves -->
-  <path d="M180 60 Q195 40 180 20" stroke="#ffcc00" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M200 65 Q225 35 200 5" stroke="#ffcc00" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
-  <path d="M220 68 Q250 30 220 -5" stroke="#ffcc00" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M180 60 Q195 40 180 20" stroke="#E5B43C" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <path d="M200 65 Q225 35 200 5" stroke="#E5B43C" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M220 68 Q250 30 220 -5" stroke="#E5B43C" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
   <!-- Phone icon -->
   <g transform="translate(600,480)">
-    <rect x="0" y="0" width="44" height="80" rx="8" fill="#2a2a2a" stroke="#FDEB07" stroke-width="2"/>
+    <rect x="0" y="0" width="44" height="80" rx="8" fill="#2a2a2a" stroke="#E5B43C" stroke-width="2"/>
     <rect x="8" y="12" width="28" height="50" rx="3" fill="#1a1a1a"/>
-    <circle cx="22" cy="70" r="4" fill="none" stroke="#FDEB07" stroke-width="1.5"/>
-    <path d="M14 24 h16 M14 34 h16 M14 44 h10" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="22" cy="70" r="4" fill="none" stroke="#E5B43C" stroke-width="1.5"/>
+    <path d="M14 24 h16 M14 34 h16 M14 44 h10" stroke="#E5B43C" stroke-width="2" stroke-linecap="round"/>
   </g>
   <text x="400" y="560" text-anchor="middle" fill="#b0b0b0" font-family="Inter,sans-serif" font-size="20" font-weight="600">Smart Motorized</text>
 </svg>

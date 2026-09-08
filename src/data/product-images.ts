@@ -1,5 +1,5 @@
 // ============================================================
-// ShadeMakers — Product Images (Original Technical Illustrations)
+// CurtainMakers — Product Images (Technical Illustrations)
 // ============================================================
 
 export interface ProductImage {

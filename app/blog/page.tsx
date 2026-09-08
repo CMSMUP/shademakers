@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Blog | ShadeMakers — Commercial Blinds Tips & Insights',
-  description: 'Expert tips, guides, and insights about commercial blinds for offices in Dubai. Roller blinds, smart blinds, installation guides, and more.',
+  title: 'Blog | Curtain Makers — Curtain & Blind Tips for Abu Dhabi & Dubai',
+  description: 'Expert tips, guides, and insights about curtains and blinds in Abu Dhabi and Dubai. Roller blinds, curtains, smart motorized blinds, installation guides, and more.',
 };
 
 const BLOG_POSTS = [
@@ -17,7 +17,7 @@ const BLOG_POSTS = [
   },
   {
     slug: 'benefits-smart-motorized-blinds',
-    title: '5 Benefits of Smart Motorized Blinds for Dubai Offices',
+    title: '5 Benefits of Smart Motorized Blinds for UAE Offices',
     excerpt: 'Discover how automated blinds can improve energy efficiency, productivity, and convenience in your workplace.',
     date: '2026-07-15',
     category: 'Smart Blinds',
@@ -32,12 +32,12 @@ const BLOG_POSTS = [
     image: '▤',
   },
   {
-    slug: 'dubai-building-regulations-blinds',
-    title: 'Dubai Building Regulations for Office Window Coverings',
-    excerpt: 'What you need to know about fire safety, building codes, and compliance requirements for office blinds in Dubai.',
-    date: '2026-07-05',
-    category: 'Guide',
-    image: '📋',
+    slug: 'curtains-vs-blinds-abu-dhabi',
+    title: 'Curtains vs Blinds: What Works Best in Abu Dhabi Homes?',
+    excerpt: 'A guide to choosing between curtains and blinds for your Abu Dhabi villa — climate, maintenance, and style considerations.',
+    date: '2026-06-28',
+    category: 'Tips',
+    image: '🏠',
   },
   {
     slug: 'energy-saving-blinds-dubai',
@@ -52,41 +52,44 @@ const BLOG_POSTS = [
 export default function BlogPage() {
   return (
     <>
-      <section className="pt-24 pb-10">
+      <section className="relative pt-24 pb-10 bg-navy-900">
         <div className="container-wide">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Office Blinds <span className="text-brand-500">Blog</span>
+            Curtain &amp; Blind{' '}
+            <span className="text-brand-500">Blog</span>
           </h1>
           <p className="text-deep-300 max-w-xl">
-            Expert tips, guides, and insights about commercial blinds for Dubai offices.
+            Expert tips, guides, and insights about curtains and blinds for Abu Dhabi and Dubai.
           </p>
         </div>
       </section>
 
-      <section className="pb-20">
+      <section className="section bg-deep-50">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {BLOG_POSTS.map(post => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="card p-6 group hover:border-brand-500/30 transition-all flex flex-col"
+                className="card p-6 group hover:border-brand-500/50 transition-all flex flex-col"
               >
-                <div className={`w-12 h-12 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center mb-4 text-white text-lg group-hover:scale-110 transition-transform`}>
+                <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-4 text-brand-500 text-lg group-hover:bg-brand-500/20 transition-colors">
                   {post.image}
                 </div>
-                <span className="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                <span className="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-2">
                   {post.category}
                 </span>
-                <h2 className="text-white font-semibold text-base mb-2 group-hover:text-brand-400 transition-colors leading-snug">
+                <h2 className="text-navy-900 font-semibold text-base mb-2 group-hover:text-brand-500 transition-colors leading-snug">
                   {post.title}
                 </h2>
-                <p className="text-deep-400 text-xs leading-relaxed flex-1">
+                <p className="text-navy-400 text-xs leading-relaxed flex-1">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
-                  <span className="text-deep-500 text-xs">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
-                  <span className="text-brand-400 text-xs font-medium group-hover:mr-0 -mr-2 transition-all">
+                <div className="flex items-center justify-between mt-4 pt-3 border-t border-deep-200">
+                  <span className="text-navy-400 text-xs">
+                    {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  </span>
+                  <span className="text-brand-500 text-xs font-medium group-hover:mr-0 -mr-2 transition-all">
                     Read more →
                   </span>
                 </div>
@@ -96,22 +99,18 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* SEO Content Section */}
-      <section className="pb-20">
+      <section className="section bg-white">
         <div className="container-wide max-w-3xl">
           <div className="card p-8">
-            <h2 className="text-xl font-bold text-white mb-4">Why Office Blinds Matter in Dubai</h2>
-            <div className="text-deep-400 text-sm leading-relaxed space-y-3">
+            <h2 className="text-xl font-bold text-navy-900 mb-4">Why Curtains & Blinds Matter in the UAE</h2>
+            <div className="text-navy-500 text-sm leading-relaxed space-y-3">
               <p>
-                Dubai&apos;s unique climate — with intense sun, high temperatures, and a need for privacy
-                in commercial settings — makes the right window treatment essential for any office.
-                Whether you&apos;re outfitting a new space in DIFC, upgrading your Dubai Marina office,
-                or fitting out a Business Bay tower, the right blinds can transform your workplace.
+                The UAE&apos;s unique climate — with intense sun, high temperatures, and a need for privacy
+                in both residential and commercial settings — makes the right window treatment essential.
               </p>
               <p>
-                From cost-effective <Link href="/products/roller-blinds" className="text-brand-400 hover:underline">roller blinds</Link> to premium <Link href="/products/smart-blinds" className="text-brand-400 hover:underline">smart motorized systems</Link>,
-                ShadeMakers offers tailored solutions for every commercial project.
-                Our team handles everything from consultation and measurement to professional
+                From Abu Dhabi villas to Dubai offices, Curtain Makers offers tailored solutions for every
+                requirement. Our team handles everything from consultation and measurement to professional
                 installation and aftercare.
               </p>
             </div>

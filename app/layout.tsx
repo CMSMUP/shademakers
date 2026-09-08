@@ -19,44 +19,42 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ShadeMakers | Commercial Office Blinds Dubai",
-    template: "%s | ShadeMakers",
+    default: "Curtain Makers | Premium Curtains & Blinds — Abu Dhabi & Dubai",
+    template: "%s | Curtain Makers",
   },
   description:
-    "Dubai's commercial blinds specialist for offices, towers & fit-out projects. Custom roller, venetian, smart motorized blinds with expert installation. Free project quote & site survey.",
+    "Abu Dhabi's premier curtain and blinds specialist. Premium custom curtains, roller blinds, motorized blinds & expert installation for villas, hotels, offices & commercial projects across Abu Dhabi and Dubai.",
   keywords: [
+    "curtains Abu Dhabi",
+    "blinds Abu Dhabi",
     "office blinds Dubai",
-    "commercial blinds Dubai",
-    "project blinds Dubai",
-    "roller blinds Dubai",
-    "venetian blinds Dubai",
-    "smart blinds Dubai",
-    "motorized blinds Dubai",
-    "office window treatments Dubai",
-    "blinds installation Dubai",
-    "fit out blinds UAE",
+    "curtain makers Abu Dhabi",
+    "curtain shop Abu Dhabi",
+    "villa curtains Abu Dhabi",
+    "motorized curtains",
+    "blackout curtains",
   ],
   openGraph: {
-    title: "ShadeMakers | Commercial Office Blinds Dubai",
+    title: "Curtain Makers | Premium Curtains & Blinds",
     description:
-      "Commercial blinds for offices & projects in Dubai. Roller, Venetian, Smart, and more. Free quote & installation.",
-    url: "https://shademakers.ae",
-    siteName: "ShadeMakers",
+      "Abu Dhabi's premier curtain and blinds specialist. Custom curtains, roller blinds & motorized blinds for villas, hotels & offices.",
+    url: "https://curtainmakers.ae",
+    siteName: "Curtain Makers",
     locale: "en_AE",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ShadeMakers | Commercial Office Blinds Dubai",
+    title: "Curtain Makers | Premium Curtains & Blinds",
     description:
-      "Commercial blinds for offices & projects in Dubai. Free quote & installation.",
+      "Abu Dhabi's premier curtain and blinds specialist. Custom curtains & blinds for villas, hotels & commercial projects.",
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://shademakers.ae",
+    canonical: "https://curtainmakers.ae",
   },
 };
 
@@ -79,25 +77,25 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "ShadeMakers",
+              name: "Curtain Makers",
               description:
-                "Commercial blinds specialist for offices & projects in Dubai, UAE",
-              url: "https://shademakers.ae",
-              telephone: "+971****4567",
-              email: "info@shademakers.ae",
-              areaServed: "Dubai, UAE",
+                "Premium curtain and blinds specialist in Abu Dhabi and Dubai, UAE",
+              url: "https://curtainmakers.ae",
+              telephone: "+971****5678",
+              email: "info@curtainmakers.ae",
+              areaServed: ["Abu Dhabi", "Dubai", "UAE"],
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Dubai",
+                addressLocality: "Abu Dhabi",
                 addressCountry: "AE",
               },
               offers: [
+                { "@type": "Offer", name: "Custom Curtains" },
                 { "@type": "Offer", name: "Roller Blinds" },
+                { "@type": "Offer", name: "Motorized Blinds" },
                 { "@type": "Offer", name: "Venetian Blinds" },
                 { "@type": "Offer", name: "Smart Motorized Blinds" },
                 { "@type": "Offer", name: "Zebra Blinds" },
-                { "@type": "Offer", name: "Vertical Blinds" },
-                { "@type": "Offer", name: "Roman Blinds" },
               ],
             }),
           }}

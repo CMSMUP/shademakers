@@ -6,24 +6,26 @@ import { useState } from 'react';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/estimate', label: 'Get a Quote' },
+  { href: '/products', label: 'Curtains' },
+  { href: '/dubai/office-blinds', label: 'Office Blinds' },
+  { href: '/portfolio', label: 'Portfolio' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
 const PRODUCT_MEGA = [
+  { href: '/products', label: 'All Curtains', desc: 'Custom curtains for villas & hotels' },
+  { href: '/dubai/office-blinds', label: 'Office Blinds Dubai', desc: 'Commercial blinds for offices' },
   { href: '/products/roller-blinds', label: 'Roller Blinds', desc: 'Blackout, Sunscreen, Translucent' },
-  { href: '/products/roman-blinds', label: 'Roman Blinds', desc: 'Blackout, Sunscreen, Soft Fabrics' },
-  { href: '/products/wooden-venetian-blinds', label: 'Wooden Venetian', desc: '50mm & 25mm, Wood & Faux' },
-  { href: '/products/vertical-blinds', label: 'Vertical Blinds', desc: 'Blackout, Sunscreen, Translucent' },
-  { href: '/products/aluminium-venetian-blinds', label: 'Aluminium Venetian', desc: '50mm, 25mm, Perforated' },
-  { href: '/products/zebra-blinds', label: 'Zebra Blinds', desc: 'Day & Night, Translucent, Blackout' },
-  { href: '/products/smart-blinds', label: 'Smart / Motorized', desc: 'Automated, App Control, Voice' },
-  { href: '/products/pleated-blinds', label: 'Pleated Blinds', desc: 'Translucent, Blackout, Thermal' },
-  { href: '/products/panel-blinds', label: 'Panel Blinds', desc: 'Modern Sliding Panels' },
-  { href: '/products/skylight-blinds', label: 'Skylight Blinds', desc: 'Specialist Roof Solutions' },
-  { href: '/products/flyscreen-blinds', label: 'Flyscreen Blinds', desc: 'Insect Screens' },
+  { href: '/products/wooden-venetian-blinds', label: 'Wooden Venetian', desc: 'Real & faux wood' },
+  { href: '/products/vertical-blinds', label: 'Vertical Blinds', desc: 'For large windows' },
+  { href: '/products/smart-blinds', label: 'Smart Motorized', desc: 'App & voice controlled' },
+  { href: '/products/zebra-blinds', label: 'Zebra Blinds', desc: 'Day & Night' },
+  { href: '/products/roman-blinds', label: 'Roman Blinds', desc: 'Elegant fabric folds' },
+  { href: '/products/aluminium-venetian-blinds', label: 'Aluminium Venetian', desc: 'Slim modern slats' },
+  { href: '/products/pleated-blinds', label: 'Pleated Blinds', desc: 'Energy efficient' },
+  { href: '/products/panel-blinds', label: 'Panel Blinds', desc: 'Modern sliding panels' },
+  { href: '/products/skylight-blinds', label: 'Skylight Blinds', desc: 'For roof windows' },
 ];
 
 export default function Header() {
@@ -31,25 +33,25 @@ export default function Header() {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-deep-50 border-b border-deep-200">
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
               src="/logo.svg"
-              alt="ShadeMakers — Commercial Office Blinds Dubai"
+              alt="Curtain Makers — Premium Curtains & Blinds"
               width={170}
               height={42}
               priority
-              className="h-9 md:h-10 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-9 md:h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link) => {
-              if (link.label === 'Products') {
+              if (link.label === 'Curtains' || link.label === 'Office Blinds') {
                 return (
                   <div
                     key={link.label}
@@ -57,21 +59,24 @@ export default function Header() {
                     onMouseEnter={() => setProductsOpen(true)}
                     onMouseLeave={() => setProductsOpen(false)}
                   >
-                    <button className="px-4 py-2 rounded-lg text-sm font-medium text-deep-200 hover:text-white hover:bg-white/5 transition-all">
-                      Products ▾
-                    </button>
+                    <Link
+                      href={link.href}
+                      className="px-4 py-2 rounded-lg text-sm font-medium text-navy-700 hover:text-navy-900 hover:bg-deep-200/50 transition-all"
+                    >
+                      {link.label} ▾
+                    </Link>
                     {productsOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-[600px] p-4 rounded-2xl glass border border-white/10 grid grid-cols-2 gap-2 shadow-2xl">
+                      <div className="absolute top-full left-0 mt-1 w-[640px] p-4 rounded-2xl bg-white border border-deep-200 grid grid-cols-2 gap-1 shadow-xl">
                         {PRODUCT_MEGA.map((p) => (
                           <Link
                             key={p.href}
                             href={p.href}
-                            className="block p-3 rounded-xl hover:bg-white/5 transition-all group"
+                            className="block p-3 rounded-xl hover:bg-deep-50 transition-all group"
                           >
-                            <span className="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">
+                            <span className="text-sm font-semibold text-navy-900 group-hover:text-brand-500 transition-colors">
                               {p.label}
                             </span>
-                            <span className="text-xs text-deep-400 block mt-0.5">{p.desc}</span>
+                            <span className="text-xs text-navy-400 block mt-0.5">{p.desc}</span>
                           </Link>
                         ))}
                       </div>
@@ -83,7 +88,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-4 py-2 rounded-lg text-sm font-medium text-deep-200 hover:text-white hover:bg-white/5 transition-all"
+                  className="px-4 py-2 rounded-lg text-sm font-medium text-navy-700 hover:text-navy-900 hover:bg-deep-200/50 transition-all"
                 >
                   {link.label}
                 </Link>
@@ -95,23 +100,22 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/estimate"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold text-sm hover:translate-y-[-2px] transition-all"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-500 text-navy-900 font-semibold text-sm hover:bg-brand-600 transition-all"
             >
-              Free Quote
+              Get a Quote
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
             <Link
               href="/auth"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-deep-200 hover:text-white hover:bg-white/5 transition-all border border-white/10"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-navy-700 hover:text-navy-900 border border-deep-200 hover:bg-deep-200/50 transition-all"
             >
-              Login
+              Sign In
             </Link>
-            {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-lg text-deep-200 hover:text-white hover:bg-white/5"
+              className="lg:hidden p-2 rounded-lg text-navy-700 hover:text-navy-900 hover:bg-deep-200/50"
               aria-label="Menu"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -128,42 +132,44 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-white/5 glass">
-          <div className="container-wide py-4 space-y-2">
+        <div className="lg:hidden border-t border-deep-200 bg-deep-50">
+          <div className="container-wide py-4 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="block px-4 py-3 rounded-xl text-sm font-medium text-deep-200 hover:text-white hover:bg-white/5 transition-all"
+                className="block px-4 py-3 rounded-lg text-sm font-medium text-navy-700 hover:text-navy-900 hover:bg-deep-200/50 transition-all"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            {PRODUCT_MEGA.map((p) => (
-              <Link
-                key={p.href}
-                href={p.href}
-                className="block px-4 py-2.5 rounded-xl text-sm text-deep-300 hover:text-white hover:bg-white/5 transition-all pl-8"
-                onClick={() => setMobileOpen(false)}
-              >
-                {p.label}
-              </Link>
-            ))}
-            <div className="pt-3 flex gap-3">
+            <div className="border-t border-deep-200 pt-3 mt-3 space-y-1">
+              {PRODUCT_MEGA.map((p) => (
+                <Link
+                  key={p.href}
+                  href={p.href}
+                  className="block px-4 py-2.5 rounded-lg text-sm text-navy-500 hover:text-navy-900 hover:bg-deep-200/50 transition-all pl-8"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {p.label}
+                </Link>
+              ))}
+            </div>
+            <div className="pt-4 flex gap-3">
               <Link
                 href="/estimate"
-                className="flex-1 text-center px-5 py-3 rounded-xl bg from-brand-600 to-brand-500 text-white font-semibold text-sm"
+                className="flex-1 text-center px-5 py-3 rounded-lg bg-brand-500 text-navy-900 font-semibold text-sm"
                 onClick={() => setMobileOpen(false)}
               >
-                Free Quote
+                Get a Quote
               </Link>
               <Link
                 href="/auth"
-                className="flex-1 text-center px-5 py-3 rounded-xl text-sm font-medium border border-white/10 text-deep-200"
+                className="flex-1 text-center px-5 py-3 rounded-lg text-sm font-medium border border-deep-200 text-navy-700"
                 onClick={() => setMobileOpen(false)}
               >
-                Login
+                Sign In
               </Link>
             </div>
           </div>

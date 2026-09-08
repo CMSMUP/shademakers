@@ -6,7 +6,7 @@
     </linearGradient>
     <linearGradient id="slatGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f09333"/>
-      <stop offset="100%" stop-color="#FDEB07"/>
+      <stop offset="100%" stop-color="#E5B43C"/>
     </linearGradient>
     <linearGradient id="fabricGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f5f5f5"/>
@@ -47,8 +47,8 @@
   <circle cx="665" cy="305" r="5" fill="none" stroke="#888" stroke-width="2"/>
   <!-- Light rays -->
   <g opacity="0.15">
-    <path d="M200 500 L240 100 L260 100 L220 500 Z" fill="#ffcc00"/>
-    <path d="M280 500 L320 100 L340 100 L300 500 Z" fill="#ffcc00"/>
+    <path d="M200 500 L240 100 L260 100 L220 500 Z" fill="#E5B43C"/>
+    <path d="M280 500 L320 100 L340 100 L300 500 Z" fill="#E5B43C"/>
   </g>
   <!-- Label -->
   <text x="400" y="560" text-anchor="middle" fill="#b0b0b0" font-family="Inter,sans-serif" font-size="20" font-weight="600">Roller Blinds</text>

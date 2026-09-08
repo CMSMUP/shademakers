@@ -9,7 +9,7 @@ import { getProductMainImage } from '@/src/data/product-images';
 
 /**
  * Inline hero quote calculator — gives instant pricing on the homepage.
- * Simple version: blind type + width + height + material → instant estimate.
+ * Light background, clean corporate look with warm yellow accent.
  */
 export default function HeroCalculator() {
   const [productSlug, setProductSlug] = useState('');
@@ -52,10 +52,10 @@ export default function HeroCalculator() {
   const mainImage = productSlug ? getProductMainImage(productSlug) : null;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg from-white/[0.04] to-white/[0.01] backdrop-blur-sm">
+    <div className="relative overflow-hidden rounded-3xl border border-deep-200 bg-white shadow-sm">
       <div className="grid grid-cols-1 lg:grid-cols-5">
         {/* Left: Product Preview */}
-        <div className="lg:col-span-2 relative min-h-[280px] lg:min-h-[400px] bg-white/[0.02] overflow-hidden">
+        <div className="lg:col-span-2 relative min-h-[280px] lg:min-h-[400px] bg-deep-50 overflow-hidden">
           {mainImage ? (
             <OptimizedProductImage
               src={mainImage.src}
@@ -66,24 +66,24 @@ export default function HeroCalculator() {
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-deep-500">
-                <svg className="w-16 h-16 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+              <div className="text-center text-deep-400">
+                <svg className="w-16 h-16 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
                 </svg>
-                <span className="text-xs">Select a blind type</span>
+                <span className="text-xs font-medium text-navy-400">Select a blind type</span>
               </div>
             </div>
           )}
           {/* Price badge overlay */}
           {estimate && (
-            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl glass border border-brand-500/20">
+            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white border border-brand-500/30 shadow-sm">
               <div className="flex items-baseline justify-between">
-                <span className="text-deep-400 text-xs">Estimated price</span>
-                <span className="text-brand-400 font-bold text-lg">
+                <span className="text-navy-400 text-xs font-medium">Estimated price</span>
+                <span className="text-brand-500 font-bold text-lg">
                   {formatAED(estimate.total)}
                 </span>
               </div>
-              <div className="text-deep-500 text-[10px] mt-1">
+              <div className="text-navy-400 text-[10px] mt-1">
                 {estimate.area_sqm.toFixed(2)} m² × AED {Math.round(estimate.pricePerSqm)}/m² × {quantity} unit(s) + 5% VAT
               </div>
             </div>
@@ -93,16 +93,16 @@ export default function HeroCalculator() {
         {/* Right: Calculator Form */}
         <div className="lg:col-span-3 p-6 sm:p-8">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-deep-300 text-xs font-medium uppercase tracking-wider">
+            <div className="w-2 h-2 rounded-full bg-brand-500" />
+            <span className="text-navy-600 text-xs font-medium uppercase tracking-wider">
               Instant Price Calculator
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-2">
             Calculate Your Price
           </h2>
-          <p className="text-deep-400 text-sm mb-6">
+          <p className="text-navy-500 text-sm mb-6">
             Select your blind type and enter dimensions for an instant estimate. Free site visit included.
           </p>
 
@@ -128,7 +128,7 @@ export default function HeroCalculator() {
             <div>
               <label className="label">
                 Width (cm)
-                <span className="text-deep-500 font-normal ml-1">50–300</span>
+                <span className="text-navy-400 font-normal ml-1">50–300</span>
               </label>
               <div className="relative">
                 <input
@@ -139,7 +139,7 @@ export default function HeroCalculator() {
                   onChange={e => setWidth(Math.min(300, Math.max(50, +e.target.value || 50)))}
                   className="input-field !pr-20"
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-deep-500 text-xs">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-navy-400 text-xs">
                   {(width / 100).toFixed(2)}m
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function HeroCalculator() {
             <div>
               <label className="label">
                 Height (cm)
-                <span className="text-deep-500 font-normal ml-1">50–300</span>
+                <span className="text-navy-400 font-normal ml-1">50–300</span>
               </label>
               <div className="relative">
                 <input
@@ -160,7 +160,7 @@ export default function HeroCalculator() {
                   onChange={e => setHeight(Math.min(300, Math.max(50, +e.target.value || 50)))}
                   className="input-field !pr-20"
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-deep-500 text-xs">
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-navy-400 text-xs">
                   {(height / 100).toFixed(2)}m
                 </span>
               </div>
@@ -202,31 +202,31 @@ export default function HeroCalculator() {
 
           {/* Price Breakdown */}
           {estimate && (
-            <div className="mt-6 p-4 rounded-2xl bg-brand-500/10 border border-brand-500/10">
+            <div className="mt-6 p-4 rounded-2xl bg-brand-50 border border-brand-100">
               <div className="grid grid-cols-2 gap-y-2 text-sm">
-                <span className="text-deep-300">Area</span>
-                <span className="text-white text-right">{estimate.area_sqm.toFixed(2)} m²</span>
+                <span className="text-navy-500">Area</span>
+                <span className="text-navy-900 text-right font-medium">{estimate.area_sqm.toFixed(2)} m²</span>
 
-                <span className="text-deep-300">Rate</span>
-                <span className="text-white text-right">{formatAED(estimate.pricePerSqm)}/m²</span>
+                <span className="text-navy-500">Rate</span>
+                <span className="text-navy-900 text-right font-medium">{formatAED(estimate.pricePerSqm)}/m²</span>
 
-                <span className="text-deep-300">Material</span>
-                <span className="text-white text-right">{estimate.modelName}</span>
+                <span className="text-navy-500">Material</span>
+                <span className="text-navy-900 text-right font-medium">{estimate.modelName}</span>
 
-                <span className="text-deep-300">Subtotal</span>
-                <span className="text-white text-right">{formatAED(estimate.subtotal)}</span>
+                <span className="text-navy-500">Subtotal</span>
+                <span className="text-navy-900 text-right font-medium">{formatAED(estimate.subtotal)}</span>
 
-                <span className="text-deep-300">VAT (5%)</span>
-                <span className="text-white text-right">{formatAED(estimate.vat)}</span>
+                <span className="text-navy-500">VAT (5%)</span>
+                <span className="text-navy-900 text-right font-medium">{formatAED(estimate.vat)}</span>
 
-                <div className="col-span-2 border-t border-white/10 my-1" />
+                <div className="col-span-2 border-t border-deep-200 my-1" />
 
-                <span className="text-white font-bold">Estimated Total</span>
-                <span className="text-brand-400 font-bold text-right text-lg">{formatAED(estimate.total)}</span>
+                <span className="text-navy-900 font-bold">Estimated Total</span>
+                <span className="text-brand-500 font-bold text-right text-lg">{formatAED(estimate.total)}</span>
               </div>
 
-              <div className="mt-3 p-2 rounded-lg bg-amber-500/10 border border-amber-500/10">
-                <p className="text-amber-400/80 text-xs flex items-center gap-1.5">
+              <div className="mt-3 p-2 rounded-lg bg-brand-50 border border-brand-100">
+                <p className="text-brand-700 text-xs flex items-center gap-1.5">
                   <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -240,7 +240,7 @@ export default function HeroCalculator() {
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
               href={productSlug ? `/estimate?product=${productSlug}&w=${width}&h=${height}` : '/estimate'}
-              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 text-navy-950 font-bold text-sm hover:bg-brand-600 transition-all"
+              className="btn-primary flex-1 text-sm"
             >
               Get Detailed Quote
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -250,7 +250,7 @@ export default function HeroCalculator() {
             {productSlug && (
               <Link
                 href={`/products/${productSlug}`}
-                className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl glass text-deep-200 font-semibold text-sm hover:bg-white/10 transition-all"
+                className="btn-secondary flex-1 text-sm"
               >
                 View Product Details
               </Link>

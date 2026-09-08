@@ -7,7 +7,7 @@ const BLOG_POSTS = {
     title: 'How to Choose the Perfect Office Blinds in Dubai',
     date: '2026-07-20',
     category: 'Guide',
-    author: 'ShadeMakers Team',
+    author: 'Curtain Makers Team',
     readTime: '6 min read',
     metaDesc: 'A comprehensive guide to selecting the right commercial blinds for your Dubai office. Compare roller, venetian, smart, and zebra blinds for your workspace.',
     content: `Choosing the right blinds for your office in Dubai is about more than just aesthetics — it's about functionality, energy efficiency, and creating the right environment for your team.
@@ -68,7 +68,7 @@ Roller and vertical blinds are easiest to maintain. Venetian blinds may require 
 ### Budget
 Our online calculator gives you an instant estimate. Remember to factor in 5% UAE VAT.
 
-## The ShadeMakers Process
+## The Curtain Makers Process
 
 1. **Free online quote** — Use our calculator for an instant estimate
 2. **Free site visit** — Our team measures and recommends
@@ -82,7 +82,7 @@ Ready to get started? [Get your free quote](/estimate) today.`,
     title: '5 Benefits of Smart Motorized Blinds for Dubai Offices',
     date: '2026-07-15',
     category: 'Smart Blinds',
-    author: 'ShadeMakers Team',
+    author: 'Curtain Makers Team',
     readTime: '5 min read',
     metaDesc: 'Discover why smart motorized blinds are transforming Dubai offices. Learn about energy savings, automation, and how they improve workplace productivity.',
     content: `Smart motorized blinds are rapidly becoming the standard for modern offices in Dubai. Here's why forward-thinking businesses are making the switch.
@@ -119,7 +119,7 @@ Our smart blinds integrate with building management systems, occupancy sensors, 
     title: 'Roller Blinds vs Venetian Blinds: Which Is Best for Your Office?',
     date: '2026-07-10',
     category: 'Comparison',
-    author: 'ShadeMakers Team',
+    author: 'Curtain Makers Team',
     readTime: '4 min read',
     metaDesc: 'Compare roller blinds and venetian blinds for Dubai offices. We break down the pros, cons, pricing, and best use cases for each option.',
     content: `Two of the most popular choices for Dubai offices are roller blinds and venetian blinds. But which one is right for your space?
@@ -179,7 +179,7 @@ Need help deciding? [Get a free consultation](/contact) — our team will visit 
     title: 'Dubai Building Regulations for Office Window Coverings',
     date: '2026-07-05',
     category: 'Guide',
-    author: 'ShadeMakers Team',
+    author: 'Curtain Makers Team',
     readTime: '5 min read',
     metaDesc: 'Learn about Dubai building codes and safety regulations for commercial window coverings. Fire safety compliance, child safety standards, and more.',
     content: `When outfitting an office in Dubai, it's essential to understand the local building regulations that apply to window coverings. Here's what you need to know.
@@ -202,7 +202,7 @@ Dubai Municipality's building codes specify:
 
 ## Our Compliance Guarantee
 
-All ShadeMakers products are:
+All Curtain Makers products are:
 - ✅ Fire-retardant certified (UAE Civil Defense compliant)
 - ✅ Child-safe options available
 - ✅ Professionally installed to building code standards
@@ -214,11 +214,77 @@ We regularly work with major Dubai developers including Emaar, Nakheel, and Duba
 
 For specific compliance questions about your project, [contact our team](/contact).`,
   },
+  'curtain-fabric-guide-abu-dhabi': {
+    title: 'Choosing Curtain Fabrics for the UAE Climate',
+    date: '2026-07-01',
+    category: 'Guide',
+    author: 'Curtain Makers Team',
+    readTime: '5 min read',
+    metaDesc: 'Learn about the best curtain fabrics for Abu Dhabi and Dubai. From light-filtering sheers to thermal blackout linings, find the perfect fabric for your home or office.',
+    content: `Choosing the right curtain fabric in Abu Dhabi and Dubai is about balancing aesthetics with the realities of the UAE climate. Here's everything you need to know.
+
+## Understanding the UAE Climate Challenge
+
+With summer temperatures exceeding 45°C, intense UV radiation, and year-round sunshine, curtain fabrics in the UAE need to perform. The right fabric can reduce cooling costs, protect your furniture from fading, and create a comfortable indoor environment.
+
+## Fabric Types for the UAE
+
+### Sheer Fabrics
+Lightweight and translucent, sheers allow natural light while providing daytime privacy. Best for living rooms and spaces where you want to maintain a connection to the outdoors.
+
+**Best for**: Living rooms, reception areas, layering under heavier curtains
+**Light control**: 20-40% blockout
+**Thermal**: Low
+
+### Lining Fabrics
+Essential for UAE homes. A good lining extends curtain life, blocks light, and adds insulation.
+
+- **Standard lining**: Basic light protection, moderate thermal benefits
+- **Blackout lining**: Complete darkness, excellent for bedrooms and media rooms
+- **Thermal lining**: Maximum insulation, reduces cooling costs by up to 25%
+
+### Velvet & Heavy Drapes
+Luxurious and substantial, velvet curtains provide excellent insulation and a premium feel. Perfect for executive offices and formal living spaces.
+
+**Best for**: Executive offices, formal dining rooms, luxury villas
+**Light control**: 90-100% with blackout lining
+**Thermal**: Excellent
+
+### Cotton & Linen Blends
+Natural fabrics that breathe well and offer a relaxed, elegant look. Linen blends are popular for their texture and durability.
+
+**Best for**: Casual living spaces, coastal homes (Al Raha, Saadiyat)
+**Light control**: 50-70%
+**Thermal**: Moderate
+
+## Fabric Selection Guide by Room
+
+| Room | Recommended Fabric | Lining |
+|------|-------------------|--------|
+| Living Room | Sheer + Drape combo | Light-filtering |
+| Master Bedroom | Velvet or Heavy Drape | Blackout |
+| Guest Room | Cotton/Linen blend | Standard |
+| Home Office | Roller blind + Curtain | Sunscreen |
+| Kids Room | Cotton blend | Blackout |
+
+## Care & Maintenance in the UAE
+
+- **Dust accumulation**: Abu Dhabi's dusty environment means curtains should be vacuumed monthly
+- **Dry cleaning**: Professional clean every 6-12 months
+- **Sun damage**: Rotate curtains seasonally to prevent uneven fading
+- **Humidity**: Avoid pure cotton in bathrooms; opt for polyester blends
+
+## Why Choose Curtain Makers?
+
+We offer over 200 fabric samples from leading global suppliers. Our design consultants help you select the perfect fabric for your specific needs and budget. Every order is made-to-measure and professionally installed.
+
+[Browse our curtain collection](/products) or [book a free consultation](/contact) to see fabric samples in person.`,
+  },
   'energy-saving-blinds-dubai': {
     title: 'How Energy-Efficient Blinds Can Reduce Your Office Cooling Costs',
     date: '2026-06-28',
     category: 'Tips',
-    author: 'ShadeMakers Team',
+    author: 'Curtain Makers Team',
     readTime: '4 min read',
     metaDesc: 'Learn how the right office blinds can reduce your energy bills in Dubai. Smart blinds, thermal fabrics, and positioning strategies for maximum savings.',
     content: `In Dubai, air conditioning accounts for up to 70% of a commercial building's electricity bill. The right window coverings can significantly reduce this cost.
@@ -276,7 +342,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: 'Post Not Found' };
 
   return {
-    title: `${post.title} | ShadeMakers Blog`,
+    title: `${post.title} | Curtain Makers Blog`,
     description: post.metaDesc,
     openGraph: {
       title: post.title,
@@ -285,7 +351,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
     },
     alternates: {
-      canonical: `https://officeblindsdubai.com/blog/${params.slug}`,
+      canonical: `https://curtainmakers.ae/blog/${params.slug}`,
     },
   };
 }
@@ -363,7 +429,7 @@ export default function BlogPostPage({ params }: Props) {
           {/* Share + CTA */}
           <div className="mt-12 p-8 rounded-2xl card text-center">
             <h3 className="text-xl font-bold text-white mb-3">Ready for Your Free Quote?</h3>
-            <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Dubai office — takes 2 minutes.</p>
+            <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Abu Dhabi or Dubai project — takes 2 minutes.</p>
             <Link
               href="/estimate"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-bold hover:translate-y-[-2px] transition-all"

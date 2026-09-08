@@ -8,5 +8,11 @@ export const AREAS = [
   { slug: 'deira', name: 'Deira', desc: 'traditional business district offices in Deira' },
   { slug: 'al-barsha', name: 'Al Barsha', desc: 'commercial spaces in Al Barsha' },
   { slug: 'sharjah', name: 'Sharjah', desc: 'business offices in Sharjah' },
-  { slug: 'abu-dhabi', name: 'Abu Dhabi', desc: 'commercial blinds for offices in Abu Dhabi' },
+  { slug: 'abu-dhabi', name: 'Abu Dhabi', desc: 'premier curtains and blinds for properties across Abu Dhabi' },
+  { slug: 'al-reem-island', name: 'Al Reem Island', desc: 'luxury apartments and offices on Al Reem Island in Abu Dhabi' },
+  { slug: 'al-rah-beach', name: 'Al Raha Beach', desc: 'waterfront residences and commercial spaces at Al Raha Beach, Abu Dhabi' },
+  { slug: 'saadiyat-island', name: 'Saadiyat Island', desc: 'prestigious cultural and residential district of Saadiyat Island, Abu Dhabi' },
+  { slug: 'yas-island', name: 'Yas Island', desc: 'vibrant entertainment district and residential community on Yas Island, Abu Dhabi' },
+  { slug: 'khalifa-city', name: 'Khalifa City', desc: 'family-friendly residential community of Khalifa City, Abu Dhabi' },
+  { slug: 'mohammed-bin-zayed-city', name: 'Mohammed Bin Zayed City', desc: 'growing residential community of Mohammed Bin Zayed City, Abu Dhabi' },
 ];

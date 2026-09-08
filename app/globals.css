@@ -1,63 +1,64 @@
 @import "tailwindcss";
 
 /* ============================================================
-   ShadeMakers — Design System
-   Electric Yellow (#FDEB07) on Dark Slate (#121714)
-   Flat colors — no gradients
+   CurtainMakers — Design System
+   Corporate • Premium • Professional
+   Warm Yellow Accent on Warm Off-White + Graphite
    ============================================================ */
 
 @theme inline {
-  /* Brand Colors — Electric Yellow */
-  --color-brand-50: #fffee6;
-  --color-brand-100: #fffcc2;
-  --color-brand-200: #fef780;
-  --color-brand-300: #fef06a;
-  --color-brand-400: #fdee3a;
-  --color-brand-500: #FDEB07;
-  --color-brand-600: #e0c800;
-  --color-brand-700: #c0a800;
-  --color-brand-800: #9a8900;
-  --color-brand-900: #7a6d00;
-  --color-brand-950: #423a00;
+  /* BRAND — Warm Yellow (signature accent, MAX 8%) */
+  --color-brand-50: #fdf8ec;
+  --color-brand-100: #f9edc9;
+  --color-brand-200: #f3d990;
+  --color-brand-300: #edc55c;
+  --color-brand-400: #e7b344;
+  --color-brand-500: #E5B43C;
+  --color-brand-600: #D4A531;
+  --color-brand-700: #b88b28;
+  --color-brand-800: #936e20;
+  --color-brand-900: #6f5118;
+  --color-brand-950: #3d2a0b;
 
-  /* Dark Slate Background */
-  --color-navy-50: #f3f6f5;
-  --color-navy-100: #e0e7e3;
-  --color-navy-200: #c1cec7;
-  --color-navy-300: #9aaea4;
-  --color-navy-400: #748d81;
-  --color-navy-500: #5a7266;
-  --color-navy-600: #475a50;
-  --color-navy-700: #3a4942;
-  --color-navy-800: #28312B;
-  --color-navy-900: #1A211D;
-  --color-navy-950: #121714;
+  /* GRAPHITE — Main corporate dark (replaces pure black #000) */
+  --color-navy-50: #f0f1f1;
+  --color-navy-100: #d5d7d8;
+  --color-navy-200: #b0b3b5;
+  --color-navy-300: #85898d;
+  --color-navy-400: #5f6468;
+  --color-navy-500: #454b4d;
+  --color-navy-600: #3a4042;
+  --color-navy-700: #303638;
+  --color-navy-800: #262b2d;
+  --color-navy-850: #212628;
+  --color-navy-900: #1D2224;
+  --color-navy-950: #151a1b;
 
-  /* Surface & Text Colors */
-  --color-deep-50: #FFFFFF;
-  --color-deep-100: #F5F5F5;
-  --color-deep-200: #E0E0E0;
-  --color-deep-300: #A1A8A3;
-  --color-deep-400: #A1A8A3;
-  --color-deep-500: #7A827C;
-  --color-deep-600: #5A625C;
-  --color-deep-700: #3A423C;
-  --color-deep-800: #2A322C;
-  --color-deep-900: #1A211D;
-  --color-deep-950: #121714;
+  /* WARM OFF-WHITE — Main background (50% of page) */
+  --color-deep-50: #F5F3ED;
+  --color-deep-100: #eeebe4;
+  --color-deep-200: #E7E4DC;
+  --color-deep-300: #d4d1c9;
+  --color-deep-400: #b0ada5;
+  --color-deep-500: #8c8982;
+  --color-deep-600: #6b6863;
+  --color-deep-700: #54524e;
+  --color-deep-800: #3d3b39;
+  --color-deep-900: #262523;
+  --color-deep-950: #151413;
 
-  /* Gold Accent — kept minimal */
-  --color-gold-50: #fffee6;
-  --color-gold-100: #fffcc2;
-  --color-gold-200: #fef780;
-  --color-gold-300: #fef06a;
-  --color-gold-400: #fdee3a;
-  --color-gold-500: #FDEB07;
-  --color-gold-600: #e0c800;
-  --color-gold-700: #c0a800;
-  --color-gold-800: #9a8900;
-  --color-gold-900: #7a6d00;
-  --color-gold-950: #423a00;
+  /* Gold — maps to warm yellow */
+  --color-gold-50: #fdf8ec;
+  --color-gold-100: #f9edc9;
+  --color-gold-200: #f3d990;
+  --color-gold-300: #edc55c;
+  --color-gold-400: #e7b344;
+  --color-gold-500: #E5B43C;
+  --color-gold-600: #d4a531;
+  --color-gold-700: #b88b28;
+  --color-gold-800: #936e20;
+  --color-gold-900: #6f5118;
+  --color-gold-950: #3d2a0b;
 
   /* Fonts */
   --font-sans: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
@@ -65,72 +66,111 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* Base Styles */
+/* ============================================================
+   Base Styles
+   ============================================================ */
 body {
-  background: var(--color-navy-950);
-  color: var(--color-deep-50);
+  background: var(--color-deep-50);
+  color: var(--color-navy-500);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scrollbar Styling */
+/* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--color-navy-950); }
-::-webkit-scrollbar-thumb { background: var(--color-navy-700); border-radius: 4px; }
+::-webkit-scrollbar-track { background: var(--color-deep-50); }
+::-webkit-scrollbar-thumb { background: var(--color-navy-300); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-brand-500); }
 
 /* Selection */
 ::selection { background: var(--color-brand-500); color: var(--color-navy-950); }
 
-/* Animations */
+/* ============================================================
+   Animations
+   ============================================================ */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(253, 235, 7, 0.15); }
-  50% { box-shadow: 0 0 40px rgba(253, 235, 7, 0.3); }
+  0%, 100% { box-shadow: 0 0 12px rgba(229, 180, 60, 0.15); }
+  50% { box-shadow: 0 0 24px rgba(229, 180, 60, 0.3); }
 }
-
 .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
 .animate-fade-in-up-delay-1 { animation: fadeInUp 0.6s ease-out 0.1s forwards; opacity: 0; }
 .animate-fade-in-up-delay-2 { animation: fadeInUp 0.6s ease-out 0.2s forwards; opacity: 0; }
 .animate-fade-in-up-delay-3 { animation: fadeInUp 0.6s ease-out 0.3s forwards; opacity: 0; }
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-.animate-float { animation: float 3s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
-/* Glass Effect */
-.glass {
+/* ============================================================
+   Component Styles
+   ============================================================ */
+
+/* Primary CTA Button — Warm Yellow bg, dark text */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  background: var(--color-brand-500);
+  color: var(--color-navy-900);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--color-brand-600);
+}
+
+/* Secondary Button — Transparent, dark border */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--color-navy-900);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1.5px solid var(--color-navy-900);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-secondary:hover {
   background: var(--color-navy-900);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-navy-800);
+  color: white;
 }
 
 /* Card */
 .card {
-  border-radius: 12px;
-  background: var(--color-navy-900);
-  border: 1px solid var(--color-navy-800);
+  border-radius: 0.75rem;
+  background: white;
+  border: 1px solid var(--color-deep-200);
   transition: all 0.3s ease;
 }
 .card:hover {
-  border-color: rgba(253, 235, 7, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-brand-500);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+/* Card on dark background */
+.card-dark {
+  border-radius: 0.75rem;
+  background: var(--color-navy-700);
+  border: 1px solid var(--color-navy-800);
+  transition: all 0.3s ease;
+}
+.card-dark:hover {
+  border-color: var(--color-brand-500);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-4px);
 }
 
@@ -138,8 +178,8 @@ body {
 .container-wide {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   max-width: 1280px;
 }
 @media (min-width: 640px) {
@@ -151,38 +191,30 @@ body {
 
 /* Section */
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 @media (min-width: 768px) {
   .section { padding-top: 6rem; padding-bottom: 6rem; }
 }
 
-/* Grid background pattern */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
 /* Input */
 .input-field {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   outline: none;
   transition: all 0.2s;
-  background: var(--color-navy-900);
-  border: 1px solid var(--color-navy-800);
-  color: white;
+  background: white;
+  border: 1px solid var(--color-deep-200);
+  color: var(--color-navy-900);
 }
 .input-field:focus {
   border-color: var(--color-brand-500);
-  box-shadow: 0 0 0 3px rgba(253, 235, 7, 0.15);
+  box-shadow: 0 0 0 3px rgba(229, 180, 60, 0.12);
 }
-.input-field::placeholder { color: var(--color-deep-300); }
+.input-field::placeholder { color: var(--color-deep-400); }
 
 /* Label */
 .label {
@@ -190,5 +222,26 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 0.375rem;
-  color: var(--color-deep-200);
+  color: var(--color-navy-900);
+}
+
+/* Section label accent */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-500);
+  margin-bottom: 0.75rem;
+}
+
+/* Stats number — yellow on dark */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-brand-500);
+  line-height: 1;
 }
