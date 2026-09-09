@@ -30,6 +30,7 @@ export default function AdminCustomersPage() {
     setLoading(false);
   };
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchData(1, ''); }, []);
 
   const handleSearch = () => { setPage(1); fetchData(1, search); };

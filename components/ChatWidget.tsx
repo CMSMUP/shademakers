@@ -1,29 +1,34 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useAuth } from './AuthProvider';
+import { findFAQ, searchFAQs, getFAQsByCategory, FAQ_CATEGORIES } from '@/src/data/faq-knowledge-base';
 
-interface ChatMessage {
+interface Message {
   id: string;
-  role: 'user' | 'assistant' | 'admin';
+  role: 'user' | 'assistant';
   content: string;
-  created_at: string;
+  isCategory?: boolean;
+  isFAQ?: boolean;
+  categoryId?: string;
 }
+
+const GREETING = `Hi! 👋 Welcome to Curtain Makers.
+
+I can help you with:
+• **Pricing & Quotes** — curtain costs, free estimates, discounts
+• **Fabrics & Styles** — types, blackout vs sheer, what suits Abu Dhabi
+• **Ordering & Installation** — how to order, process, timing
+• **Services** — free design visits, areas we serve, commercial projects
+• **Blinds** — types, office solutions, motorized options
+
+Or just type your question below!`;
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      id: '0',
-      role: 'assistant',
-      content: 'Hi! 👋 Welcome to ShadeMakers. I can help with product info, project quotes, or connect you with our team. What can I help you with?',
-      created_at: new Date().toISOString(),
-    },
+  const [messages, setMessages] = useState<Message[]>([
+    { id: '0', role: 'assistant', content: GREETING },
   ]);
   const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [sessionId] = useState(() => Math.random().toString(36).slice(2, 10));
-  const { user } = useAuth();
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -34,65 +39,57 @@ export default function ChatWidget() {
     }
   }, [open, messages]);
 
-  const sendMessage = async () => {
-    if (!input.trim() || loading) return;
-
-    const userMsg: ChatMessage = {
-      id: `msg-${Date.now()}`,
-      role: 'user',
-      content: input.trim(),
-      created_at: new Date().toISOString(),
-    };
-
-    setMessages(prev => [...prev, userMsg]);
-    setInput('');
-    setLoading(true);
-
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: userMsg.content,
-          session_id: sessionId,
-          email: user?.email || null,
-        }),
-      });
-
-      const data = await res.json();
-      const reply: ChatMessage = {
-        id: `reply-${Date.now()}`,
-        role: data.escalated ? 'admin' : 'assistant',
-        content: data.reply || 'Let me connect you with a team member.',
-        created_at: new Date().toISOString(),
-      };
-
-      setMessages(prev => [...prev, reply]);
-    } catch {
-      setMessages(prev => [...prev, {
-        id: `err-${Date.now()}`,
-        role: 'assistant',
-        content: 'Sorry, I had trouble connecting. Please try again or contact us directly.',
-        created_at: new Date().toISOString(),
-      }]);
-    } finally {
-      setLoading(false);
-    }
+  const addMsg = (content: string, role: 'user' | 'assistant', extra?: Partial<Message>) => {
+    setMessages(prev => [...prev, { id: `msg-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`, role, content, ...extra }]);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
+  const handleCategoryClick = (catId: string) => {
+      const faqs = getFAQsByCategory(catId);
+      if (faqs.length === 0) {
+        addMsg(`I don't have specific answers for that category yet. Try asking a specific question!`, 'assistant');
+        return;
+      }
+      const cat = FAQ_CATEGORIES.find(c => c.id === catId);
+      const reply = `Here are common questions about **${cat?.label || catId}**:\n\n` +
+        faqs.slice(0, 5).map((f, i) => `${i + 1}. **${f.question}**\n   ${f.answer.split('.')[0]}.`).join('\n\n') +
+        `\n\nType your question for more details!`;
+      addMsg(reply, 'assistant');
+    };
+
+  const handleSend = () => {
+    if (!input.trim()) return;
+    const query = input.trim();
+    addMsg(query, 'user');
+    setInput('');
+
+    const faq = findFAQ(query);
+    if (faq) {
+      addMsg(faq.answer, 'assistant');
+    } else {
+      const searchResults = searchFAQs(query);
+      if (searchResults.length > 0) {
+        const reply = `I found ${searchResults.length} relevant answer${searchResults.length > 1 ? 's' : ''}:\n\n` +
+          searchResults.slice(0, 3).map((f, i) =>
+            `${i + 1}. **${f.question}**\n   ${f.answer.split('.')[0]}.`
+          ).join('\n\n') +
+          `\n\nCan you tell me more so I can give you the exact answer?`;
+        addMsg(reply, 'assistant');
+      } else {
+        addMsg(`I couldn't find an exact answer to your question. Here's what I suggest:\n\n` +
+          `1. **Book a Free Design Visit** — our experts will answer everything in person\n` +
+          `2. **Call us** Sat-Thu 9am-6pm\n` +
+          `3. **WhatsApp us** for quick help\n\n` +
+          `Or try rephrasing your question!`, 'assistant');
+      }
     }
   };
 
   return (
     <>
-      {/* Chat bubble button */}
+      {/* Chat bubble */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-brand-500 text-deep-950 shadow-xl hover:scale-105 transition-all animate-pulse-glow flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-brand-500 text-navy-950 shadow-xl hover:scale-105 transition-all animate-pulse-glow flex items-center justify-center"
         aria-label="Chat with us"
       >
         {open ? (
@@ -108,80 +105,80 @@ export default function ChatWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-10rem)] rounded-2xl glass border border-white/10 shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
+        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-10rem)] rounded-2xl bg-white border border-deep-200 shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
           {/* Header */}
-          <div className="p-4 border-b border-white/10 flex items-center gap-3 bg from-brand-600/20 to-navy-700/20">
-            <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-deep-950 font-bold text-sm">OB</div>
-            <div>
-              <p className="text-white text-sm font-semibold">ShadeMakers</p>
-              <p className="text-deep-400 text-xs">Online support</p>
+          <div className="p-4 border-b border-deep-200" style={{ backgroundColor: 'var(--color-navy-900)' }}>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-navy-950 font-bold text-sm">CM</div>
+              <div>
+                <p className="text-white text-sm font-semibold">Curtain Makers</p>
+                <p className="text-deep-300 text-xs">AI-powered support</p>
+              </div>
             </div>
-            {user && <span className="ml-auto text-xs text-green-400">●</span>}
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 scroll-smooth">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 scroll-smooth" style={{ backgroundColor: 'var(--color-deep-50)' }}>
             {messages.map(msg => (
-              <div
-                key={msg.id}
-                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-              >
-                <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
-                    msg.role === 'user'
-                      ? 'bg from-brand-600 to-brand-500 text-white rounded-br-md'
-                      : msg.role === 'admin'
-                      ? 'bg-amber-500/20 border border-amber-500/20 text-amber-200 rounded-bl-md'
-                      : 'bg-white/10 text-deep-200 rounded-bl-md'
-                  }`}
-                >
-                  {msg.content}
-                  <div className={`text-[10px] mt-1 ${msg.role === 'user' ? 'text-white/50' : 'text-deep-500'}`}>
-                    {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    {msg.role === 'admin' && <span className="ml-1 text-amber-400">· Team</span>}
+              <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`max-w-[88%] rounded-2xl px-4 py-2.5 text-sm ${
+                  msg.role === 'user'
+                    ? 'bg-brand-500 text-navy-950 rounded-br-md'
+                    : 'bg-white border border-deep-200 text-navy-700 rounded-bl-md shadow-sm'
+                }`}>
+                  <div className="whitespace-pre-line leading-relaxed">{msg.content}</div>
+                  {msg.isCategory && msg.categoryId && (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {FAQ_CATEGORIES.slice(0, 6).map(cat => (
+                        <button
+                          key={cat.id}
+                          onClick={() => handleCategoryClick(cat.id)}
+                          className="text-xs px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-600 hover:bg-brand-500/20 transition-colors font-medium"
+                        >
+                          {cat.icon} {cat.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  <div className="text-[10px] mt-1 text-deep-400">
+                    {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </div>
                 </div>
               </div>
             ))}
-            {loading && (
-              <div className="flex justify-start">
-                <div className="bg-white/10 rounded-2xl rounded-bl-md px-4 py-3">
-                  <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-deep-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                    <span className="w-2 h-2 bg-deep-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                    <span className="w-2 h-2 bg-deep-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-                  </div>
-                </div>
-              </div>
-            )}
             <div ref={bottomRef} />
           </div>
 
+          {/* Quick action buttons */}
+          <div className="px-3 py-2 border-t border-deep-200 flex flex-wrap gap-1.5" style={{ backgroundColor: 'var(--color-deep-50)' }}>
+            <button onClick={() => handleCategoryClick('Pricing')} className="text-xs px-2 py-1 rounded-full bg-brand-500/10 text-brand-600 hover:bg-brand-500/20 transition-colors">💰 Pricing</button>
+            <button onClick={() => handleCategoryClick('Fabrics')} className="text-xs px-2 py-1 rounded-full bg-brand-500/10 text-brand-600 hover:bg-brand-500/20 transition-colors">🧵 Fabrics</button>
+            <button onClick={() => { addMsg('How do I order curtains in Abu Dhabi?', 'user'); const faq = { question: '', answer: 'Ordering is simple: 1) Book a free design visit. 2) Select fabrics at home. 3) We install within 3 days. You can also use our online calculator for an instant estimate.' }; addMsg(faq.answer, 'assistant'); }} className="text-xs px-2 py-1 rounded-full bg-brand-500/10 text-brand-600 hover:bg-brand-500/20 transition-colors">📋 How to Order</button>
+            <button onClick={() => { addMsg('Do you offer free curtain design visits?', 'user'); addMsg('Yes! Our curtain experts come to your home with catalogs and samples. Free measurement, advice, and instant quote — no obligation. Covers all of Abu Dhabi and Dubai.', 'assistant'); }} className="text-xs px-2 py-1 rounded-full bg-brand-500/10 text-brand-600 hover:bg-brand-500/20 transition-colors">🏠 Free Visit</button>
+          </div>
+
           {/* Input */}
-          <div className="p-3 border-t border-white/10">
+          <div className="p-3 border-t border-deep-200 bg-white">
             <div className="flex gap-2">
               <input
                 ref={inputRef}
                 value={input}
                 onChange={e => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder="Type a message..."
-                className="flex-1 rounded-xl px-4 py-2.5 text-sm bg-white/5 border border-white/10 text-white placeholder-deep-500 outline-none focus:border-brand-500/50 transition-all"
-                disabled={loading}
+                onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } }}
+                placeholder="Ask about curtains, pricing, fabrics..."
+                className="flex-1 rounded-xl px-4 py-2.5 text-sm bg-deep-50 border border-deep-200 text-navy-900 placeholder-deep-400 outline-none focus:border-brand-500 transition-all"
               />
               <button
-                onClick={sendMessage}
-                disabled={!input.trim() || loading}
-                className="w-10 h-10 rounded-xl bg from-brand-600 to-brand-500 text-white flex items-center justify-center disabled:opacity-40 hover:scale-105 transition-all"
+                onClick={handleSend}
+                disabled={!input.trim()}
+                className="w-10 h-10 rounded-xl bg-brand-500 text-navy-950 flex items-center justify-center disabled:opacity-40 hover:scale-105 transition-all"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </button>
             </div>
-            <p className="text-deep-600 text-[10px] mt-1.5 text-center">
-              AI-assisted support · May transfer to team
-            </p>
+            <p className="text-deep-400 text-[10px] mt-1.5 text-center">Powered by Curtain Makers knowledge base</p>
           </div>
         </div>
       )}

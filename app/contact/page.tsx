@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Curtain Makers',
@@ -113,74 +114,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-navy-900 mb-6">
                   Send Us a Message
                 </h2>
-                <form className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="label">Full Name *</label>
-                      <input
-                        type="text"
-                        className="input-field"
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="label">Phone Number</label>
-                      <input
-                        type="tel"
-                        className="input-field"
-                        placeholder="+971 50 123 4567"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="label">Email Address *</label>
-                    <input
-                      type="email"
-                      className="input-field"
-                      placeholder="you@email.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="label">Subject</label>
-                    <select className="input-field">
-                      <option value="">Select a topic...</option>
-                      <option value="curtains">Curtains</option>
-                      <option value="blinds">Blinds</option>
-                      <option value="motorized">Motorized Systems</option>
-                      <option value="commercial">Commercial Project</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="label">Message *</label>
-                    <textarea
-                      className="input-field min-h-[140px] resize-none"
-                      placeholder="Tell us about your project — size, location, style preferences, and any special requirements..."
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn-primary w-full justify-center text-base py-4"
-                  >
-                    Send Message
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </button>
-                </form>
+                <ContactForm />
 
                 {/* WhatsApp CTA — prominent below the form */}
                 <div className="mt-8 pt-6 border-t border-deep-200">

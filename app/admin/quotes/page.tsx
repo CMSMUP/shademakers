@@ -37,6 +37,7 @@ export default function AdminQuotesPage() {
     setLoading(false);
   };
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { load(1, '', ''); }, []);
 
   const onFilter = (s: string) => { setFStatus(s); setPage(1); load(1, s, search); };

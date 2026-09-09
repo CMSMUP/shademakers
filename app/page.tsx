@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import CurtainPriceCalculator from "@/components/CurtainPriceCalculator";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const CURTAIN_STYLES = [
   { name: "Pinch Pleat Curtains", desc: "The most popular curtain style in Abu Dhabi. Stitched and pinched pleats create elegant flowing fabric folds.", tag: "Best Seller" },
@@ -401,10 +402,7 @@ export default function HomePage() {
             <p className="text-sm mb-6 max-w-md mx-auto" style={{ color: 'var(--color-navy-500)' }}>
               Get exclusive discounts on curtains, free pillow matching with your curtain fabrics, free swatch samples, curtain design ideas, and more!
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input type="email" placeholder="Your Email Address" className="input-field flex-1" required />
-              <button type="submit" className="btn-primary flex-shrink-0">Join Free</button>
-            </form>
+            <NewsletterSignup />
             <p className="text-deep-400 text-[11px] mt-3">We don&apos;t share your info with anyone. Unsubscribe anytime.</p>
           </div>
         </div>
