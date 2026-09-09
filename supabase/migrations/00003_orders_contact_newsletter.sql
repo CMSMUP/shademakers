@@ -75,12 +75,15 @@ ALTER TABLE contact_messages ENABLE ROW LEVEL SECURITY;
 ALTER TABLE newsletter_subscribers ENABLE ROW LEVEL SECURITY;
 
 -- Allow anonymous inserts on contact_messages and newsletter
-CREATE POLICY IF NOT EXISTS allow_anon_insert_contact ON contact_messages
+DROP POLICY IF EXISTS allow_anon_insert_contact ON contact_messages;
+CREATE POLICY allow_anon_insert_contact ON contact_messages
   FOR INSERT TO anon, authenticated WITH CHECK (true);
 
-CREATE POLICY IF NOT EXISTS allow_anon_insert_newsletter ON newsletter_subscribers
+DROP POLICY IF EXISTS allow_anon_insert_newsletter ON newsletter_subscribers;
+CREATE POLICY allow_anon_insert_newsletter ON newsletter_subscribers
   FOR INSERT TO anon, authenticated WITH CHECK (true);
 
 -- Allow service_role full access to orders (admin API uses service_role key implicitly)
-CREATE POLICY IF NOT EXISTS allow_service_all_orders ON orders
+DROP POLICY IF EXISTS allow_service_all_orders ON orders;
+CREATE POLICY allow_service_all_orders ON orders
   FOR ALL TO service_role USING (true) WITH CHECK (true);
