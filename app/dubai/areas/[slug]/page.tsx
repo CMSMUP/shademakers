@@ -42,7 +42,7 @@ export default function DubaiAreaPage({ params }: Props) {
           <nav className="flex items-center gap-2 text-sm text-deep-300 mb-6">
             <Link href="/" className="hover:text-brand-500 transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/dubai/office-blind" className="hover:text-brand-500">Office Blinds</Link>
+            <Link href="/dubai/office-blinds" className="hover:text-brand-500">Office Blinds</Link>
             <span>/</span>
             <span className="text-white">{area.name}</span>
           </nav>
@@ -131,9 +131,9 @@ export default function DubaiAreaPage({ params }: Props) {
             <p className="text-deep-300 text-sm max-w-md mx-auto mb-6">
               Schedule your free site survey today.
             </p>
-            <Link href="/dubai/quote" className="btn-primary">
-              Get Free Quote
-            </Link>
+            <Link href="/contact" className="btn-primary">
+                            Get Free Quote
+                          </Link>
           </div>
         </div>
       </section>

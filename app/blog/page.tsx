@@ -47,6 +47,22 @@ const BLOG_POSTS = [
     category: 'Tips',
     image: '🌡️',
   },
+  {
+    slug: 'curtain-fabric-guide-abu-dhabi',
+    title: 'Choosing Curtain Fabrics for the UAE Climate',
+    excerpt: 'Learn about the best curtain fabrics for Abu Dhabi and Dubai homes and offices. From light-filtering sheers to thermal blackout linings.',
+    date: '2026-07-01',
+    category: 'Guide',
+    image: '🧵',
+  },
+  {
+    slug: 'dubai-building-regulations-blinds',
+    title: 'Dubai Building Regulations for Office Window Coverings',
+    excerpt: 'Learn about Dubai building codes and safety regulations for commercial window coverings including fire safety compliance.',
+    date: '2026-07-05',
+    category: 'Guide',
+    image: '📋',
+  },
 ];
 
 export default function BlogPage() {

@@ -175,6 +175,78 @@ For most Dubai offices, we recommend **roller blinds as the default choice** —
 
 Need help deciding? [Get a free consultation](/contact) — our team will visit your office and recommend the perfect solution.`,
   },
+  'curtains-vs-blinds-abu-dhabi': {
+    title: 'Curtains vs Blinds: What Works Best in Abu Dhabi Homes?',
+    date: '2026-06-28',
+    category: 'Tips',
+    author: 'Curtain Makers Team',
+    readTime: '4 min read',
+    metaDesc: 'A guide to choosing between curtains and blinds for your Abu Dhabi villa — climate, maintenance, and style considerations for each option.',
+    content: `One of the most common questions we hear from homeowners in Abu Dhabi is whether curtains or blinds are the better choice. The answer depends on your specific needs, but here's a comprehensive comparison.
+
+## Curtains: Pros and Cons
+
+### Pros
+- Superior aesthetic — soft fabrics add warmth and elegance
+- Better insulation — heavy fabrics reduce heat transfer
+- Sound absorption — fabrics dampen noise, ideal for bedrooms
+- Design versatility — thousands of fabrics, colors, and styles
+- Custom fit — made-to-measure for any window shape
+
+### Cons
+- More expensive than standard blinds
+- Require professional cleaning
+- Take up more visual space
+- Not ideal for high-humidity areas (bathrooms)
+
+**Best for**: Living rooms, master bedrooms, villas, formal spaces
+**Price range**: From AED 180/m
+
+## Blinds: Pros and Cons
+
+### Pros
+- Clean, modern appearance
+- Easy maintenance — wipe clean
+- Better light control — adjustable slats or position
+- Space-efficient — sit inside window recess
+- More affordable entry point
+- Motorization-friendly
+
+### Cons
+- Less fabric variety
+- Can look "office-like" in wrong setting
+- Less sound absorption
+- May not suit traditional or luxury interiors
+
+**Best for**: Offices, kitchens, bathrooms, modern apartments
+**Price range**: From AED 65/m²
+
+## Quick Decision Guide
+
+| Need | Best Choice | Reason |
+|------|-------------|--------|
+| Luxury villa living room | Curtains | Elegance and insulation |
+| Modern apartment bedroom | Both | Curtains + roller blind combo |
+| Office or study | Blinds | Clean, professional look |
+| Kids room | Curtains | Soft, safe, playful fabrics |
+| Bathroom | Blinds | Moisture resistant |
+| Large villa windows | Curtains | Proportion and drama |
+
+## The Abu Dhabi Factor
+
+Abu Dhabi's climate — intense sun, dust, and humidity — means your choice should factor in:
+
+- **Sun protection**: Both work well, but curtains with blackout lining offer superior UV blocking
+- **Dust**: Blinds are easier to clean; curtains need regular vacuuming
+- **Cooling costs**: Heavy curtains with thermal lining reduce AC costs more effectively
+- **Maintenance**: Blinds win on ease; curtains win on longevity
+
+## Our Recommendation
+
+For most Abu Dhabi villas, we recommend a **combination approach**: curtains for living rooms and master bedrooms, and blinds for guest rooms, offices, and service areas. This gives you the best of both worlds.
+
+Need help deciding? [Book a free design visit](/contact) — we'll bring samples and recommend the perfect solution for each room in your home.`,
+  },
   'dubai-building-regulations-blinds': {
     title: 'Dubai Building Regulations for Office Window Coverings',
     date: '2026-07-05',
@@ -361,7 +433,7 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <>
+    <div style={{ backgroundColor: 'var(--color-navy-900)' }}>
       <section className="pt-24 pb-4">
         <div className="container-wide">
           <nav className="flex items-center gap-2 text-sm text-deep-400">
@@ -394,36 +466,102 @@ export default function BlogPostPage({ params }: Props) {
 
           {/* Content */}
           <div className="prose prose-invert max-w-none">
-            {post.content.split('\n').map((line, i) => {
-              if (line.startsWith('## ')) {
-                return <h2 key={i} className="text-xl font-bold text-white mt-10 mb-4">{line.replace('## ', '')}</h2>;
-              }
-              if (line.startsWith('### ')) {
-                return <h3 key={i} className="text-lg font-semibold text-white mt-8 mb-3">{line.replace('### ', '')}</h3>;
-              }
-              if (line.startsWith('**') && line.endsWith('**')) {
-                return <p key={i} className="text-deep-300 text-sm leading-relaxed mb-4"><strong>{line.replace(/\*\*/g, '')}</strong></p>;
-              }
-              if (line.startsWith('|')) {
-                return null; // skip tables for now
-              }
-              if (line.startsWith('- ') || line.startsWith('* ')) {
-                return <li key={i} className="text-deep-300 text-sm ml-4 mb-1 list-disc">{line.replace(/^[-*] /, '')}</li>;
-              }
-              if (line.match(/^\[/) && line.includes('](/')) {
-                const match = line.match(/\[(.+?)\]\(\/(.+?)\)/);
-                if (match) {
-                  return <p key={i} className="mb-4">
-                    <Link href={`/${match[2]}`} className="text-brand-400 hover:underline text-sm">{match[1]}</Link>
-                  </p>;
+            {(() => {
+              const lines = post.content.split('\n');
+              const elements: React.ReactNode[] = [];
+              let inTable = false;
+              let tableRows: string[][] = [];
+              let inList = false;
+              let listItems: React.ReactNode[] = [];
+
+              const flushList = () => {
+                if (inList && listItems.length > 0) {
+                  elements.push(<ul key={`ul-${elements.length}`} className="space-y-1 mb-4">{listItems}</ul>);
+                  listItems = [];
+                  inList = false;
                 }
-              }
-              if (line.startsWith('[')) {
-                return null;
-              }
-              if (line.trim() === '') return <div key={i} className="h-4" />;
-              return <p key={i} className="text-deep-300 text-sm leading-relaxed mb-4">{line}</p>;
-            })}
+              };
+
+              const renderInline = (text: string) => {
+                // Handle inline links: [text](/path)
+                const linkRegex = /\[([^\]]+)\]\(\/([^)]+)\)/g;
+                const parts: React.ReactNode[] = [];
+                let lastIdx = 0;
+                let match;
+                let idx = 0;
+                while ((match = linkRegex.exec(text)) !== null) {
+                  if (match.index > lastIdx) {
+                    parts.push(text.slice(lastIdx, match.index));
+                  }
+                  parts.push(<Link key={`l-${idx++}`} href={`/${match[2]}`} className="text-brand-400 hover:underline">{match[1]}</Link>);
+                  lastIdx = match.index + match[0].length;
+                }
+                if (lastIdx < text.length) {
+                  parts.push(text.slice(lastIdx));
+                }
+                // Handle bold
+                return parts.length > 0 ? parts : text;
+              };
+
+              lines.forEach((line, i) => {
+                if (line.startsWith('## ')) {
+                  flushList();
+                  elements.push(<h2 key={i} className="text-xl font-bold text-white mt-10 mb-4">{line.replace('## ', '')}</h2>);
+                } else if (line.startsWith('### ')) {
+                  flushList();
+                  elements.push(<h3 key={i} className="text-lg font-semibold text-white mt-8 mb-3">{line.replace('### ', '')}</h3>);
+                } else if (line.startsWith('|') && line.endsWith('|') && line.includes('---') === false) {
+                  // Table data row
+                  flushList();
+                  inTable = true;
+                  const cells = line.split('|').filter(Boolean).map(c => c.trim());
+                  tableRows.push(cells);
+                } else if (line.startsWith('|') && line.includes('---')) {
+                  // Table header separator - skip
+                } else if (inTable && line.trim() === '') {
+                  // End of table
+                  if (tableRows.length > 0) {
+                    const header = tableRows[0];
+                    const body = tableRows.slice(1);
+                    elements.push(
+                      <table key={`t-${i}`} className="w-full text-sm mb-6 border-collapse">
+                        <thead>
+                          <tr className="border-b border-navy-700">
+                            {header.map((h, ci) => <th key={ci} className="text-left py-2 pr-4 text-white font-semibold">{h}</th>)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {body.map((row, ri) => (
+                            <tr key={ri} className="border-b border-navy-800">
+                              {row.map((cell, ci) => <td key={ci} className="py-2 pr-4 text-deep-300">{cell}</td>)}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    );
+                  }
+                  tableRows = [];
+                  inTable = false;
+                } else if (line.startsWith('- ') || line.startsWith('* ')) {
+                  inList = true;
+                  listItems.push(<li key={`li-${i}`} className="text-deep-300 text-sm ml-4 mb-1 list-disc">{renderInline(line.replace(/^[-*] /, ''))}</li>);
+                } else if (line.startsWith('[') && line.includes('](/')) {
+                  flushList();
+                  const match = line.match(/\[(.+?)\]\(\/(.+?)\)/);
+                  if (match) {
+                    elements.push(<p key={i} className="mb-4"><Link href={`/${match[2]}`} className="text-brand-400 hover:underline text-sm">{match[1]}</Link></p>);
+                  }
+                } else if (line.trim() === '') {
+                  flushList();
+                  elements.push(<div key={`sp-${i}`} className="h-4" />);
+                } else {
+                  flushList();
+                  elements.push(<p key={i} className="text-deep-300 text-sm leading-relaxed mb-4">{renderInline(line)}</p>);
+                }
+              });
+              flushList();
+              return elements;
+            })()}
           </div>
 
           {/* Share + CTA */}
@@ -432,7 +570,7 @@ export default function BlogPostPage({ params }: Props) {
             <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Abu Dhabi or Dubai project — takes 2 minutes.</p>
             <Link
               href="/estimate"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-500 text-navy-950 font-bold hover:bg-brand-600 transition-all text-white font-bold hover:translate-y-[-2px] transition-all"
+              className="btn-primary"
             >
               Get Free Quote
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -442,6 +580,6 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 }

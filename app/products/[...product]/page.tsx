@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: productData.meta_title,
     description: productData.meta_description,
-    alternates: { canonical: `https://officeblindsdubai.com/products/${productData.slug}` },
+    alternates: { canonical: `https://curtainmakers.ae/products/${productData.slug}` },
   };
 }
 
@@ -37,7 +37,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const productImages = getProductImage(slug);
 
   return (
-    <>
+    <div style={{ backgroundColor: 'var(--color-navy-900)' }}>
       {/* Breadcrumb */}
       <section className="pt-24 pb-4">
         <div className="container-wide">
@@ -261,6 +261,6 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

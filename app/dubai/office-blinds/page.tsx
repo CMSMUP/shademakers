@@ -38,8 +38,8 @@ export default function DubaiOfficeBlindsPage() {
               premium window coverings for offices, towers, and commercial projects across Dubai.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/dubai/quote" className="btn-primary">
-                Get Project Quote
+              <Link href="/estimate" className="btn-primary">
+                              Get a Free Project Quote
               </Link>
               <Link href="/dubai/office-curtains" className="btn-secondary !border-white !text-white">
                 View Office Curtains
@@ -64,29 +64,32 @@ export default function DubaiOfficeBlindsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {COMMERCIAL_PRODUCTS.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/dubai/office-blinds/${p.slug}`}
-                className="card p-5 group hover:border-brand-500/50 transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-4 group-hover:bg-brand-500/20 transition-colors">
-                  <div className="w-5 h-5 bg-brand-500 rounded-sm" />
-                </div>
-                <h3 className="text-navy-900 font-semibold text-base mb-1 group-hover:text-brand-500 transition-colors">
-                  {p.name}
-                </h3>
-                <p className="text-navy-500 text-xs leading-relaxed mb-3">{p.short_description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-brand-500 font-semibold text-sm">
-                    From AED {p.base_price_per_sqm}/m²
-                  </span>
-                  <span className="text-navy-400 text-xs group-hover:text-brand-500 transition-colors">
-                    Details →
-                  </span>
-                </div>
-              </Link>
-            ))}
+            {['roller-blinds', 'vertical-blinds', 'aluminium-venetian-blinds', 'zebra-blinds', 'smart-blinds', 'wooden-venetian-blinds', 'panel-blinds', 'pleated-blinds'].map((slug) => {
+              const p = PRODUCTS_SEED.find(pr => pr.slug === slug)!;
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/products/${p.slug}`}
+                  className="card p-5 group hover:border-brand-500/50 transition-all"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-4 group-hover:bg-brand-500/20 transition-colors">
+                    <div className="w-5 h-5 bg-brand-500 rounded-sm" />
+                  </div>
+                  <h3 className="text-navy-900 font-semibold text-base mb-1 group-hover:text-brand-500 transition-colors">
+                    {p.name}
+                  </h3>
+                  <p className="text-navy-500 text-xs leading-relaxed mb-3">{p.short_description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-brand-500 font-semibold text-sm">
+                      From AED {p.base_price_per_sqm}/m²
+                    </span>
+                    <span className="text-navy-400 text-xs group-hover:text-brand-500 transition-colors">
+                      Details →
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -135,8 +138,8 @@ export default function DubaiOfficeBlindsPage() {
               Get a free project quote within 24 hours. Site survey included.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <Link href="/dubai/quote" className="btn-primary">
-                Request Quote
+              <Link href="/estimate" className="btn-primary">
+                              Get a Free Project Quote
               </Link>
               <Link href="/contact" className="btn-secondary !border-white !text-white">
                 Contact Our Dubai Team

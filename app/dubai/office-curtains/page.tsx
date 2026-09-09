@@ -43,7 +43,7 @@ export default function DubaiHubPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
-              <Link href="/dubai/quote" className="btn-secondary !border-white !text-white hover:!text-white">
+              <Link href="/estimate" className="btn-secondary !border-white !text-white hover:!text-white">
                 Get Project Quote
               </Link>
             </div>
@@ -201,9 +201,9 @@ export default function DubaiHubPage() {
               <div className="text-brand-500 text-4xl font-bold mb-2">15+</div>
               <div className="text-white text-lg font-semibold mb-1">Years of Excellence</div>
               <div className="text-deep-300 text-sm mb-6">Abu Dhabi&apos;s trusted curtain & blinds specialist, now serving Dubai</div>
-              <Link href="/dubai/quote" className="btn-primary">
-                Get a Free Project Quote
-              </Link>
+              <Link href="/estimate" className="btn-primary">
+                              Get Project Quote
+                            </Link>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@ export default function DubaiHubPage() {
               A dedicated project manager will handle the rest.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <Link href="/dubai/quote" className="btn-primary">
+              <Link href="/estimate" className="btn-primary">
                 Get Instant Quote
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />

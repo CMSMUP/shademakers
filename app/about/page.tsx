@@ -145,7 +145,7 @@ export default function AboutPage() {
               Get a free curtain design visit with catalogs, online pricing, and a 30% discount 
               on selected fabrics. No obligation.
             </p>
-            <Link href="/appointment" className="btn-primary">Book Free Design Visit</Link>
+            <Link href="/contact" className="btn-primary">Book Free Design Visit</Link>
           </div>
         </div>
       </section>
