@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import HeroCalculator from '@/components/HeroCalculator';
 
 export const metadata: Metadata = {
   title: 'Dubai Office Curtains & Blinds | Curtain Makers',
@@ -64,7 +65,23 @@ export default function DubaiHubPage() {
         </div>
       </section>
 
-      {/* Office Products */}
+      {/* ===== BLINDS PRICE CALCULATOR ===== */}
+      <section className="section bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-10">
+            <div className="section-label justify-center"><span>Blinds Calculator</span></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-3">
+              Instant <span className="text-brand-500">Blinds Price</span> Calculator
+            </h2>
+            <p className="text-navy-500 max-w-2xl mx-auto">
+              Select your blind type and enter dimensions for an instant estimate. Free site survey included.
+            </p>
+          </div>
+          <HeroCalculator />
+        </div>
+      </section>
+
+      {/* ===== Office Products ===== */}
       <section className="section bg-deep-50">
         <div className="container-wide">
           <div className="text-center mb-12">

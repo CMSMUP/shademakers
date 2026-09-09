@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import HeroCalculator from "@/components/HeroCalculator";
 import CurtainPriceCalculator from "@/components/CurtainPriceCalculator";
 
 const CURTAIN_STYLES = [
@@ -51,77 +50,139 @@ const PRODUCT_SERVICES = [
   { name: "Sofa & Cushions", desc: "Custom upholstered furniture and cushions to match your curtains." },
 ];
 
+const COMPARISON_FEATURES = [
+  { feature: "In-House Manufacturing", us: "Yes — full control over quality", others: "Usually outsourced" },
+  { feature: "Fabric Collection", us: "3,700+ fabrics in stock", others: "Limited selection" },
+  { feature: "Design Visit", us: "Free — we come to you with catalogs", others: "Paid or showroom only" },
+  { feature: "Installation Time", us: "3 days from confirmation", others: "1–3 weeks" },
+  { feature: "Online Pricing", us: "Instant calculator, transparent", others: "Quote only, opaque" },
+  { feature: "Warranty", us: "3 years with free repairs", others: "1 year standard" },
+];
+
 export default function HomePage() {
   return (
     <>
-      {/* ===== HERO — Dark bg ===== */}
+      {/* ===== HERO — Dark bg, single color ===== */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 pb-12" style={{ backgroundColor: 'var(--color-navy-900)' }}>
         <div className="container-wide relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            <div className="pt-8 lg:pt-16">
-              <div className="section-label">
-                <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'var(--color-brand-500)' }} />
-                Best Curtain Shop in Abu Dhabi
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style={{ color: 'var(--color-deep-50)' }}>
-                Buy Premium{' '}
-                <span style={{ color: 'var(--color-brand-500)' }}>Curtains &amp; Blinds</span>
-                <br />
-                <span style={{ color: 'var(--color-deep-100)' }}>in Abu Dhabi &amp; Dubai</span>
-              </h1>
-
-              <p className="text-lg sm:text-xl max-w-xl leading-relaxed mb-8" style={{ color: 'var(--color-deep-300)' }}>
-                Abu Dhabi&apos;s most trusted curtain shop. Thousands of fabrics, in-house manufacturing, and professional installation.
-                <span className="font-semibold block mt-2" style={{ color: 'var(--color-brand-400)' }}>
-                  Free design visit. Free project quote. Installation in 3 days.
-                </span>
-              </p>
-
-              {/* Offer badges */}
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-green-500/15 text-green-400 border border-green-500/20">30% OFF Selected Fabrics</span>
-                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-brand-500/15 text-brand-400 border border-brand-500/20">3 Year Warranty</span>
-                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-blue-500/15 text-blue-400 border border-blue-500/20">Free Design Visit</span>
-              </div>
-
-              {/* Trust badges */}
-              <div className="flex flex-wrap gap-6">
-                {['Curtain Specialists', 'In-House Manufacturing', '5,000+ Fabrics', '3-Day Installation'].map((badge) => (
-                  <div key={badge} className="flex items-center gap-1.5 text-sm" style={{ color: 'var(--color-deep-400)' }}>
-                    <svg className="w-4 h-4" style={{ color: 'var(--color-brand-500)' }} fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {badge}
-                  </div>
-                ))}
-              </div>
-
-              {/* Quick links */}
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Link href="/contact" className="btn-primary text-base">
-                  Book Free Design Visit
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-                <Link href="/products" className="btn-secondary" style={{ borderColor: 'var(--color-deep-100)', color: 'var(--color-deep-50)' }}>
-                  Browse Curtains
-                </Link>
-              </div>
-
-              {/* Social proof */}
-              <div className="flex items-center gap-2 mt-6 text-deep-400 text-xs">
-                <span className="text-brand-500 font-bold text-sm">★★★★★</span>
-                <span>Five-star reviews from Abu Dhabi homeowners</span>
-              </div>
+          <div className="max-w-3xl">
+            <div className="section-label">
+              <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: 'var(--color-brand-500)' }} />
+              Best Curtain Shop in Abu Dhabi
             </div>
 
-            {/* Right: Calculator */}
-            <div>
-              <HeroCalculator />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style={{ color: 'var(--color-deep-50)' }}>
+              Buy Premium{' '}
+              <span style={{ color: 'var(--color-brand-500)' }}>Curtains &amp; Blinds</span>
+              <br />
+              <span style={{ color: 'var(--color-deep-100)' }}>in Abu Dhabi &amp; Dubai</span>
+            </h1>
+
+            <p className="text-lg sm:text-xl max-w-xl leading-relaxed mb-8" style={{ color: 'var(--color-deep-300)' }}>
+              Abu Dhabi&apos;s most trusted curtain shop. Thousands of fabrics, in-house manufacturing, and professional installation.
+              <span className="font-semibold block mt-2" style={{ color: 'var(--color-brand-400)' }}>
+                Free design visit. Free project quote. Installation in 3 days.
+              </span>
+            </p>
+
+            {/* Offer badges — single color tone */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="px-3 py-1.5 rounded-full text-xs font-bold" style={{ backgroundColor: 'rgba(229,180,60,0.15)', color: 'var(--color-brand-400)', border: '1px solid rgba(229,180,60,0.2)' }}>30% OFF Selected Fabrics</span>
+              <span className="px-3 py-1.5 rounded-full text-xs font-bold" style={{ backgroundColor: 'rgba(229,180,60,0.15)', color: 'var(--color-brand-400)', border: '1px solid rgba(229,180,60,0.2)' }}>3 Year Warranty</span>
+              <span className="px-3 py-1.5 rounded-full text-xs font-bold" style={{ backgroundColor: 'rgba(229,180,60,0.15)', color: 'var(--color-brand-400)', border: '1px solid rgba(229,180,60,0.2)' }}>Free Design Visit</span>
+            </div>
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-6">
+              {['Curtain Specialists', 'In-House Manufacturing', '3,700+ Fabrics', '3-Day Installation'].map((badge) => (
+                <div key={badge} className="flex items-center gap-1.5 text-sm" style={{ color: 'var(--color-deep-400)' }}>
+                  <svg className="w-4 h-4" style={{ color: 'var(--color-brand-500)' }} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  {badge}
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link href="/contact" className="btn-primary text-base">
+                Book Free Design Visit
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link href="/products" className="btn-secondary" style={{ borderColor: 'var(--color-deep-100)', color: 'var(--color-deep-50)' }}>
+                Browse Products
+              </Link>
+            </div>
+
+            {/* Social proof */}
+            <div className="flex items-center gap-2 mt-6 text-deep-400 text-xs">
+              <span className="text-brand-500 font-bold text-sm">★★★★★</span>
+              <span>Five-star reviews from Abu Dhabi homeowners</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== WHY CURTAINMAKERS — Comparison — Light bg ===== */}
+      <section className="section" style={{ backgroundColor: 'var(--color-deep-50)' }}>
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <div className="section-label text-center justify-center">Why CurtainMakers</div>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4" style={{ color: 'var(--color-navy-900)' }}>
+              How We Compare to{' '}
+              <span style={{ color: 'var(--color-brand-500)' }}>Other Curtain Companies</span>
+            </h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--color-navy-500)' }}>
+              We don&apos;t cut corners. Here&apos;s how we deliver more value, better quality, and faster service.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-deep-200 bg-white">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-deep-200" style={{ backgroundColor: 'var(--color-navy-900)' }}>
+                  <th className="text-left py-4 px-5 text-white font-semibold">Feature</th>
+                  <th className="text-left py-4 px-5 text-brand-400 font-semibold">CurtainMakers</th>
+                  <th className="text-left py-4 px-5 text-deep-400 font-medium">Other Companies</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARISON_FEATURES.map((row, i) => (
+                  <tr key={i} className="border-b border-deep-100 last:border-0 hover:bg-deep-50 transition-colors">
+                    <td className="py-3.5 px-5 text-navy-900 font-medium">{row.feature}</td>
+                    <td className="py-3.5 px-5">
+                      <div className="flex items-center gap-2">
+                        <svg className="w-4 h-4 flex-shrink-0 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-navy-900">{row.us}</span>
+                      </div>
+                    </td>
+                    <td className="py-3.5 px-5 text-deep-500">{row.others}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CURTAIN PRICE CALCULATOR — White bg ===== */}
+      <section className="section bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-10">
+            <div className="section-label text-center justify-center">Curtains Estimator</div>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4" style={{ color: 'var(--color-navy-900)' }}>
+              <span style={{ color: 'var(--color-brand-500)' }}>Curtain</span> Price Calculator
+            </h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--color-navy-500)' }}>
+              Choose your curtain style, fabric tier, and operation for an instant estimate. First in Abu Dhabi — online curtain pricing.
+            </p>
+          </div>
+          <CurtainPriceCalculator />
         </div>
       </section>
 
@@ -216,24 +277,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== CURTAIN PRICE CALCULATOR — Light bg ===== */}
-      <section className="section bg-white">
-        <div className="container-wide">
-          <div className="text-center mb-10">
-            <div className="section-label text-center justify-center">Curtains Estimator</div>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4" style={{ color: 'var(--color-navy-900)' }}>
-              <span style={{ color: 'var(--color-brand-500)' }}>Curtain</span> Price Calculator
-            </h2>
-            <p className="max-w-2xl mx-auto" style={{ color: 'var(--color-navy-500)' }}>
-              Choose your curtain style, fabric tier, and operation for an instant estimate. First in Abu Dhabi — online curtain pricing.
-            </p>
-          </div>
-          <CurtainPriceCalculator />
-        </div>
-      </section>
-
       {/* ===== PRODUCTS & SERVICES — Light bg ===== */}
-      <section className="section" style={{ backgroundColor: 'var(--color-deep-50)' }}>
+      <section className="section bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <div className="section-label text-center justify-center">Products & Services</div>
@@ -258,7 +303,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== BLINDS PRODUCTS GRID — Light bg ===== */}
-      <section className="section bg-white">
+      <section className="section" style={{ backgroundColor: 'var(--color-deep-50)' }}>
         <div className="container-wide">
           <div className="text-center mb-12">
             <div className="section-label text-center justify-center">Blinds Range</div>
@@ -292,7 +337,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== HOW IT WORKS / PROCESS — Light bg ===== */}
-      <section className="section" style={{ backgroundColor: 'var(--color-deep-50)' }}>
+      <section className="section bg-white">
         <div className="container-wide">
           <div className="text-center mb-12">
             <div className="section-label text-center justify-center">Simple Process</div>
@@ -324,7 +369,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== WHY US — Light bg ===== */}
+      {/* ===== WHY US ===== */}
       <section className="section pt-0" style={{ backgroundColor: 'var(--color-deep-50)' }}>
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -345,7 +390,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== NEWSLETTER — Light bg ===== */}
+      {/* ===== NEWSLETTER ===== */}
       <section className="section" style={{ backgroundColor: 'var(--color-deep-50)' }}>
         <div className="container-wide">
           <div className="card p-8 md:p-12 max-w-2xl mx-auto text-center">
