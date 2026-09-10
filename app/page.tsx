@@ -407,6 +407,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== TESTIMONIALS — White bg ===== */}
+      <section className="section bg-white">
+        <div className="container-wide">
+          <div className="text-center mb-12">
+            <div className="section-label text-center justify-center">Reviews</div>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4" style={{ color: 'var(--color-navy-900)' }}>
+              What Our <span style={{ color: 'var(--color-brand-500)' }}>Customers Say</span>
+            </h2>
+            <div className="inline-flex items-center gap-2 text-sm" style={{ color: 'var(--color-navy-500)' }}>
+              <span className="text-brand-500 font-bold text-lg tracking-wide">★★★★★</span>
+              <span>5.0 rating on Google</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              { name: 'Nicole Becker', meta: 'Nov 2024', text: 'I love my curtains, they were professionally made and absolutely amazing. Everything was done super fast. We will be using them again for the remaining rooms of our house.' },
+              { name: 'Lauren', meta: 'Local Guide', text: 'Sayed was professional, friendly, helpful, and went above and beyond to provide an outstanding service for our sheers and blackout curtains. Thank you so much. Highly recommend.' },
+              { name: 'Mihaela Hanganu', meta: 'Local Guide', text: 'I’m very happy with the work done by CM Curtain Makers. They transformed my regular curtains into blackout ones and replaced the top band — everything looks perfect now. The team was professional, came right on time, picked up the curtains, and delivered them back exactly as promised. The technician who handled the work at my home was polite, efficient, and really customer-oriented. Excellent service from start to finish — highly recommended!' },
+              { name: 'E J', meta: 'Local Guide', text: 'From the beginning, they were very professional and listened to what I liked. They worked hard to match my design and they did an amazing job. They were organised, on time and very clean - leaving no mess. They were polite and respectful in the home and made sure everything was to a high quality.' },
+            ].map((r) => (
+              <div key={r.name} className="card p-7 flex flex-col">
+                <div className="flex items-center gap-1 mb-3 text-brand-500 text-sm" aria-label="5 out of 5 stars">
+                  {['★','★','★','★','★'].map((s, i) => <span key={i}>{s}</span>)}
+                </div>
+                <p className="text-navy-500 text-sm leading-relaxed flex-1" style={{ fontStyle: 'italic' }}>
+                  &ldquo;{r.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-2 mt-5 pt-4 border-t border-deep-200">
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold text-white" style={{ backgroundColor: 'var(--color-navy-900)' }}>
+                    {r.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-navy-900 font-semibold text-sm">{r.name}</div>
+                    <div className="text-navy-400 text-xs">{r.meta}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== WHY US ===== */}
       <section className="section pt-0" style={{ backgroundColor: 'var(--color-deep-50)' }}>
         <div className="container-wide">
