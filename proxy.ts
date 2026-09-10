@@ -10,7 +10,7 @@ const PROTECTED_PATHS = ['/admin'];
 // Public auth page
 const AUTH_PAGE = '/auth';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the path needs protection
