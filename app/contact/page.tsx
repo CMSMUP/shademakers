@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import { JsonLd, buildFaqSchema } from '@/src/data/schema';
+
+const CONTACT_FAQS = [
+  { question: 'How fast will you respond to my enquiry?', answer: 'We reply to most enquiries within 24 hours during working days (Saturday to Thursday). For urgent requests, WhatsApp is the fastest way to reach our team.' },
+  { question: 'Do you really offer free design visits?', answer: 'Yes. We bring fabric catalogs to your home or office, measure on the spot, and give you a confirmed price before anything is made. There is no charge and no obligation to buy.' },
+  { question: 'Which areas do you cover?', answer: 'All of Abu Dhabi and Dubai, including Al Reem Island, Saadiyat Island, Al Raha Beach, Yas Island, Dubai Marina, DIFC, Business Bay, and Downtown Dubai.' },
+];
 
 export const metadata: Metadata = {
   title: 'Contact Us | Curtain Makers',
@@ -19,6 +26,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={buildFaqSchema(CONTACT_FAQS)} />
       {/* Hero */}
       <section className="bg-navy-900 pt-24 pb-16">
         <div className="container-wide">

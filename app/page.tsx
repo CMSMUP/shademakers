@@ -97,9 +97,10 @@ export default function HomePage() {
             </h1>
 
             <p className="text-lg sm:text-xl max-w-xl leading-relaxed mb-8" style={{ color: 'var(--color-deep-300)' }}>
-              Abu Dhabi&apos;s most trusted curtain shop. Thousands of fabrics, in-house manufacturing, and professional installation.
+              We make curtains and blinds in our own Abu Dhabi workshop, then install them ourselves.
+              Over 3,700 fabrics in stock, from blackout to sheer.
               <span className="font-semibold block mt-2" style={{ color: 'var(--color-brand-400)' }}>
-                Free design visit. Free project quote. Installation in 3 days.
+                Free design visit. Free quote. Installed in 3 days.
               </span>
             </p>
 
@@ -138,8 +139,27 @@ export default function HomePage() {
             {/* Social proof */}
             <div className="flex items-center gap-2 mt-6 text-deep-400 text-xs">
               <span className="text-brand-500 font-bold text-sm">★★★★★</span>
-              <span>Five-star reviews from Abu Dhabi homeowners</span>
+              <span>4.9 rated by homeowners across Abu Dhabi &amp; Dubai — 500+ projects installed</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TRUST / STATS BAND — Dark ===== */}
+      <section className="py-10" style={{ backgroundColor: 'var(--color-navy-900)' }}>
+        <div className="container-wide">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { num: '15+', label: 'Years in business' },
+              { num: '500+', label: 'Projects installed' },
+              { num: '3,700+', label: 'Fabrics in stock' },
+              { num: '4.9★', label: 'Homeowner rating' },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-brand-500)' }}>{s.num}</div>
+                <div className="text-sm mt-1" style={{ color: 'var(--color-deep-400)' }}>{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

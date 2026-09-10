@@ -11,7 +11,7 @@ const BLOG_POSTS = {
     author: 'Curtain Makers Team',
     readTime: '6 min read',
     metaDesc: 'A comprehensive guide to selecting the right commercial blinds for your Dubai office. Compare roller, venetian, smart, and zebra blinds for your workspace.',
-    content: `Choosing the right blinds for your office in Dubai is about more than just aesthetics — it's about functionality, energy efficiency, and creating the right environment for your team.
+    content: `Choosing the right blinds for your office in Dubai is about more than just aesthetics, it's about functionality, energy efficiency, and creating the right environment for your team.
 
 ## Why Office Blinds Matter in Dubai
 
@@ -61,7 +61,7 @@ Innovative dual-layer design with alternating translucent and opaque fabric band
 Consider how much natural light each area needs. Boardrooms need blackout capability, while general offices benefit from sunscreen fabrics.
 
 ### Energy Efficiency
-The right blinds can reduce cooling costs by up to 30% by blocking solar heat gain — a significant saving in Dubai's climate.
+The right blinds can reduce cooling costs by up to 30% by blocking solar heat gain, a significant saving in Dubai's climate.
 
 ### Maintenance
 Roller and vertical blinds are easiest to maintain. Venetian blinds may require occasional dusting between slats.
@@ -71,11 +71,11 @@ Our online calculator gives you an instant estimate. Remember to factor in 5% UA
 
 ## The Curtain Makers Process
 
-1. **Free online quote** — Use our calculator for an instant estimate
-2. **Free site visit** — Our team measures and recommends
-3. **Final quote** — Confirmed pricing with fabric samples
-4. **Professional installation** — Minimal disruption to your operations
-5. **Aftercare** — 5-year warranty and ongoing support
+1. **Free online quote**: Use our calculator for an instant estimate
+2. **Free site visit**: Our team measures and recommends
+3. **Final quote**: Confirmed pricing with fabric samples
+4. **Professional installation**: Minimal disruption to your operations
+5. **Aftercare**: 5-year warranty and ongoing support
 
 Ready to get started? [Get your free quote](/estimate) today.`,
   },
@@ -106,7 +106,7 @@ Control every blind in your office from a single app. Create scenes like "Presen
 
 ## 5. Integration with Smart Buildings
 
-Our smart blinds integrate with building management systems, occupancy sensors, and voice assistants — making them a key component of any smart office ecosystem.
+Our smart blinds integrate with building management systems, occupancy sensors, and voice assistants, making them a key component of any smart office ecosystem.
 
 ## Available Options
 
@@ -172,9 +172,9 @@ Our smart blinds integrate with building management systems, occupancy sensors, 
 
 ## The Verdict
 
-For most Dubai offices, we recommend **roller blinds as the default choice** — they offer the best balance of price, appearance, and functionality. However, for executive offices where a classic, prestigious look is desired, **wooden venetian blinds** remain unmatched.
+For most Dubai offices, we recommend **roller blinds as the default choice**: they offer the best balance of price, appearance, and functionality. However, for executive offices where a classic, prestigious look is desired, **wooden venetian blinds** remain unmatched.
 
-Need help deciding? [Get a free consultation](/contact) — our team will visit your office and recommend the perfect solution.`,
+Need help deciding? [Get a free consultation](/contact), our team will visit your office and recommend the perfect solution.`,
   },
   'curtains-vs-blinds-abu-dhabi': {
     title: 'Curtains vs Blinds: What Works Best in Abu Dhabi Homes?',
@@ -182,17 +182,17 @@ Need help deciding? [Get a free consultation](/contact) — our team will visit 
     category: 'Tips',
     author: 'Curtain Makers Team',
     readTime: '4 min read',
-    metaDesc: 'A guide to choosing between curtains and blinds for your Abu Dhabi villa — climate, maintenance, and style considerations for each option.',
+    metaDesc: 'A guide to choosing between curtains and blinds for your Abu Dhabi villa, climate, maintenance, and style considerations for each option.',
     content: `One of the most common questions we hear from homeowners in Abu Dhabi is whether curtains or blinds are the better choice. The answer depends on your specific needs, but here's a comprehensive comparison.
 
 ## Curtains: Pros and Cons
 
 ### Pros
-- Superior aesthetic — soft fabrics add warmth and elegance
-- Better insulation — heavy fabrics reduce heat transfer
-- Sound absorption — fabrics dampen noise, ideal for bedrooms
-- Design versatility — thousands of fabrics, colors, and styles
-- Custom fit — made-to-measure for any window shape
+- Superior aesthetic, soft fabrics add warmth and elegance
+- Better insulation, heavy fabrics reduce heat transfer
+- Sound absorption, fabrics dampen noise, ideal for bedrooms
+- Design versatility, thousands of fabrics, colors, and styles
+- Custom fit, made-to-measure for any window shape
 
 ### Cons
 - More expensive than standard blinds
@@ -207,9 +207,9 @@ Need help deciding? [Get a free consultation](/contact) — our team will visit 
 
 ### Pros
 - Clean, modern appearance
-- Easy maintenance — wipe clean
-- Better light control — adjustable slats or position
-- Space-efficient — sit inside window recess
+- Easy maintenance, wipe clean
+- Better light control, adjustable slats or position
+- Space-efficient, sit inside window recess
 - More affordable entry point
 - Motorization-friendly
 
@@ -235,7 +235,7 @@ Need help deciding? [Get a free consultation](/contact) — our team will visit 
 
 ## The Abu Dhabi Factor
 
-Abu Dhabi's climate — intense sun, dust, and humidity — means your choice should factor in:
+Abu Dhabi's climate, intense sun, dust, and humidity, means your choice should factor in:
 
 - **Sun protection**: Both work well, but curtains with blackout lining offer superior UV blocking
 - **Dust**: Blinds are easier to clean; curtains need regular vacuuming
@@ -246,7 +246,7 @@ Abu Dhabi's climate — intense sun, dust, and humidity — means your choice sh
 
 For most Abu Dhabi villas, we recommend a **combination approach**: curtains for living rooms and master bedrooms, and blinds for guest rooms, offices, and service areas. This gives you the best of both worlds.
 
-Need help deciding? [Book a free design visit](/contact) — we'll bring samples and recommend the perfect solution for each room in your home.`,
+Need help deciding? [Book a free design visit](/contact), we'll bring samples and recommend the perfect solution for each room in your home.`,
   },
   'dubai-building-regulations-blinds': {
     title: 'Dubai Building Regulations for Office Window Coverings',
@@ -294,7 +294,7 @@ For specific compliance questions about your project, [contact our team](/contac
     author: 'Curtain Makers Team',
     readTime: '5 min read',
     metaDesc: 'Learn about the best curtain fabrics for Abu Dhabi and Dubai. From light-filtering sheers to thermal blackout linings, find the perfect fabric for your home or office.',
-    content: `Choosing the right curtain fabric in Abu Dhabi and Dubai is about balancing aesthetics with the realities of the UAE climate. Here's everything you need to know.
+    content: `Choosing the right curtain fabric in Abu Dhabi and Dubai is about balancing aesthetics with the realities of the UAE climate. Here is what actually matters.
 
 ## Understanding the UAE Climate Challenge
 
@@ -386,7 +386,7 @@ Programmable to close during peak sun hours (10am-3pm) and open during cooler pe
 - **East-facing windows**: Close blinds by mid-morning
 - **South-facing windows**: Keep closed during midday (11am-3pm)
 - **West-facing windows**: Close from early afternoon
-- **North-facing windows**: Minimal heat gain — keep open for natural light
+- **North-facing windows**: Minimal heat gain, keep open for natural light
 
 ## Calculate Your Savings
 
@@ -569,7 +569,7 @@ export default function BlogPostPage({ params }: Props) {
           {/* Share + CTA */}
           <div className="mt-12 p-8 rounded-2xl card text-center">
             <h3 className="text-xl font-bold text-white mb-3">Ready for Your Free Quote?</h3>
-            <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Abu Dhabi or Dubai project — takes 2 minutes.</p>
+            <p className="text-deep-300 text-sm mb-6">Get an instant estimate for your Abu Dhabi or Dubai project, takes 2 minutes.</p>
             <Link
               href="/estimate"
               className="btn-primary"

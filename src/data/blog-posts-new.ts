@@ -1,5 +1,5 @@
 // ============================================================
-// CurtainMakers — New SEO Blog Posts (September 2026)
+// CurtainMakers, New SEO Blog Posts (September 2026)
 // Merged into the blog detail page BLOG_POSTS object
 // ============================================================
 
@@ -20,8 +20,8 @@ export const NEW_BLOG_POSTS: Record<string, BlogPost> = {
     category: 'Guide',
     author: 'Curtain Makers Team',
     readTime: '6 min read',
-    metaDesc: 'Everything you need to know about blackout curtains in Abu Dhabi — fabrics, prices, blackout vs dim-out, motorized options, and how to choose. From AED 380/m.',
-    content: `Blackout curtains are one of the smartest investments you can make for a home in Abu Dhabi. With summer temperatures regularly exceeding 45°C and intense, year-round sunshine, the right blackout curtains in Abu Dhabi do far more than darken a room. They lower your cooling bills, protect furniture and flooring from UV fading, and deliver the deep, uninterrupted sleep that bright early mornings can otherwise make impossible. This guide covers everything you need to know before you buy — fabrics, blackout versus dim-out, motorized options, and real AED pricing.
+    metaDesc: 'Everything you need to know about blackout curtains in Abu Dhabi, fabrics, prices, blackout vs dim-out, motorized options, and how to choose. From AED 380/m.',
+    content: `Blackout curtains are one of the best buys you can make for a home in Abu Dhabi. With summer temperatures regularly exceeding 45°C and intense, year-round sunshine, the right blackout curtains in Abu Dhabi do far more than darken a room. They lower your cooling bills, protect furniture and flooring from UV fading, and deliver the deep, uninterrupted sleep that bright early mornings can otherwise make impossible. Here is what to know before you buy: fabrics, blackout versus dim-out, motorized options, and real AED pricing.
 
 ## Why Blackout Curtains Matter in Abu Dhabi's Climate
 
@@ -45,16 +45,16 @@ This is the most common point of confusion for buyers. The two terms are not int
 | Best for | Bedrooms, media rooms, nurseries | Living rooms, offices, dining areas |
 | Typical price | Higher | Lower |
 
-If you need a room to be genuinely dark at midday, specify true blackout fabric with a full blackout lining. If you simply want to soften glare while keeping some daylight, dim-out is the more economical choice. At Curtain Makers we always confirm your intended use before recommending, so you never pay for blackout when dim-out would do — or end up with dim-out when you truly needed darkness.
+If you need a room to be genuinely dark at midday, specify true blackout fabric with a full blackout lining. If you simply want to soften glare while keeping some daylight, dim-out is the more economical choice. At Curtain Makers we always confirm your intended use before recommending, so you never pay for blackout when dim-out would do, or end up with dim-out when you actually needed darkness.
 
 ## Best Fabrics for Blackout Curtains
 
 The blackout effect comes from the lining and the density of the weave, not from a single magic material. Popular options for Abu Dhabi homes include:
 
-- **Polyester blackout** — durable, affordable, and highly effective; the workhorse option from AED 380 per metre in our Mid Range tier
-- **Velvet with blackout lining** — a luxurious, thick option that adds excellent thermal insulation
-- **Cotton-linen blends with blackout lining** — a natural, breathable look with full light-blocking performance
-- **Triple-weave fabrics** — a single fabric that performs without a separate lining, ideal for a cleaner, lighter drape
+- **Polyester blackout**: durable, affordable, and highly effective; the workhorse option from AED 380 per metre in our Mid Range tier
+- **Velvet with blackout lining**: a luxurious, thick option that adds excellent thermal insulation
+- **Cotton-linen blends with blackout lining**: a natural, breathable look with full light-blocking performance
+- **Triple-weave fabrics**: a single fabric that performs without a separate lining, ideal for a cleaner, lighter drape
 
 ## How Much Do Blackout Curtains Cost in Abu Dhabi?
 
@@ -70,18 +70,18 @@ Blackout lining typically adds around 25% to the fabric cost, and a 5% VAT appli
 
 ## Motorized Blackout Curtains
 
-For floor-to-ceiling villa windows and hard-to-reach drapes, motorized blackout curtains in Abu Dhabi are increasingly popular. They let you schedule the curtains to close automatically during the hottest part of the day and open gently in the morning, all controlled from a smartphone app or wall switch. Motorization adds a fixed cost plus a per-metre track cost on top of the fabric — but for large windows and luxury homes, the convenience is well worth it. Read our full [motorized curtains pricing guide](/blog/how-much-do-motorized-curtains-cost).
+For floor-to-ceiling villa windows and hard-to-reach drapes, motorized blackout curtains in Abu Dhabi are common now. They let you schedule the curtains to close automatically during the hottest part of the day and open gently in the morning, all controlled from a smartphone app or wall switch. Motorization adds a fixed cost plus a per-metre track cost on top of the fabric, but for large windows and luxury homes, the convenience usually pays for itself. Read our full [motorized curtains pricing guide](/blog/how-much-do-motorized-curtains-cost).
 
 ## How to Choose the Right Blackout Curtains
 
 - **Measure the full window, not just the glass**, so the curtains fully cover the frame and block light leaks at the edges
 - **Choose a ceiling-to-floor drop** to prevent light spilling in from above
-- **Confirm your goal** — total darkness, heat reduction, or both — before selecting fabric and lining
+- **Confirm your goal**: total darkness, heat reduction, or both, before selecting fabric and lining
 - **Match the fullness factor** (typically 2 to 2.5 times the track width) for a rich, luxurious drape
 
 ## Get Professional Help in Abu Dhabi
 
-Selecting blackout curtains is easy to get wrong without the right guidance. Our team brings fabric samples to your home, measures every window precisely, and installs each curtain to a professional standard — backed by a five-year warranty. [Contact us](/contact) to book a free design visit, or [browse our products](/products) to see the full collection.`,
+Selecting blackout curtains is easy to get wrong without the right guidance. Our team brings fabric samples to your home, measures every window precisely, and installs each curtain to a professional standard, backed by a five-year warranty. [Contact us](/contact) to book a free design visit, or [browse our products](/products) to see the full collection.`,
   },
   'how-much-do-motorized-curtains-cost': {
     title: 'How Much Do Motorized Curtains Cost in the UAE? (2026 Guide)',
@@ -89,16 +89,16 @@ Selecting blackout curtains is easy to get wrong without the right guidance. Our
     category: 'Pricing',
     author: 'Curtain Makers Team',
     readTime: '5 min read',
-    metaDesc: 'Motorized curtain pricing in Abu Dhabi and Dubai explained — motor costs, fabric costs, installation, smart home integration. Get real AED figures.',
-    content: `If you are planning a smart home upgrade or simply want effortless control over hard-to-reach windows, one question comes up first: how much do motorized curtains cost in the UAE? The honest answer is that it depends on the motor, the fabric, and the size of your windows — but in this guide we break down every cost component with real AED figures so you can budget with confidence, whether you are furnishing a villa in Abu Dhabi or a modern apartment in Dubai.
+    metaDesc: 'Motorized curtain pricing in Abu Dhabi and Dubai explained, motor costs, fabric costs, installation, smart home integration. Get real AED figures.',
+    content: `If you are planning a smart home upgrade or simply want easy control over hard-to-reach windows, one question comes up first: how much do motorized curtains cost in the UAE? The honest answer is that it depends on the motor, the fabric, and the size of your windows, but here are the cost components with real AED figures so you can budget properly, whether you are furnishing a villa in Abu Dhabi or a modern apartment in Dubai.
 
 ## What Goes Into Motorized Curtain Pricing
 
-Motorized curtains are priced differently from regular curtains because the operation — the motor and track system — is a separate, significant line item. Understanding the four cost components is the key to comparing quotes fairly.
+Motorized curtains are priced differently from regular curtains because the operation, the motor and track system, is a separate, significant line item. Understanding the four cost components is the key to comparing quotes fairly.
 
 ### The Motor and Track
 
-This is the largest variable. In the UAE market, a motorized curtain track typically costs from around AED 850 for the motor itself, plus roughly AED 150 per metre of track width. A simple two-metre window therefore carries an operation cost of around AED 1,150 before any fabric. Higher-end motors — quieter, stronger, and better suited to heavy fabrics — cost more.
+This is the largest variable. In the UAE market, a motorized curtain track typically costs from around AED 850 for the motor itself, plus roughly AED 150 per metre of track width. A simple two-metre window therefore carries an operation cost of around AED 1,150 before any fabric. Higher-end motors, quieter, stronger, and better suited to heavy fabrics, cost more.
 
 ### The Fabric
 
@@ -116,7 +116,7 @@ Adding a lining improves light control and insulation. A standard lining adds ar
 
 ### Installation and Smart Home Setup
 
-Most made-to-measure providers in Abu Dhabi and Dubai include professional installation and basic programming within the quote. If you want deeper integration — voice control through Alexa or Google Home, app scheduling, or connection to a broader home-automation system like Control4 or KNX — confirm whether that programming is included or billed separately.
+Most made-to-measure providers in Abu Dhabi and Dubai include professional installation and basic programming within the quote. If you want deeper integration, voice control through Alexa or Google Home, app scheduling, or connection to a broader home-automation system like Control4 or KNX, confirm whether that programming is included or billed separately.
 
 ## Motorized Curtain Prices: Real AED Figures
 
@@ -132,15 +132,15 @@ As a rule of thumb, an entry-level motorized curtain for a standard two-metre wi
 
 ## What Drives the Price Up or Down
 
-- **Window width** — the single biggest factor, since both fabric and track are priced per metre
-- **Fabric origin** — European and USA fabrics carry a premium of about 1.5 times over local cotton or polyester blends
-- **Curtain style** — ripple wave and pinch pleat use more fabric than simple eyelet or tab-top styles
-- **Motor type** — battery-powered, hardwired, and high-torque options all differ in price
-- **Quantity** — multi-window projects often qualify for better per-unit pricing
+- **Window width**: the single biggest factor, since both fabric and track are priced per metre
+- **Fabric origin**: European and USA fabrics carry a premium of about 1.5 times over local cotton or polyester blends
+- **Curtain style**: ripple wave and pinch pleat use more fabric than simple eyelet or tab-top styles
+- **Motor type**: battery-powered, hardwired, and high-torque options all differ in price
+- **Quantity**: multi-window projects often qualify for better per-unit pricing
 
 ## Are Motorized Curtains Worth the Cost?
 
-For most UAE homeowners, the answer is yes. Motorized curtains eliminate the strain of opening heavy floor-to-ceiling drapes, can be scheduled to close automatically during peak afternoon heat — reducing air-conditioning load — and add a genuinely premium, modern feel to villas and high-rise apartments alike. For hotels and offices, they also allow centralized control of dozens of windows from a single panel.
+For most UAE homeowners, the answer is yes. Motorized curtains eliminate the strain of opening heavy floor-to-ceiling drapes, can be scheduled to close automatically during peak afternoon heat, reducing air-conditioning load, and add a modern feel to villas and high-rise apartments alike. For hotels and offices, they also allow centralized control of dozens of windows from a single panel.
 
 ## How to Get an Accurate Quote
 
@@ -154,8 +154,8 @@ Ready to automate your home? [Contact us](/contact) to schedule a free consultat
     category: 'Guide',
     author: 'Curtain Makers Team',
     readTime: '5 min read',
-    metaDesc: 'Learn exactly how to measure windows for curtains and blinds in Abu Dhabi — width, drop, track vs pole, and common mistakes to avoid. Free professional measurement available.',
-    content: `Measuring a window correctly is the single most important step when ordering curtains or blinds in Abu Dhabi and Dubai. A mistake of just two or three centimetres can leave a gap at the bottom, a track that scrapes the wall, or fabric that puddles on the floor. This step-by-step guide covers width, drop, track versus pole, and the common errors that cost homeowners time and money — so you can measure with confidence or hand the whole job to our team.
+    metaDesc: 'Learn exactly how to measure windows for curtains and blinds in Abu Dhabi, width, drop, track vs pole, and common mistakes to avoid. Free professional measurement available.',
+    content: `Measuring a window correctly is the single most important step when ordering curtains or blinds in Abu Dhabi and Dubai. A mistake of just two or three centimetres can leave a gap at the bottom, a track that scrapes the wall, or fabric that puddles on the floor. This covers width, drop, track versus pole, and the errors that cost homeowners time and money, so you can measure it right or hand the whole job to our team.
 
 ## What You Will Need
 
@@ -190,7 +190,7 @@ Track or pole? The answer changes the drop measurement.
 
 ## Step 4: Consider Fullness and Stacking
 
-Curtains look best when they are 2 to 2.5 times the width of the window — a principle called fullness. Ordering a panel exactly the width of the window will look flat and cheap. When measuring, also note whether the curtains will stack (gather) to the left, right, or both sides, and make sure the track or pole is wide enough to hold the stacked fabric clear of the glass.
+Curtains look best when they are 2 to 2.5 times the width of the window, a principle called fullness. Ordering a panel exactly the width of the window will look flat and cheap. When measuring, also note whether the curtains will stack (gather) to the left, right, or both sides, and make sure the track or pole is wide enough to hold the stacked fabric clear of the glass.
 
 ## Measuring for Blinds
 
@@ -222,7 +222,7 @@ Roman blinds follow the same recess rules, while roller blinds in kitchens and b
 
 In Abu Dhabi and Dubai, floor-to-ceiling windows, bay windows, and sliding doors are the norm, especially in villas and offices. Sun exposure is intense, which is why blackout and sunscreen linings are so popular. A precise measurement ensures the lining sits exactly where it should and that motorized curtains and blinds operate without catching on the frame.
 
-## Get a Professional Measurement — Free
+## Get a Professional Measurement, Free
 
 If you would rather avoid the tape measure entirely, our team offers a free site visit across Abu Dhabi and Dubai. We measure every window, confirm track and fabric choices on site, and provide a fixed quote before any work begins. [Book a free measurement](/estimate) or [contact us](/contact) to arrange a visit, and [browse our products](/products) while you wait.`,
   },
@@ -232,17 +232,17 @@ If you would rather avoid the tape measure entirely, our team offers a free site
     category: 'Comparison',
     author: 'Curtain Makers Team',
     readTime: '4 min read',
-    metaDesc: 'Compare roller blinds and roman blinds for Abu Dhabi and Dubai homes and offices — style, light control, cost, maintenance. Roller from AED 85/m², Roman from AED 120/m².',
+    metaDesc: 'Compare roller blinds and roman blinds for Abu Dhabi and Dubai homes and offices, style, light control, cost, maintenance. Roller from AED 85/m², Roman from AED 120/m².',
     content: `Roller blinds and Roman blinds are two of the most popular window treatments in Abu Dhabi and Dubai, and for good reason: both are clean, versatile, and easy to live with. But they suit very different rooms, budgets, and tastes. This comparison breaks down style, light control, cost, and maintenance so you can choose with confidence.
 
 ## The Quick Verdict
 
-- Choose roller blinds for a sleek, modern look, precise light control, and affordability — ideal for offices, kitchens, and minimalist interiors.
+- Choose roller blinds for a sleek, modern look, precise light control, and affordability, ideal for offices, kitchens, and minimalist interiors.
 - Choose Roman blinds for soft, layered elegance and better insulation in bedrooms and living rooms.
 
 ## Style and Appearance
 
-Roller blinds are a single panel of fabric that rolls neatly into a cassette or onto a tube at the top of the window. The look is clean, flat, and unobtrusive — the fabric almost disappears when raised.
+Roller blinds are a single panel of fabric that rolls neatly into a cassette or onto a tube at the top of the window. The look is clean, flat, and unobtrusive, the fabric almost disappears when raised.
 
 Roman blinds are fabric that folds into soft horizontal pleats when raised and hangs flat when lowered. The look is tailored and warm, closer to curtains than to a technical blind.
 
@@ -251,7 +251,7 @@ Roman blinds are fabric that folds into soft horizontal pleats when raised and h
 Roller blinds offer precise light control through fabric choice:
 
 - Blackout roller blinds: block almost all light, ideal for bedrooms and media rooms.
-- Sunscreen (dimout) roller blinds: filter sunlight and reduce glare while keeping a view — perfect for Abu Dhabi offices and Dubai living rooms that face the sun.
+- Sunscreen (dimout) roller blinds: filter sunlight and reduce glare while keeping a view, perfect for Abu Dhabi offices and Dubai living rooms that face the sun.
 - Translucent roller blinds: soften light while giving daytime privacy.
 
 Roman blinds typically come in blackout, thermal, or standard lining. They filter light elegantly but offer less granular control than a roller, and small gaps can appear at the sides where the fabric sits inside the recess.
@@ -271,7 +271,7 @@ Roller blinds are the more budget-friendly option, especially when fitting many 
 
 ## Insulation and Energy Efficiency
 
-Both blinds help manage the Gulf heat, but they work differently. Roman blinds, especially those with thermal or blackout lining, create a thicker barrier and slightly better insulation. Roller blinds in sunscreen fabrics reduce solar heat gain while still letting you see outside — a popular choice for west-facing windows that catch the afternoon sun in Dubai.
+Both blinds help manage the Gulf heat, but they work differently. Roman blinds, especially those with thermal or blackout lining, create a thicker barrier and slightly better insulation. Roller blinds in sunscreen fabrics reduce solar heat gain while still letting you see outside, a popular choice for west-facing windows that catch the afternoon sun in Dubai.
 
 ## Maintenance and Durability
 
@@ -285,9 +285,9 @@ Both blinds can be motorized and integrated with smart-home systems. Roller blin
 
 ## Which Suits Your Space?
 
-- Bedrooms: both work — choose blackout roller for total darkness or lined Roman for a softer, hotel-style feel.
+- Bedrooms: both work, choose blackout roller for total darkness or lined Roman for a softer, hotel-style feel.
 - Living rooms: Roman blinds add warmth and character; sunscreen roller blinds preserve the view and cut glare.
-- Kitchens and bathrooms: roller blinds win — flat fabric resists moisture and is easy to wipe clean.
+- Kitchens and bathrooms: roller blinds win, flat fabric resists moisture and is easy to wipe clean.
 - Offices: roller blinds, especially sunscreen and blackout, are the standard choice across Dubai for glare control and a professional look.
 
 ## The Final Word
@@ -303,7 +303,7 @@ Whichever you choose, every blind is made to measure in our workshop and install
     author: 'Curtain Makers Team',
     readTime: '6 min read',
     metaDesc: 'Designing curtains for an Abu Dhabi villa? Explore pinch pleat, motorized, blackout and sheer options, fabric choices, and villa-specific considerations with real AED pricing.',
-    content: `Abu Dhabi villas are built differently from apartments. They have floor-to-ceiling windows, double-height majlis spaces, glazed garden doors, and bedrooms that face the Gulf sun for most of the day. That changes the way you should approach curtains entirely. This guide covers the styles, fabrics, linings, and pricing that matter most when dressing a villa in Abu Dhabi or Dubai, so you can make an informed decision before your first site visit.
+    content: `Abu Dhabi villas are built differently from apartments. They have floor-to-ceiling windows, double-height majlis spaces, glazed garden doors, and bedrooms that face the Gulf sun for most of the day. That changes the way you should approach curtains entirely. Here are the styles, fabrics, linings, and pricing that matter most when dressing a villa in Abu Dhabi or Dubai, so you can decide before your first site visit.
 
 ### Popular Curtain Styles for Villas
 
@@ -323,12 +323,12 @@ Pinch pleat remains the classic Abu Dhabi choice for its crisp, structured finis
 
 Fabric selection is where most villa owners go wrong. A heavy velvet may look luxurious but absorbs heat and holds dust in a climate that sees sand and humidity year-round. Consider these origins and their practical trade-offs:
 
-- **Linen** — breathable, elegant, and ideal for living areas, though it creases more than synthetics.
-- **Cotton** — soft and natural, a balanced all-rounder for bedrooms.
-- **Polyester and poly-cotton** — durable, fade-resistant, and low-maintenance, the smart choice for high-exposure windows.
-- **European and Turkish fabrics** — premium weaves with superior drape and colour fastness, suited to statement rooms.
+- **Linen**: breathable, elegant, and ideal for living areas, though it creases more than synthetics.
+- **Cotton**: soft and natural, a balanced all-rounder for bedrooms.
+- **Polyester and poly-cotton**: durable, fade-resistant, and low-maintenance, the smart choice for high-exposure windows.
+- **European and Turkish fabrics**: premium weaves with superior drape and colour fastness, suited to statement rooms.
 
-We price fabrics across three tiers starting at AED 180 per linear metre for value options, AED 380 for mid-range, and AED 750 for premium European collections. Fabric origin then adjusts the base price, so a Turkish mid-range fabric costs more than a Chinese or Indian equivalent — but the drape and longevity usually justify the difference in a villa you will live in for years.
+We price fabrics across three tiers starting at AED 180 per linear metre for value options, AED 380 for mid-range, and AED 750 for premium European collections. Fabric origin then adjusts the base price, so a Turkish mid-range fabric costs more than a Chinese or Indian equivalent, but the drape and longevity usually justify the difference in a villa you will live in for years.
 
 ### Blackout vs. Sheer: Layering for Bedrooms and the Majlis
 
@@ -338,7 +338,7 @@ In a villa, no single curtain does everything. The most functional setup is laye
 - **Standard plus blackout** (adds 35%) where you want privacy and full darkness together.
 - **Sheer curtains** in living and dining areas to soften glare while keeping the view of the garden or sea.
 
-Layering blackout behind a sheer curtain gives you total control — daytime privacy, evening warmth, and full darkness when you want it.
+Layering blackout behind a sheer curtain gives you total control, daytime privacy, evening warmth, and full darkness when you want it.
 
 ### Motorized Curtains for High Windows and Entrances
 
@@ -362,7 +362,7 @@ Your villa deserves curtains that handle the heat, the dust, and the scale of th
     category: 'Tips',
     author: 'Curtain Makers Team',
     readTime: '4 min read',
-    metaDesc: "How to clean and maintain curtains and blinds in Abu Dhabi and Dubai's dusty climate — vacuuming, deep cleaning, when to replace, and professional care tips.",
+    metaDesc: "How to clean and maintain curtains and blinds in Abu Dhabi and Dubai's dusty climate, vacuuming, deep cleaning, when to replace, and professional care tips.",
     content: `Curtains and blinds in Abu Dhabi and Dubai face three constant enemies: airborne sand, fine dust, and intense UV exposure. Dust settles into fabric folds within days, sand abrades fibres during cleaning, and sunlight fades colours and weakens threads. With a little routine and the right professional care, however, your window treatments can look new for years. Here is how to maintain them properly.
 
 ### Routine Maintenance: A Weekly Habit
@@ -371,7 +371,7 @@ The single most effective step is regular, gentle vacuuming:
 
 - **Vacuum curtains weekly** using a soft brush attachment on low suction, working top to bottom.
 - **For blinds**, close the slats fully and vacuum across them, then reverse and repeat so both faces are cleaned.
-- **Dust window sills and tracks** at the same time — build-up there gets blown back onto the fabric.
+- **Dust window sills and tracks** at the same time, build-up there gets blown back onto the fabric.
 - **Rotate or adjust slats** on wooden and aluminium blinds so no single angle is always exposed to sun.
 
 In sandstorm season, increase vacuuming to twice weekly. Catching dust early prevents it from becoming embedded in the weave, which is what causes the grey, dull look many curtains develop over time.
@@ -389,24 +389,24 @@ How you clean depends entirely on the material. Not every curtain can go in a wa
 | Sheer / voile | Hand wash cold, air dry flat | Every 6 months |
 | Blackout lining | Spot clean or dry clean, never machine dry | As needed |
 
-Always remove hooks, weights, and rings before washing, and test any detergent on a hidden corner first. Never tumble-dry lined or blackout curtains — the heat breaks down the coating that gives them their light-blocking properties.
+Always remove hooks, weights, and rings before washing, and test any detergent on a hidden corner first. Never tumble-dry lined or blackout curtains, the heat breaks down the coating that gives them their light-blocking properties.
 
 ### Blinds: Material-Specific Care
 
-- **Roller and zebra blinds** — wipe with a damp microfibre cloth and mild soap; avoid soaking the mechanism.
-- **Venetian and aluminium blinds** — clean slat by slat with a damp cloth, then dry to prevent water spots.
-- **Vertical blinds** — vacuum with the brush attachment and spot-clean fabric vanes; replace bent vanes promptly.
-- **Wooden blinds** — dust only, and never use water, which warps the slats.
+- **Roller and zebra blinds**: wipe with a damp microfibre cloth and mild soap; avoid soaking the mechanism.
+- **Venetian and aluminium blinds**: clean slat by slat with a damp cloth, then dry to prevent water spots.
+- **Vertical blinds**: vacuum with the brush attachment and spot-clean fabric vanes; replace bent vanes promptly.
+- **Wooden blinds**: dust only, and never use water, which warps the slats.
 
 ### When to Repair vs. Replace
 
 Curtains and blinds have a natural lifespan in the UAE climate. Look for these signs:
 
-- **Fading** — especially on south- and west-facing windows, where UV is strongest.
-- **Brittle or thinning fabric** — when fibres snap under light pressure.
-- **Discolouration of the lining** — a sign the blackout coating is degrading.
-- **Sticking tracks or mechanisms** — often repairable, but ageing cord systems should be upgraded to motorized for safety.
-- **Warped or cracked slats** — on blinds exposed to direct sun for years.
+- **Fading**: especially on south- and west-facing windows, where UV is strongest.
+- **Brittle or thinning fabric**: when fibres snap under light pressure.
+- **Discolouration of the lining**: a sign the blackout coating is degrading.
+- **Sticking tracks or mechanisms**: often repairable, but ageing cord systems should be upgraded to motorized for safety.
+- **Warped or cracked slats**: on blinds exposed to direct sun for years.
 
 If the hardware is sound but the fabric is tired, replacing the fabric alone is a cost-effective option. If the tracks are failing, a full upgrade often makes more sense than repeated repairs.
 
