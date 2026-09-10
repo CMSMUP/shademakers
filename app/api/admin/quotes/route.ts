@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createServerSupabaseClient } from '@/lib/supabase';
+import { createAdminSupabaseClient } from '@/lib/supabase';
 
 export async function GET(req: NextRequest) {
   try {
@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     const search = searchParams.get('search');
     const offset = (page - 1) * limit;
 
-    const supabase = createServerSupabaseClient();
+    const supabase = createAdminSupabaseClient();
     let query = supabase
       .from('quotes')
       .select('*, customers(id, name, email, phone, company_name)', { count: 'exact' });
@@ -39,7 +39,7 @@ export async function PATCH(req: NextRequest) {
     const { id, status, notes } = await req.json();
     if (!id) return NextResponse.json({ error: 'Quote ID required' }, { status: 400 });
 
-    const supabase = createServerSupabaseClient();
+    const supabase = createAdminSupabaseClient();
     const updates: Record<string, unknown> = { updated_at: new Date().toISOString() };
     if (status) updates.status = status;
     if (notes !== undefined) updates.notes = notes;
@@ -57,7 +57,7 @@ export async function DELETE(req: NextRequest) {
     const { id } = await req.json();
     if (!id) return NextResponse.json({ error: 'Quote ID required' }, { status: 400 });
 
-    const supabase = createServerSupabaseClient();
+    const supabase = createAdminSupabaseClient();
     await supabase.from('quote_line_items').delete().eq('quote_id', id);
     const { error } = await supabase.from('quotes').delete().eq('id', id);
     if (error) throw error;

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createServerSupabaseClient } from '@/lib/supabase';
+import { createAdminSupabaseClient } from '@/lib/supabase';
 
 export async function GET(req: NextRequest) {
   try {
@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     const search = searchParams.get('search');
     const offset = (page - 1) * limit;
 
-    const supabase = createServerSupabaseClient();
+    const supabase = createAdminSupabaseClient();
     let query = supabase.from('customers').select('*', { count: 'exact' });
 
     if (search) {

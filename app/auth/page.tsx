@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useAuth } from '@/components/AuthProvider';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function AuthPage() {
+function AuthForm() {
   const [email, setEmail] = useState('');
   const [token, setToken] = useState('');
   const [step, setStep] = useState<'email' | 'otp'>('email');
@@ -13,12 +13,15 @@ export default function AuthPage() {
   const [success, setSuccess] = useState('');
   const { signInWithOtp, verifyOtp, user } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectTo = searchParams.get('redirect') || '/dashboard';
 
   // If already logged in, redirect
-  if (user) {
-    router.push('/dashboard');
-    return null;
-  }
+  useEffect(() => {
+    if (user) {
+      router.push(redirectTo);
+    }
+  }, [user, router, redirectTo]);
 
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,5 +173,17 @@ export default function AuthPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AuthPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center">
+        <div className="text-deep-400 text-sm">Loading...</div>
+      </div>
+    }>
+      <AuthForm />
+    </Suspense>
   );
 }
