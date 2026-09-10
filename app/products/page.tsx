@@ -2,6 +2,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { PRODUCTS_SEED } from '@/src/data/products';
 import ProductCard from '@/components/ProductCard';
+import {
+  IconRoller, IconVenetian, IconVertical, IconDefault,
+  IconZebra, IconRoman, IconAluminium, IconPleated,
+  IconPanel, IconSkylight, IconFlyscreen,
+} from '@/src/data/icons';
 
 export const metadata: Metadata = {
   title: 'All Products — Curtains & Blinds | Curtain Makers',
@@ -15,18 +20,18 @@ export const metadata: Metadata = {
   },
 };
 
-const CATEGORY_ICONS: Record<string, string> = {
-  roller: '▤',
-  venetian: '▦',
-  vertical: '∥',
-  smart: '⚡',
-  zebra: '≡',
-  roman: '⌺',
-  'aluminium-venetian': '▭',
-  pleated: '≋',
-  panel: '▯',
-  skylight: '◈',
-  flyscreen: '⊞',
+const CATEGORY_ICONS: Record<string, React.FC<{ size?: number; className?: string }>> = {
+  roller: IconRoller,
+  venetian: IconVenetian,
+  vertical: IconVertical,
+  smart: IconDefault,
+  zebra: IconZebra,
+  roman: IconRoman,
+  'aluminium-venetian': IconAluminium,
+  pleated: IconPleated,
+  panel: IconPanel,
+  skylight: IconSkylight,
+  flyscreen: IconFlyscreen,
 };
 
 export default function ProductsPage() {
@@ -62,7 +67,7 @@ export default function ProductsPage() {
         <div className="container-wide">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {PRODUCTS_SEED.map((product, i) => {
-              const icon = CATEGORY_ICONS[product.category] || '◆';
+              const Icon = CATEGORY_ICONS[product.category] || IconDefault;
               return (
                 <ProductCard
                   key={product.slug}
@@ -70,7 +75,7 @@ export default function ProductsPage() {
                   name={product.name}
                   tagline={`From AED ${product.base_price_per_sqm}/m²`}
                   desc={product.short_description}
-                  icon={icon}
+                  icon={<Icon size={32} className="text-brand-500" />}
                   index={i}
                   showImage={true}
                 />

@@ -8,7 +8,7 @@ interface ProductCardProps {
   name: string;
   tagline: string;
   desc: string;
-  icon: string;
+  icon: React.ReactNode;
   index: number;
   showImage?: boolean;
   gradient?: string;

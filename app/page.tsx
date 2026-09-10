@@ -2,6 +2,12 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import CurtainPriceCalculator from "@/components/CurtainPriceCalculator";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import {
+  IconBedroom, IconLivingRoom, IconKidsRoom, IconGarden,
+  IconHotel, IconOffice, IconClipboard, IconCheckCircle, IconTools,
+  IconRoller, IconRoman, IconVenetian, IconVertical, IconDefault,
+  IconZebra, IconAluminium, IconPleated, IconPanel, IconSkylight, IconFlyscreen,
+} from "@/src/data/icons";
 
 const CURTAIN_STYLES = [
   { name: "Pinch Pleat Curtains", desc: "The most popular curtain style in Abu Dhabi. Stitched and pinched pleats create elegant flowing fabric folds.", tag: "Best Seller" },
@@ -30,12 +36,12 @@ const FABRIC_TYPES = [
 ];
 
 const ROOM_TYPES = [
-  { name: "Bedroom Curtains", icon: "🛏️", desc: "Blackout lined for perfect sleep. Soft fabrics for a cozy sanctuary." },
-  { name: "Living Area Curtains", icon: "🛋️", desc: "Statement curtains that define your living space. Light control and style." },
-  { name: "Kids Room Curtains", icon: "🧸", desc: "Colorful, playful, and practical. Washable fabrics available." },
-  { name: "Villa Courtyard", icon: "🌿", desc: "Motorized outdoor curtains for villa courtyards. Weather-resistant." },
-  { name: "Hotel Curtains", icon: "🏨", desc: "Contract-grade fabrics meeting hotel standards. Fire retardant options." },
-  { name: "Office Curtains", icon: "🏢", desc: "Professional window treatments for corporate environments." },
+  { name: "Bedroom Curtains", icon: IconBedroom, desc: "Blackout lined for perfect sleep. Soft fabrics for a cozy sanctuary." },
+  { name: "Living Area Curtains", icon: IconLivingRoom, desc: "Statement curtains that define your living space. Light control and style." },
+  { name: "Kids Room Curtains", icon: IconKidsRoom, desc: "Colorful, playful, and practical. Washable fabrics available." },
+  { name: "Villa Courtyard", icon: IconGarden, desc: "Motorized outdoor curtains for villa courtyards. Weather-resistant." },
+  { name: "Hotel Curtains", icon: IconHotel, desc: "Contract-grade fabrics meeting hotel standards. Fire retardant options." },
+  { name: "Office Curtains", icon: IconOffice, desc: "Professional window treatments for corporate environments." },
 ];
 
 const PRODUCT_SERVICES = [
@@ -266,7 +272,7 @@ export default function HomePage() {
             {ROOM_TYPES.map((room, i) => (
               <div key={i} className="card p-6 group flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style={{ backgroundColor: 'rgba(229, 180, 60, 0.1)', border: '1px solid rgba(229, 180, 60, 0.15)' }}>
-                  {room.icon}
+                  <room.icon size={20} className="text-brand-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm group-hover:text-brand-500 transition-colors" style={{ color: 'var(--color-navy-900)' }}>{room.name}</h3>
@@ -319,19 +325,19 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {[
-              { slug: "roller-blinds", name: "Roller Blinds", tagline: "Sleek. Minimal. Professional.", desc: "Blackout, Sunscreen & Translucent options", icon: "▤" },
-              { slug: "roman-blinds", name: "Roman Blinds", tagline: "Timeless. Soft. Luxurious.", desc: "Soft fabric folds for elegant spaces", icon: "⌺" },
-              { slug: "wooden-venetian-blinds", name: "Wooden Venetian", tagline: "Classic. Warm. Prestigious.", desc: "50mm & 25mm real and faux wood", icon: "▦" },
-              { slug: "aluminium-venetian-blinds", name: "Aluminium Venetian", tagline: "Sleek. Durable. Contemporary.", desc: "50mm, 25mm & Perforated options", icon: "▭" },
-              { slug: "vertical-blinds", name: "Vertical Blinds", tagline: "Practical. Spacious. Modern.", desc: "Perfect for large windows and doors", icon: "∥" },
-              { slug: "zebra-blinds", name: "Zebra Blinds", tagline: "Dual layer. Elegant. Versatile.", desc: "Day & Night zebra blinds", icon: "≡" },
-              { slug: "smart-blinds", name: "Smart Motorized", tagline: "Automated. Effortless.", desc: "App, voice & schedule controlled", icon: "⚡" },
-              { slug: "pleated-blinds", name: "Pleated Blinds", tagline: "Compact. Efficient.", desc: "Energy-saving cellular blinds", icon: "≋" },
-              { slug: "panel-blinds", name: "Panel Blinds", tagline: "Contemporary. Minimal.", desc: "Sliding panels for large spans", icon: "▯" },
-              { slug: "skylight-blinds", name: "Skylight Blinds", tagline: "Specialist. Precision.", desc: "Custom roof window solutions", icon: "◈" },
-              { slug: "flyscreen-blinds", name: "Flyscreen Blinds", tagline: "Protection. Ventilation.", desc: "Insect screens that blend in", icon: "⊞" },
+              { slug: "roller-blinds", name: "Roller Blinds", tagline: "Sleek. Minimal. Professional.", desc: "Blackout, Sunscreen & Translucent options", icon: IconRoller },
+              { slug: "roman-blinds", name: "Roman Blinds", tagline: "Timeless. Soft. Luxurious.", desc: "Soft fabric folds for elegant spaces", icon: IconRoman },
+              { slug: "wooden-venetian-blinds", name: "Wooden Venetian", tagline: "Classic. Warm. Prestigious.", desc: "50mm & 25mm real and faux wood", icon: IconVenetian },
+              { slug: "aluminium-venetian-blinds", name: "Aluminium Venetian", tagline: "Sleek. Durable. Contemporary.", desc: "50mm, 25mm & Perforated options", icon: IconAluminium },
+              { slug: "vertical-blinds", name: "Vertical Blinds", tagline: "Practical. Spacious. Modern.", desc: "Perfect for large windows and doors", icon: IconVertical },
+              { slug: "zebra-blinds", name: "Zebra Blinds", tagline: "Dual layer. Elegant. Versatile.", desc: "Day & Night zebra blinds", icon: IconZebra },
+              { slug: "smart-blinds", name: "Smart Motorized", tagline: "Automated. Effortless.", desc: "App, voice & schedule controlled", icon: IconDefault },
+              { slug: "pleated-blinds", name: "Pleated Blinds", tagline: "Compact. Efficient.", desc: "Energy-saving cellular blinds", icon: IconPleated },
+              { slug: "panel-blinds", name: "Panel Blinds", tagline: "Contemporary. Minimal.", desc: "Sliding panels for large spans", icon: IconPanel },
+              { slug: "skylight-blinds", name: "Skylight Blinds", tagline: "Specialist. Precision.", desc: "Custom roof window solutions", icon: IconSkylight },
+              { slug: "flyscreen-blinds", name: "Flyscreen Blinds", tagline: "Protection. Ventilation.", desc: "Insect screens that blend in", icon: IconFlyscreen },
             ].map((product, i) => (
-              <ProductCard key={product.slug} slug={product.slug} name={product.name} tagline={product.tagline} desc={product.desc} icon={product.icon} index={i} />
+              <ProductCard key={product.slug} slug={product.slug} name={product.name} tagline={product.tagline} desc={product.desc} icon={<product.icon size={32} className="text-brand-500" />} index={i} />
             ))}
           </div>
         </div>
@@ -353,13 +359,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { num: "1", title: "Free Design Consultation", desc: "Our curtain experts visit your home with catalogs and help you design your space. Thousands of fabric choices at your doorstep.", icon: "📋" },
-              { num: "2", title: "Confirm at Home", desc: "Choose the perfect design, fabrics, and pricing at your place at your convenient time. No showroom visits needed.", icon: "✓" },
-              { num: "3", title: "Installed in 3 Days", desc: "Enjoy quick curtain fixing, neat stitching, and quality workmanship. Full installation within 3 days of confirmation.", icon: "🔧" },
+              { num: "1", title: "Free Design Consultation", desc: "Our curtain experts visit your home with catalogs and help you design your space. Thousands of fabric choices at your doorstep.", icon: IconClipboard },
+              { num: "2", title: "Confirm at Home", desc: "Choose the perfect design, fabrics, and pricing at your place at your convenient time. No showroom visits needed.", icon: IconCheckCircle },
+              { num: "3", title: "Installed in 3 Days", desc: "Enjoy quick curtain fixing, neat stitching, and quality workmanship. Full installation within 3 days of confirmation.", icon: IconTools },
             ].map((step, i) => (
               <div key={i} className="card p-6 text-center group">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform text-2xl" style={{ backgroundColor: 'rgba(229, 180, 60, 0.1)', border: '1px solid rgba(229, 180, 60, 0.2)' }}>
-                  {step.icon}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform" style={{ backgroundColor: 'rgba(229, 180, 60, 0.1)', border: '1px solid rgba(229, 180, 60, 0.2)' }}>
+                  <step.icon size={28} className="text-brand-500" />
                 </div>
                 <div className="text-brand-500 font-bold text-lg mb-1">Step {step.num}</div>
                 <h3 className="font-semibold mb-2 text-sm" style={{ color: 'var(--color-navy-900)' }}>{step.title}</h3>

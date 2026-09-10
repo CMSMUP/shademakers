@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {
+  IconGuide, IconSmart, IconCompare, IconTips,
+  IconEnergy, IconFabric, IconRegulations,
+} from '@/src/data/icons';
 
 export const metadata: Metadata = {
   title: 'Blog | Curtain Makers — Curtain & Blind Tips for Abu Dhabi & Dubai',
@@ -13,7 +17,7 @@ const BLOG_POSTS = [
     excerpt: 'A comprehensive guide to selecting the right blinds for your commercial space in Dubai — from roller to smart motorized options.',
     date: '2026-07-20',
     category: 'Guide',
-    image: '◆',
+    Icon: IconGuide,
   },
   {
     slug: 'benefits-smart-motorized-blinds',
@@ -21,7 +25,7 @@ const BLOG_POSTS = [
     excerpt: 'Discover how automated blinds can improve energy efficiency, productivity, and convenience in your workplace.',
     date: '2026-07-15',
     category: 'Smart Blinds',
-    image: '⚡',
+    Icon: IconSmart,
   },
   {
     slug: 'roller-vs-venetian-blinds',
@@ -29,7 +33,7 @@ const BLOG_POSTS = [
     excerpt: 'Compare the pros and cons of roller and venetian blinds for different office environments in the UAE.',
     date: '2026-07-10',
     category: 'Comparison',
-    image: '▤',
+    Icon: IconCompare,
   },
   {
     slug: 'curtains-vs-blinds-abu-dhabi',
@@ -37,15 +41,15 @@ const BLOG_POSTS = [
     excerpt: 'A guide to choosing between curtains and blinds for your Abu Dhabi villa — climate, maintenance, and style considerations.',
     date: '2026-06-28',
     category: 'Tips',
-    image: '🏠',
+    Icon: IconTips,
   },
   {
     slug: 'energy-saving-blinds-dubai',
     title: 'How Energy-Efficient Blinds Can Reduce Your Office Cooling Costs',
-    excerpt: 'Learn how the right blinds can lower your energy bills by reducing heat gain in Dubai\'s climate.',
+    excerpt: "Learn how the right blinds can lower your energy bills by reducing heat gain in Dubai's climate.",
     date: '2026-06-28',
     category: 'Tips',
-    image: '🌡️',
+    Icon: IconEnergy,
   },
   {
     slug: 'curtain-fabric-guide-abu-dhabi',
@@ -53,7 +57,7 @@ const BLOG_POSTS = [
     excerpt: 'Learn about the best curtain fabrics for Abu Dhabi and Dubai homes and offices. From light-filtering sheers to thermal blackout linings.',
     date: '2026-07-01',
     category: 'Guide',
-    image: '🧵',
+    Icon: IconFabric,
   },
   {
     slug: 'dubai-building-regulations-blinds',
@@ -61,7 +65,7 @@ const BLOG_POSTS = [
     excerpt: 'Learn about Dubai building codes and safety regulations for commercial window coverings including fire safety compliance.',
     date: '2026-07-05',
     category: 'Guide',
-    image: '📋',
+    Icon: IconRegulations,
   },
 ];
 
@@ -90,7 +94,7 @@ export default function BlogPage() {
                 className="card p-6 group hover:border-brand-500/50 transition-all flex flex-col"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-500/10 flex items-center justify-center mb-4 text-brand-500 text-lg group-hover:bg-brand-500/20 transition-colors">
-                  {post.image}
+                  <post.Icon size={20} className="text-brand-500" />
                 </div>
                 <span className="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-2">
                   {post.category}

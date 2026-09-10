@@ -5,6 +5,7 @@ import { PRODUCTS_SEED } from '@/src/data/products';
 import ProductQuickQuote from '@/components/ProductQuickQuote';
 import OptimizedProductImage from '@/components/OptimizedProductImage';
 import FabricSwatchPalette from '@/components/FabricSwatchPalette';
+import FabricSwatchesDownload from '@/components/FabricSwatchesDownload';
 import { getProductImage, getProductMainImage } from '@/src/data/product-images';
 
 type Props = { params: Promise<{ product: string[] }> };
@@ -124,9 +125,14 @@ export default async function ProductDetailPage({ params }: Props) {
               </div>
 
               {/* Fabric Swatches */}
-              <div className="mb-6">
-                <FabricSwatchPalette productSlug={slug} />
-              </div>
+                            <div className="mb-6">
+                              <FabricSwatchPalette productSlug={slug} />
+                            </div>
+
+                            {/* Fabric Swatches PDF Download */}
+                            <div className="mb-6 no-print">
+                              <FabricSwatchesDownload />
+                            </div>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3">
