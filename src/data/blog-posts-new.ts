@@ -20,7 +20,7 @@ export const NEW_BLOG_POSTS: Record<string, BlogPost> = {
     category: 'Guide',
     author: 'Curtain Makers Team',
     readTime: '6 min read',
-    metaDesc: 'Everything you need to know about blackout curtains in Abu Dhabi, fabrics, prices, blackout vs dim-out, motorized options, and how to choose. From AED 380/m.',
+    metaDesc: 'Blackout curtain fabrics, prices, blackout vs dim-out, motorized options, and how to choose in Abu Dhabi. From AED 380/m.',
     content: `Blackout curtains are one of the best buys you can make for a home in Abu Dhabi. With summer temperatures regularly exceeding 45°C and intense, year-round sunshine, the right blackout curtains in Abu Dhabi do far more than darken a room. They lower your cooling bills, protect furniture and flooring from UV fading, and deliver the deep, uninterrupted sleep that bright early mornings can otherwise make impossible. Here is what to know before you buy: fabrics, blackout versus dim-out, motorized options, and real AED pricing.
 
 ## Why Blackout Curtains Matter in Abu Dhabi's Climate
