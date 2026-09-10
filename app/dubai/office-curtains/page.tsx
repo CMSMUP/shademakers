@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeroCalculator from '@/components/HeroCalculator';
+import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
 
 export const metadata: Metadata = {
   title: 'Dubai Office Curtains & Blinds | Curtain Makers',
@@ -14,9 +15,18 @@ export const metadata: Metadata = {
   },
 };
 
+const DUBAI_CURTAIN_FAQS = [
+  { question: 'Do you install curtains in Dubai offices?', answer: 'Yes, we supply and install premium office curtains and blinds across all Dubai commercial districts. Our team handles corporate offices, co-working spaces, hotels, and large fit-out projects with dedicated project managers.' },
+  { question: 'How much do office curtains cost in Dubai?', answer: 'Office curtains in Dubai are priced per linear meter of track width. Curtains start from AED 180/m for Value tier, AED 380/m for Mid Range, and AED 750/m for Premium fabrics. Blinds start from AED 65/m². Free site survey included.' },
+  { question: 'Can you handle large commercial fit-out projects?', answer: 'Absolutely. We regularly deliver projects from 10 to 1,000+ windows with phased installation, BOQ supply for fit-out contractors, and after-hours or weekend installation to avoid disruption.' },
+  { question: 'Do you offer motorized curtains for Dubai offices?', answer: 'Yes, we offer fully motorized curtain and blind systems with remote, app, and voice control (Alexa/Google Home), plus integration with building management systems and occupancy sensors.' },
+];
+
 export default function DubaiHubPage() {
   return (
     <>
+      <JsonLd data={buildFaqSchema(DUBAI_CURTAIN_FAQS)} />
+      <JsonLd data={buildLocalBusinessSchema({ areaServed: ['Dubai'] })} />
       {/* HERO */}
       <section className="relative pt-24 pb-16 overflow-hidden bg-navy-900">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(229,180,60,0.08)_0%,transparent_60%)]" />

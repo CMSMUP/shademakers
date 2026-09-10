@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import { NEW_BLOG_POSTS } from '@/src/data/blog-posts-new';
 
 const BLOG_POSTS = {
   'choosing-office-blinds-dubai': {
@@ -401,6 +402,7 @@ Use our [free quote calculator](/estimate) to see how much you could save with e
 
 Ready to start saving? [Get your free quote](/estimate) today.`,
   },
+  ...NEW_BLOG_POSTS,
 };
 
 type Props = { params: { slug: string } };

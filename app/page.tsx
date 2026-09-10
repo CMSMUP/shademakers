@@ -8,6 +8,16 @@ import {
   IconRoller, IconRoman, IconVenetian, IconVertical, IconDefault,
   IconZebra, IconAluminium, IconPleated, IconPanel, IconSkylight, IconFlyscreen,
 } from "@/src/data/icons";
+import { JsonLd, buildFaqSchema } from "@/src/data/schema";
+
+const HOME_FAQS = [
+  { question: "How do I order curtains in Abu Dhabi?", answer: "It's simple! Book a free design visit, our experts come to you with catalogs, you select fabrics and designs at home, and we install within 3 days." },
+  { question: "Do you offer free curtain design visits?", answer: "Yes! Our curtain experts will visit your home with hundreds of fabric catalogs at no cost. We help you measure, select, and design at your convenience." },
+  { question: "How many fabrics do you have?", answer: "We have thousands of curtain fabrics — over 2,500 blackout options, 1,000+ sheers, 200+ cotton collections, plus premium velvets, linens, and designer fabrics." },
+  { question: "How long does installation take?", answer: "Installation takes just 3 days after design confirmation. We offer fast curtain fixing with neat stitching and quality workmanship." },
+  { question: "What areas do you serve?", answer: "All of Abu Dhabi and Dubai — including Al Reem Island, Saadiyat Island, Al Raha Beach, Dubai Marina, Business Bay, DIFC, and Downtown Dubai." },
+  { question: "Do you offer warranty?", answer: "Yes — 3 years warranty on all curtain products including free repairs. Optional annual maintenance contracts available." },
+];
 
 const CURTAIN_STYLES = [
   { name: "Pinch Pleat Curtains", desc: "The most popular curtain style in Abu Dhabi. Stitched and pinched pleats create elegant flowing fabric folds.", tag: "Best Seller" },
@@ -69,6 +79,7 @@ const COMPARISON_FEATURES = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={buildFaqSchema(HOME_FAQS)} />
       {/* ===== HERO — Dark bg, single color ===== */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 pb-12" style={{ backgroundColor: 'var(--color-navy-900)' }}>
         <div className="container-wide relative z-10 w-full">
@@ -483,22 +494,15 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-3">
-            {[
-              { q: "How do I order curtains in Abu Dhabi?", a: "It's simple! Book a free design visit, our experts come to you with catalogs, you select fabrics and designs at home, and we install within 3 days." },
-              { q: "Do you offer free curtain design visits?", a: "Yes! Our curtain experts will visit your home with hundreds of fabric catalogs at no cost. We help you measure, select, and design at your convenience." },
-              { q: "How many fabrics do you have?", a: "We have thousands of curtain fabrics — over 2,500 blackout options, 1,000+ sheers, 200+ cotton collections, plus premium velvets, linens, and designer fabrics." },
-              { q: "How long does installation take?", a: "Installation takes just 3 days after design confirmation. We offer fast curtain fixing with neat stitching and quality workmanship." },
-              { q: "What areas do you serve?", a: "All of Abu Dhabi and Dubai — including Al Reem Island, Saadiyat Island, Al Raha Beach, Dubai Marina, Business Bay, DIFC, and Downtown Dubai." },
-              { q: "Do you offer warranty?", a: "Yes — 3 years warranty on all curtain products including free repairs. Optional annual maintenance contracts available." },
-            ].map((faq, i) => (
+            {HOME_FAQS.map((faq, i) => (
               <details key={i} className="card p-5 group cursor-pointer">
                 <summary className="font-medium text-sm flex items-center justify-between list-none" style={{ color: 'var(--color-navy-900)' }}>
-                  {faq.q}
+                  {faq.question}
                   <svg className="w-4 h-4 group-open:rotate-180 transition-transform" style={{ color: 'var(--color-navy-400)' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <p className="text-sm mt-3 leading-relaxed" style={{ color: 'var(--color-navy-500)' }}>{faq.a}</p>
+                <p className="text-sm mt-3 leading-relaxed" style={{ color: 'var(--color-navy-500)' }}>{faq.answer}</p>
               </details>
             ))}
           </div>

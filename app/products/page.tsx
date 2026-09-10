@@ -7,6 +7,13 @@ import {
   IconZebra, IconRoman, IconAluminium, IconPleated,
   IconPanel, IconSkylight, IconFlyscreen,
 } from '@/src/data/icons';
+import { JsonLd, buildFaqSchema } from '@/src/data/schema';
+
+const PRODUCTS_FAQS = [
+  { question: 'What curtain and blind types do you offer?', answer: 'We offer 11 product types including roller blinds, roman blinds, wooden and aluminium venetian blinds, vertical blinds, zebra (day & night) blinds, smart motorized blinds, pleated blinds, panel blinds, skylight blinds, and flyscreen blinds — all made-to-measure.' },
+  { question: 'Do you provide curtains as well as blinds?', answer: 'Yes. We are a full curtain and blinds specialist offering 12 curtain styles (pinch pleat, wave, pencil pleat, motorized and more) across 3,700+ fabrics, alongside our complete blinds range.' },
+  { question: 'Are your prices per square meter or per meter?', answer: 'Blinds are priced per square meter (m²) and curtains per linear meter of track width. Every product page shows a "From AED X" starting price, and our online calculator gives an instant estimate for your exact dimensions.' },
+];
 
 export const metadata: Metadata = {
   title: 'All Products — Curtains & Blinds | Curtain Makers',
@@ -37,6 +44,7 @@ const CATEGORY_ICONS: Record<string, React.FC<{ size?: number; className?: strin
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd data={buildFaqSchema(PRODUCTS_FAQS)} />
       {/* Hero */}
       <section className="bg-navy-900 pt-24 pb-16">
         <div className="container-wide">

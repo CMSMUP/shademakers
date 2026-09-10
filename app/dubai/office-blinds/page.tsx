@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PRODUCTS_SEED } from '@/src/data/products';
+import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
 
 export const metadata: Metadata = {
   title: 'Office Blinds Dubai | Curtain Makers — Commercial Blinds',
@@ -14,6 +15,14 @@ export const metadata: Metadata = {
   },
 };
 
+const DUBAI_OFFICE_FAQS = [
+  { question: 'How much do office blinds cost in Dubai?', answer: 'Office blinds in Dubai start from AED 65/m² for vertical blinds, AED 75/m² for aluminium venetian, AED 85/m² for roller blinds, and AED 110/m² for zebra blinds. Motorized options start from AED 185/m². Volume discounts are available for commercial projects over 100 windows.' },
+  { question: 'What type of blinds are best for offices in Dubai?', answer: 'Roller blinds are the most popular for Dubai offices due to their clean, minimal look and sun protection. Sunscreen roller blinds reduce heat gain while maintaining outward visibility — ideal for open-plan offices. For executive offices, wooden venetian blinds add prestige.' },
+  { question: 'Do you offer free site surveys for office blinds?', answer: 'Yes, we offer a free on-site survey across all Dubai districts including Dubai Marina, DIFC, Business Bay, Downtown Dubai, and JLT. Our team takes precise measurements and recommends the right solution per facade orientation.' },
+  { question: 'How long does office blind installation take in Dubai?', answer: 'For standard commercial projects, installation typically takes 7–14 days from order confirmation. Large fit-out projects with 100+ windows are scheduled in phases to minimize disruption to your operations.' },
+  { question: 'Do office blinds come with a warranty?', answer: 'Yes, all our commercial blinds include a 5-year warranty covering product and installation. Annual maintenance contracts are also available for larger office portfolios.' },
+];
+
 const COMMERCIAL_PRODUCTS = PRODUCTS_SEED.filter(p =>
   ['roller-blinds', 'vertical-blinds', 'aluminium-venetian-blinds', 'zebra-blinds', 'smart-blinds', 'wooden-venetian-blinds', 'panel-blinds', 'pleated-blinds'].includes(p.slug)
 );
@@ -21,6 +30,8 @@ const COMMERCIAL_PRODUCTS = PRODUCTS_SEED.filter(p =>
 export default function DubaiOfficeBlindsPage() {
   return (
     <>
+      <JsonLd data={buildFaqSchema(DUBAI_OFFICE_FAQS)} />
+      <JsonLd data={buildLocalBusinessSchema({ areaServed: ['Dubai'] })} />
       {/* HERO */}
       <section className="relative pt-24 pb-16 bg-navy-900">
         <div className="container-wide">

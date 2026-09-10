@@ -7,6 +7,7 @@ import OptimizedProductImage from '@/components/OptimizedProductImage';
 import FabricSwatchPalette from '@/components/FabricSwatchPalette';
 import FabricSwatchesDownload from '@/components/FabricSwatchesDownload';
 import { getProductImage, getProductMainImage } from '@/src/data/product-images';
+import { JsonLd, buildProductSchema, buildBreadcrumbSchema } from '@/src/data/schema';
 
 type Props = { params: Promise<{ product: string[] }> };
 
@@ -37,9 +38,24 @@ export default async function ProductDetailPage({ params }: Props) {
   const mainImage = getProductMainImage(slug);
   const productImages = getProductImage(slug);
 
+  const productSchema = buildProductSchema({
+    name: productData.name,
+    description: productData.short_description,
+    slug: productData.slug,
+    priceAed: productData.base_price_per_sqm,
+    category: productData.category,
+  });
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: 'https://curtainmakers.ae' },
+    { name: 'Products', url: 'https://curtainmakers.ae/products' },
+    { name: productData.name, url: `https://curtainmakers.ae/products/${productData.slug}` },
+  ]);
+
   return (
     <div style={{ backgroundColor: 'var(--color-navy-900)' }}>
-      {/* Breadcrumb */}
+      <JsonLd data={productSchema} />
+      <JsonLd data={breadcrumbSchema} />
+
       <section className="pt-24 pb-4">
         <div className="container-wide">
           <nav className="flex items-center gap-2 text-sm text-deep-400">

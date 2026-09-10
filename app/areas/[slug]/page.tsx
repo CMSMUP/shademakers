@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ABU_DHABI_AREAS } from '@/src/data/areas-abu-dhabi';
+import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
 
 type Props = {
   params: { slug: string };
@@ -32,8 +33,17 @@ export default function AreaPage({ params }: Props) {
   const area = getArea(params.slug);
   if (!area) notFound();
 
+  const areaFaqs = [
+    { question: `Do you install curtains in ${area.name}?`, answer: `Yes, we supply and install custom curtains, blinds, and motorized systems across ${area.name}, Abu Dhabi. Free site visit included with every project.` },
+    { question: `How much do curtains cost in ${area.name}?`, answer: `Curtain prices in ${area.name} start from AED 180/m for Value tier, AED 380/m for Mid Range, and AED 750/m for Premium fabrics. Blinds start from AED 65/m². Use our online calculator for an instant estimate.` },
+    { question: `How long does installation take in ${area.name}?`, answer: `For ${area.name} properties, installation typically takes 3 days from design confirmation for curtains, and 7–14 days for larger blind projects.` },
+  ];
+
   return (
     <>
+      <JsonLd data={buildFaqSchema(areaFaqs)} />
+      <JsonLd data={buildLocalBusinessSchema({ areaServed: [area.name, 'Abu Dhabi'] })} />
+
       {/* Hero */}
       <section className="bg-navy-900 pt-24 pb-16">
         <div className="container-wide">

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/auth/', '/dashboard/', '/admin/', '/api/'],
     },
-    sitemap: 'https://officeblindsdubai.com/sitemap.xml',
+    sitemap: 'https://curtainmakers.ae/sitemap.xml',
   };
 }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   IconGuide, IconSmart, IconCompare, IconTips,
-  IconEnergy, IconFabric, IconRegulations,
+  IconEnergy, IconFabric, IconRegulations, IconTools,
 } from '@/src/data/icons';
 
 export const metadata: Metadata = {
@@ -66,6 +66,54 @@ const BLOG_POSTS = [
     date: '2026-07-05',
     category: 'Guide',
     Icon: IconRegulations,
+  },
+  {
+    slug: 'blackout-curtains-abu-dhabi-guide',
+    title: 'The Complete Guide to Blackout Curtains in Abu Dhabi',
+    excerpt: 'Everything about blackout curtains in Abu Dhabi — fabrics, blackout vs dim-out, motorized options, and real AED pricing.',
+    date: '2026-09-05',
+    category: 'Guide',
+    Icon: IconGuide,
+  },
+  {
+    slug: 'how-much-do-motorized-curtains-cost',
+    title: 'How Much Do Motorized Curtains Cost in the UAE?',
+    excerpt: 'Motorized curtain pricing explained — motor, track, fabric, and installation costs with real AED figures for villas and apartments.',
+    date: '2026-09-08',
+    category: 'Pricing',
+    Icon: IconSmart,
+  },
+  {
+    slug: 'how-to-measure-curtains',
+    title: 'How to Measure Curtains Like a Pro (Step-by-Step)',
+    excerpt: 'Measure windows for curtains and blinds correctly — width, drop, track vs pole, and common mistakes to avoid.',
+    date: '2026-09-10',
+    category: 'Guide',
+    Icon: IconTips,
+  },
+  {
+    slug: 'roller-blinds-vs-roman-blinds',
+    title: 'Roller Blinds vs Roman Blinds: Which Should You Choose?',
+    excerpt: 'Compare style, light control, cost, and maintenance for roller vs roman blinds in Abu Dhabi and Dubai.',
+    date: '2026-09-03',
+    category: 'Comparison',
+    Icon: IconCompare,
+  },
+  {
+    slug: 'villa-curtains-abu-dhabi-luxury-guide',
+    title: 'Luxury Villa Curtains in Abu Dhabi: A Complete Guide',
+    excerpt: 'Designing curtains for an Abu Dhabi villa — styles, fabrics, linings, motorization, and villa-specific pricing.',
+    date: '2026-09-12',
+    category: 'Guide',
+    Icon: IconFabric,
+  },
+  {
+    slug: 'curtain-cleaning-maintenance-uae',
+    title: 'Curtain and Blind Maintenance in the UAE: Expert Tips',
+    excerpt: "How to clean and maintain curtains and blinds in the UAE's dusty climate — vacuuming, deep cleaning, and when to replace.",
+    date: '2026-09-01',
+    category: 'Tips',
+    Icon: IconTools,
   },
 ];
 
