@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { PRODUCTS_SEED } from '@/src/data/products';
 import { ABU_DHABI_AREAS } from '@/src/data/areas-abu-dhabi';
+import { SITE_URL } from '@/lib/site';
 
-const BASE_URL = 'https://curtainmakers.ae';
+const BASE_URL = SITE_URL;
 
 const BLOG_SLUGS = [
   'choosing-office-blinds-dubai',

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import { JsonLd, buildFaqSchema } from '@/src/data/schema';
+import { SITE_URL, CONTACT_EMAIL } from '@/lib/site';
 
 const CONTACT_FAQS = [
   { question: 'How fast will you respond to my enquiry?', answer: 'We reply to most enquiries within 24 hours during working days (Saturday to Thursday). For urgent requests, WhatsApp is the fastest way to reach our team.' },
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
       'Get a free quote or consultation for premium curtains, blinds, and motorized systems in Abu Dhabi and Dubai.',
   },
   alternates: {
-    canonical: 'https://curtainmakers.ae/contact',
+    canonical: `${SITE_URL}/contact`,
   },
 };
 
@@ -204,7 +205,7 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <p className="text-navy-500 text-sm">
-                      info@curtainmakers.ae
+                      {CONTACT_EMAIL}
                     </p>
                     <p className="text-navy-400 text-xs mt-0.5">
                       We reply within 24 hours

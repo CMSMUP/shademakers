@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { NEW_BLOG_POSTS } from '@/src/data/blog-posts-new';
+import { SITE_URL } from '@/lib/site';
 
 const BLOG_POSTS = {
   'choosing-office-blinds-dubai': {
@@ -425,7 +426,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
     },
     alternates: {
-      canonical: `https://curtainmakers.ae/blog/${params.slug}`,
+      canonical: `${SITE_URL}/blog/${params.slug}`,
     },
   };
 }

@@ -4,6 +4,7 @@
 // ============================================================
 
 import type { ReactNode } from 'react';
+import { SITE_URL, CONTACT_EMAIL } from '@/lib/site';
 
 /**
  * Renders a JSON-LD script tag. Server-component safe.
@@ -46,7 +47,7 @@ export function buildProductSchema(opts: {
   priceAed?: number;
   category?: string;
 }) {
-  const url = `https://curtainmakers.ae/products/${opts.slug}`;
+  const url = `${SITE_URL}/products/${opts.slug}`;
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -57,7 +58,7 @@ export function buildProductSchema(opts: {
       '@type': 'Brand',
       name: 'Curtain Makers',
     },
-    image: opts.imageUrl || `https://curtainmakers.ae/images/products/${opts.slug}.svg`,
+    image: opts.imageUrl || `${SITE_URL}/images/products/${opts.slug}.svg`,
   };
 
   if (opts.priceAed) {
@@ -114,9 +115,9 @@ export function buildLocalBusinessSchema(opts: {
     description:
       opts.description ||
       'Premium curtain and blinds specialist serving Abu Dhabi and Dubai, UAE',
-    url: opts.url || 'https://curtainmakers.ae',
+    url: opts.url || SITE_URL,
     telephone: '+971****5678',
-    email: 'info@curtainmakers.ae',
+    email: CONTACT_EMAIL,
     areaServed: opts.areaServed.map(city => ({ '@type': 'City', name: city })),
     address: {
       '@type': 'PostalAddress',

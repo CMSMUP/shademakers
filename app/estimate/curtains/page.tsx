@@ -6,6 +6,7 @@ import {
   CURTAIN_STYLES, CURTAIN_TYPES, FABRIC_TIERS, FABRIC_TYPES, CURTAIN_OPERATIONS,
   calculateCurtainPrice, formatAED,
 } from '@/src/data/curtain-pricing';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 interface RoomWindow {
   id: string;
@@ -123,7 +124,7 @@ function CurtainsQuoteContent() {
     const text = generateQuoteText();
     const subject = encodeURIComponent('Your Curtain Makers Quote Estimate');
     const body = encodeURIComponent(text);
-    window.location.href = `mailto:${userEmail || 'info@curtainmakers.ae'}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${userEmail || CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (

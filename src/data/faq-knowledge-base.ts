@@ -3,6 +3,8 @@
 // For AI reply machine & chatbot
 // ============================================================
 
+import { CONTACT_EMAIL } from '@/lib/site';
+
 export interface FAQ {
   id: string;
   category: string;
@@ -356,7 +358,7 @@ export const FAQS: FAQ[] = [
   {
     id: 'ct1', category: 'Contact',
     question: 'How do I contact Curtain Makers?',
-    answer: 'Phone (Sat-Thu 9am-6pm), Email: info@curtainmakers.ae, WhatsApp for quick responses, or book a free in-home design visit on our website. We respond within 24 hours.',
+    answer: `Phone (Sat-Thu 9am-6pm), Email: ${CONTACT_EMAIL}, WhatsApp for quick responses, or book a free in-home design visit on our website. We respond within 24 hours.`,
     keywords: ['contact', 'phone', 'email', 'whatsapp', 'call', 'message', 'get in touch'],
     relatedQuestions: ['ct2', 'ct3', 's1'],
   },

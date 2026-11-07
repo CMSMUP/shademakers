@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 const PRODUCTS = [
   { href: '/products', label: 'Custom Curtains' },
@@ -111,7 +112,7 @@ export default function Footer() {
             </ul>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <div className="space-y-2 text-deep-300 text-sm">
-              <p>info@curtainmakers.ae</p>
+              <p>{CONTACT_EMAIL}</p>
               <p>+971 4 123 4567</p>
               <p>Abu Dhabi, UAE</p>
             </div>

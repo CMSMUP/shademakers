@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Curtain Makers',
@@ -34,9 +35,9 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-bold text-navy-900">4. Data Security</h2>
             <p>We implement industry-standard security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
             <h2 className="text-lg font-bold text-navy-900">5. Your Rights</h2>
-            <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at info@curtainmakers.ae.</p>
+            <p>You may request access to, correction of, or deletion of your personal data at any time by contacting us at {CONTACT_EMAIL}.</p>
             <h2 className="text-lg font-bold text-navy-900">6. Contact</h2>
-            <p>For privacy-related inquiries: info@curtainmakers.ae</p>
+            <p>For privacy-related inquiries: {CONTACT_EMAIL}</p>
           </div>
         </div>
       </section>

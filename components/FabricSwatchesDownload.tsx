@@ -2,6 +2,7 @@
 
 import { useRef, useCallback } from 'react';
 import { FABRIC_SWATCHES, getFabricsByGrade } from '@/src/data/fabric-swatches';
+import { SITE_HOST, CONTACT_EMAIL } from '@/lib/site';
 
 export default function FabricSwatchesDownload() {
   const printRef = useRef<HTMLDivElement>(null);
@@ -96,10 +97,10 @@ export default function FabricSwatchesDownload() {
 
             {/* Footer */}
             <div className="mt-10 pt-6 border-t-2 border-gray-300 text-center text-sm text-gray-500">
-              <p className="mb-1">CurtainMakers — curtainmakers.ae</p>
+              <p className="mb-1">CurtainMakers — {SITE_HOST}</p>
               <p className="mb-1">Abu Dhabi | Dubai | UAE</p>
               <p className="mb-1">Free Design Visit · 3-Day Installation · 3-Year Warranty</p>
-              <p className="text-xs mt-2">Contact: info@curtainmakers.ae | WhatsApp: +971 XX XXX XXXX</p>
+              <p className="text-xs mt-2">Contact: {CONTACT_EMAIL} | WhatsApp: +971 XX XXX XXXX</p>
               <p className="text-xs mt-1">Colors shown are indicative. Actual shades may vary slightly. Swatches available on request.</p>
             </div>
           </div>

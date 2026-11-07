@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Curtain Makers',
@@ -36,7 +37,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-navy-900">5. Limitation of Liability</h2>
             <p>Curtain Makers shall not be liable for indirect damages arising from the use of our products or services. Our total liability is limited to the amount paid for the specific product or service.</p>
             <h2 className="text-lg font-bold text-navy-900">6. Contact</h2>
-            <p>For questions about these terms: info@curtainmakers.ae</p>
+            <p>For questions about these terms: {CONTACT_EMAIL}</p>
           </div>
         </div>
       </section>

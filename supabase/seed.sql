@@ -4,8 +4,9 @@
 -- ============================================================
 
 -- 1. Staff user (admin login)
+-- NOTE: replace with your real admin address before running against production.
 INSERT INTO staff_users (email, name, role) VALUES
-  ('admin@curtainmakers.ae', 'Admin', 'admin')
+  ('admin@example.com', 'Admin', 'admin')
 ON CONFLICT (email) DO NOTHING;
 
 -- 2. Products (seed data matching the app's PRODUCTS_SEED)

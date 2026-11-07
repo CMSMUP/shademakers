@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeroCalculator from '@/components/HeroCalculator';
 import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Dubai Office Curtains & Blinds | Curtain Makers',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Commercial curtains and blinds for Dubai offices. Free project quote.',
   },
   alternates: {
-    canonical: 'https://curtainmakers.ae/dubai/office-curtains/',
+    canonical: `${SITE_URL}/dubai/office-curtains/`,
   },
 };
 

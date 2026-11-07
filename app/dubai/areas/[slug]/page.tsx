@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 const DUBAI_AREAS = [
   {
@@ -100,7 +101,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Office Blinds in ${area.name} | Curtain Makers`,
     description: `Premium office blinds and curtains in ${area.name}, Dubai. Roller blinds, venetian blinds, smart motorized blinds & more. Free quote & site survey in ${area.name}.`,
-    alternates: { canonical: `https://curtainmakers.ae/dubai/areas/${area.slug}/` },
+    alternates: { canonical: `${SITE_URL}/dubai/areas/${area.slug}/` },
   };
 }
 

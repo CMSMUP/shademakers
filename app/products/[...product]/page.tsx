@@ -8,6 +8,7 @@ import FabricSwatchPalette from '@/components/FabricSwatchPalette';
 import FabricSwatchesDownload from '@/components/FabricSwatchesDownload';
 import { getProductImage, getProductMainImage } from '@/src/data/product-images';
 import { JsonLd, buildProductSchema, buildBreadcrumbSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 type Props = { params: Promise<{ product: string[] }> };
 
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: productData.meta_title,
     description: productData.meta_description,
-    alternates: { canonical: `https://curtainmakers.ae/products/${productData.slug}` },
+    alternates: { canonical: `${SITE_URL}/products/${productData.slug}` },
   };
 }
 
@@ -46,9 +47,9 @@ export default async function ProductDetailPage({ params }: Props) {
     category: productData.category,
   });
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: 'Home', url: 'https://curtainmakers.ae' },
-    { name: 'Products', url: 'https://curtainmakers.ae/products' },
-    { name: productData.name, url: `https://curtainmakers.ae/products/${productData.slug}` },
+    { name: 'Home', url: SITE_URL },
+    { name: 'Products', url: `${SITE_URL}/products` },
+    { name: productData.name, url: `${SITE_URL}/products/${productData.slug}` },
   ]);
 
   return (

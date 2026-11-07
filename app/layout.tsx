@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
 import ChatWidget from "@/components/ChatWidget";
 import StickyMobileCta from "@/components/StickyMobileCta";
+import { SITE_URL, CONTACT_EMAIL } from '@/lib/site';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     title: "Curtain Makers | Premium Curtains & Blinds",
     description:
       "Abu Dhabi's premier curtain and blinds specialist. Thousands of curtain fabrics, in-house manufacturing, free design visit, and 3-day installation.",
-    url: "https://curtainmakers.ae",
+    url: SITE_URL,
     siteName: "Curtain Makers",
     locale: "en_AE",
     type: "website",
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://curtainmakers.ae",
+    canonical: SITE_URL,
   },
 };
 
@@ -87,9 +88,9 @@ export default function RootLayout({
               name: "Curtain Makers",
               description:
                 "Premium curtain and blinds specialist in Abu Dhabi and Dubai, UAE",
-              url: "https://curtainmakers.ae",
+              url: SITE_URL,
               telephone: "+971****5678",
-              email: "info@curtainmakers.ae",
+              email: CONTACT_EMAIL,
               areaServed: ["Abu Dhabi", "Dubai", "UAE"],
               address: {
                 "@type": "PostalAddress",

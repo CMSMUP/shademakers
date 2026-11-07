@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ABU_DHABI_AREAS } from '@/src/data/areas-abu-dhabi';
 import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 type Props = {
   params: { slug: string };
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: area.metaTitle,
     description: area.metaDescription,
     alternates: {
-      canonical: `https://curtainmakers.ae/areas/${area.slug}`,
+      canonical: `${SITE_URL}/areas/${area.slug}`,
     },
   };
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PRODUCTS_SEED } from '@/src/data/products';
 import { JsonLd, buildFaqSchema, buildLocalBusinessSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Office Blinds Dubai | Curtain Makers — Commercial Blinds',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Premium commercial blinds for Dubai offices. Free quote & installation.',
   },
   alternates: {
-    canonical: 'https://curtainmakers.ae/dubai/office-blinds/',
+    canonical: `${SITE_URL}/dubai/office-blinds/`,
   },
 };
 

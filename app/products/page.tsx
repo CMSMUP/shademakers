@@ -8,6 +8,7 @@ import {
   IconPanel, IconSkylight, IconFlyscreen,
 } from '@/src/data/icons';
 import { JsonLd, buildFaqSchema } from '@/src/data/schema';
+import { SITE_URL } from '@/lib/site';
 
 const PRODUCTS_FAQS = [
   { question: 'What curtain and blind types do you offer?', answer: 'We offer 11 product types including roller blinds, roman blinds, wooden and aluminium venetian blinds, vertical blinds, zebra (day & night) blinds, smart motorized blinds, pleated blinds, panel blinds, skylight blinds, and flyscreen blinds — all made-to-measure.' },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Browse all curtain and blind types for your Abu Dhabi or Dubai property.',
   },
   alternates: {
-    canonical: 'https://curtainmakers.ae/products',
+    canonical: `${SITE_URL}/products`,
   },
 };
 

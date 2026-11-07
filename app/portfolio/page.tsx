@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Portfolio | Curtain Makers',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
       'See our work: villa curtains, hotel projects, office blinds, outdoor curtains & motorized systems',
   },
   alternates: {
-    canonical: 'https://curtainmakers.ae/portfolio',
+    canonical: `${SITE_URL}/portfolio`,
   },
 };
 
