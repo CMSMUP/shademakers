@@ -5,7 +5,32 @@
 **Owner:** Sayed Abdulla Shad
 **Prepared by:** Hermes Agent (diagnosis verified live against DNS, TLS CT logs, and HTTP responses)
 
-> **UPDATE 2026-11-07 — domain detached from Vercel at owner's request.**
+> **UPDATE 2026-11-07 (later) — SUPERSEDED. The owner has decided to move to a
+> NEW domain.** `curtainmakers.ae` is being abandoned, not recovered. The
+> recovery steps below are therefore historical/evidence only.
+>
+> Actions taken to close out `curtainmakers.ae`:
+> - Removed the domain from the Vercel account (`vercel domains remove`) → 0 domains
+> - Removed the leftover `curtainmakers.vercel.app` deployment alias → 0 aliases
+> - Stripped all 34 hardcoded `curtainmakers.ae` references from the codebase
+>   (21 URLs, 12 emails, 1 bare mention across 20 files)
+> - Added `lib/site.ts` as the single source of truth for the domain; the whole
+>   app now derives canonicals / OG / JSON-LD / sitemap / robots / contact email
+>   from `NEXT_PUBLIC_SITE_URL` + `NEXT_PUBLIC_CONTACT_EMAIL`
+> - Verified 0 remaining refs in source and 0 in the `.next` build output
+>   (1,124 files scanned). Lint 0 errors, build 57/57 pages. Commit `d2f0a3d`.
+>
+> **To ship the new domain:** set `NEXT_PUBLIC_SITE_URL` and
+> `NEXT_PUBLIC_CONTACT_EMAIL` in `.env.local` + Vercel env vars, then add the
+> domain in Vercel → Settings → Domains. Nothing else needs editing.
+>
+> Still outstanding from this diagnosis and worth re-checking on the new domain:
+> email (MX/SPF/DKIM) must actually be configured this time, and keep the
+> domain pointed at Vercel (A `76.76.21.21`, or move nameservers to Vercel).
+
+---
+
+> **ORIGINAL UPDATE 2026-11-07 — domain detached from Vercel at owner's request.**
 > `curtainmakers.ae` and `www.curtainmakers.ae` were removed from the Vercel
 > account (`vercel domains remove curtainmakers.ae`). The project
 > **`shademakers`** (`prj_5AgL0PUnFSAv0TAxAFg75EHfCT8y`) was left fully intact
@@ -16,10 +41,10 @@
 > Account domain count is currently `0`.
 >
 > Also note: the live Vercel project is named **`shademakers`**, not
-> `my-curtain-app`. The local `.vercel/project.json` has a stale
-> `projectName` (`my-curtain-app` does not exist) although its `projectId` is
-> correct. A leftover deployment alias `curtainmakers.vercel.app` also survives
-> (60d old, SSO-protected) and can be removed separately if desired.
+> `my-curtain-app`. The local `.vercel/project.json` had a stale
+> `projectName` (now corrected to `shademakers`). A leftover deployment alias
+> `curtainmakers.vercel.app` also survived and has now been removed.
+
 
 
 ---
